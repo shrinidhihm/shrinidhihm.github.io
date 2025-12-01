@@ -1,102 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Work & Projects – Shrinidhi HM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work & CV – Shrinidhi Holenarsipura Murali Madhava</title>
   <style>
-    body { font-family: 'Georgia', serif; background: white; color: #1f2937; margin:0; padding:20px; line-height:1.8; }
-    .container { max-width: 900px; margin: 0 auto; }
-    header { text-align: center; padding: 40px 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 40px; }
-    img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #1e40af; }
-    h1 { font-size: 2.2rem; margin: 15px 0 5px; }
-    .contact { color: #6b7280; font-size: 1.1rem; }
+    body { font-family: Georgia, serif; background: #f9f9f9; color: #333; margin: 0; padding: 20px; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-radius: 8px; }
+    header { text-align: center; margin-bottom: 40px; }
+    .photo { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #ddd; margin-bottom: 10px; }
+    h1 { font-size: 1.8rem; margin: 5px 0; color: #333; }
+    .contact { color: #666; font-size: 0.9rem; }
     .contact a { color: #1e40af; }
     section { margin: 50px 0; }
-    h2 { font-size: 1.5rem; color: #1e40af; border-bottom: 2px solid #dbeafe; padding-bottom: 8px; }
-    .entry { margin: 25px 0; }
-    .title { font-weight: bold; font-size: 1.1rem; }
-    .date { float: right; color: #6b7280; font-style: italic; }
-    ul { padding-left: 20px; }
-    li { margin: 8px 0; }
-    .back { display: inline-block; margin: 40px 0; color: #1e40af; text-decoration: none; font-weight: bold; }
-    @media (max-width: 600px) { .date { float: none; display: block; margin-bottom: 5px; } }
+    h2 { font-size: 1.4rem; color: #1e40af; border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 20px; }
+    .entry { position: relative; margin: 30px 0; padding-left: 20px; border-left: 3px solid #e5e7eb; }
+    .entry h3 { margin: 0 0 5px 0; font-size: 1.1rem; }
+    .date { position: absolute; right: 0; top: 0; color: #999; font-size: 0.9rem; font-style: italic; }
+    ul { margin: 10px 0 0 0; padding-left: 20px; }
+    li { margin: 8px 0; color: #555; }
+    .back { color: #1e40af; text-decoration: none; font-weight: bold; margin-top: 30px; display: inline-block; }
+    @media (max-width: 600px) { .date { position: static; display: block; margin-bottom: 5px; } .container { padding: 20px; } }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <img src="avatar.jpg" alt="Shrinidhi">
+      <img src="avatar.jpg" alt="Shrinidhi" class="photo">
       <h1>Shrinidhi Holenarsipura Murali Madhava</h1>
-      <p class="contact">
-        Zi. 3524, Riedenkamp 9, 38108 Braunschweig, Germany • +49 (0)155 1045 2196<br>
-        <a href="mailto:shrinidhiaero@gmail.com">shrinidhiaero@gmail.com</a> • <a href="https://linkedin.com/in/shrinidhihm">LinkedIn</a>
-      </p>
+      <p class="contact">shrinidhiaero@gmail.com • +49 (0)155 1045 2196 • linkedin.com/in/shrinidhihm</p>
       <a href="index.html" class="back">← Back to Home</a>
     </header>
 
-    <section>
-      <h2>EDUCATION</h2>
-      <div class="entry">
-        <div class="title">Master of Science | Computational Sciences in Engineering</div>
-        <div class="date">Oct. 2022 – Present</div>
-        Technische Universität Braunschweig, Germany<br>
-        <i>Relevant Coursework:</i> Fluid Mechanics, Finite-Volume-Method, High Lift Aerodynamics, Fluid-Structure Interaction, Flow-Induced Vibrations, Multidisciplinary Design Optimization (MDO), Applied Topics in MDO, Thermodynamics & Statistics, Aerothermodynamics.
-      </div>
-      <div class="entry">
-        <div class="title">Summer School | Advanced Sustainable Aviation Technologies</div>
-        <div class="date">Aug. 2023</div>
-        Technische Universität Braunschweig<br>
-        Propulsion Systems, Advanced Aircraft Systems Engineering, Active Flow Control.
-      </div>
-      <div class="entry">
-        <div class="title">Bachelor of Engineering | Mechanical Engineering</div>
-        <div class="date">Aug. 2018 – June 2022</div>
-        Visvesvaraya Technological University, Mysuru, India
-      </div>
+    <section id="profile">
+      <h2>Personal Profile</h2>
+      <p>Master's student with a focus on aerodynamics, with hands-on experience in CFD, turbulence modeling, and simulation-driven design. Skilled in optimization and analysis of complex systems, motivated to apply theory to practical aerospace projects and deliver innovative solutions in interdisciplinary teams.</p>
     </section>
 
-    <section>
-      <h2>WORK EXPERIENCE</h2>
-      <!-- Paste all your HiWi roles and internship exactly as in your screenshot -->
+    <section id="education">
+      <h2>Education</h2>
       <div class="entry">
-        <div class="title">Research Assistant (HiWi) – Institut für Flugzeugbau und Leichtbau</div>
-        <div class="date">Mar. 2025 – Present</div>
+        <span class="date">Oct 2022 – Present</span>
+        <h3>Master of Science | Computational Sciences in Engineering</h3>
+        <p>Technische Universität Braunschweig, Germany</p>
         <ul>
-          <li>Contributing to the UNICADO framework: Python-based optimization loops with DoE and Surrogate Modelling</li>
-          <li>Extending WuFoil – integrating Gmsh, SU2, and ML-based airfoil optimization</li>
+          <li>Relevant Coursework: Fluid Mechanics, Finite-Volume-Method, High Lift Aerodynamics, Fluid-Structure Interaction, Flow-Induced Vibrations, Multidisciplinary Design Optimization (MDO), Applied Topics in MDO, Thermodynamics & Statistics, Aerothermodynamics.</li>
         </ul>
       </div>
-      <!-- Add the rest of your 5 roles the same way -->
-    </section>
-
-    <section>
-      <h2>PROJECTS</h2>
-      <!-- Add all 6 projects exactly as in your screenshot -->
       <div class="entry">
-        <div class="title">Aerodynamic Design of a Fowler Flap for a Hybrid Laminar Flow Control Airfoil</div>
-        <div class="date">Jan. 2025 – Apr. 2025</div>
+        <span class="date">Aug 2023</span>
+        <h3>Summer School | Advanced Sustainable Aviation Technologies</h3>
+        <p>Technische Universität Braunschweig, Germany</p>
         <ul>
-          <li>Achieved up to 4.5% gain in lift (C<sub>Lmax</sub>) using SU2 + PyAeroSweep</li>
-          <li>Mesh & parameter sensitivity studies, One-At-a-Time optimization</li>
+          <li>Relevant Coursework: Overall Aircraft Requirements, Aircraft Aerodynamics, Active Flow Control for Aircraft, Advanced Propulsion Systems, Advanced Systems Engineering.</li>
         </ul>
       </div>
-      <!-- Add the other 5 -->
+      <div class="entry">
+        <span class="date">Aug 2018 – Jun 2022</span>
+        <h3>Bachelor of Engineering | Mechanical Engineering</h3>
+        <p>Visvesvaraya Technological University, Mysuru, India</p>
+        <ul>
+          <li>Relevant Coursework: Fluid Mechanics, Heat Transfer, Basic & Advanced Thermodynamics, Engineering Graphics, Computer Aided Machine Drawing, Computer Aided Modelling and Analysis.</li>
+        </ul>
+      </div>
     </section>
 
-    <section>
-      <h2>SKILLS</h2>
-      <b>Languages:</b> English (Fluent), German (DSH-1/B2), Hindi (Fluent), Kannada (Native)<br>
-      <b>Programming:</b> Python, C & C++ (Basic), MATLAB & Simulink<br>
-      <b>CFD & Aerodynamics:</b> SU2, Ansys Fluent, XFLR5, Fidelity Pointwise<br>
-      <b>CAD:</b> SolidWorks (Certified), CATIA V5, OpenVSP<br>
-      <b>Tools:</b> Git, LaTeX, Linux, ParaView
+    <section id="work">
+      <h2>Work Experience</h2>
+      <div class="entry">
+        <span class="date">Mar 2025 – Present</span>
+        <h3>Research Assistant (HiWi)</h3>
+        <p>Technische Universität Braunschweig - Institut für Flugzeugbau und Leichtbau, Germany</p>
+        <ul>
+          <li>Contributing to the UNICADO - UNIversity Conceptual Aircraft Design and Optimization framework by supporting the testing and documentation of Python-based optimization loops leveraging Design of Experiments (DoE) and Surrogate Modelling techniques.</li>
+          <li>Extending WuFoil, a Python-based aerodynamic analysis tool integrating Gmsh, SU2, and ML-based airfoil shape optimization.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <span class="date">Jun 2024 – Feb 2025</span>
+        <h3>Research Assistant (HiWi)</h3>
+        <p>Technische Universität Braunschweig - Institut für Flugzeugbau und Leichtbau, Germany</p>
+        <ul>
+          <li>Supported the redevelopment of lecture materials for "Entwerfen von Verkehrsflugzeugen I," covering aircraft sizing, aerodynamics, performance, and cost estimation in early-stage aircraft design.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <span class="date">Dec 2024 – Jan 2025</span>
+        <h3>Research Assistant (HiWi)</h3>
+        <p>Technische Universität Braunschweig - Institut für Strömungsmechanik, Germany</p>
+        <ul>
+          <li>Assisted in setting up a droplet velocity and size measurement rig in the icing wind tunnel for optical characterization of multiphase flow.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <span class="date">Aug 2023 – Apr 2024</span>
+        <h3>Research Assistant (HiWi)</h3>
+        <p>Technische Universität Braunschweig - Institut für Flugzeugbau und Leichtbau, Germany</p>
+        <ul>
+          <li>Extended PyAeroSweep, a Python-based tool for aircraft analysis and conceptual design, by implementing Spalart–Allmaras and k-ω SST turbulence models for various high-lift configurations.</li>
+          <li>Enhanced automated mesh generation (structured and unstructured) and CFD simulation pipelines using Fidelity Pointwise and SU2 on Linux.</li>
+          <li>Authored technical documentation and supported integration of the tools into aircraft design studies.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <span class="date">Aug 2021 – Sep 2021</span>
+        <h3>Intern</h3>
+        <p>Hindustan Aeronautics Limited - Aerospace Division, India</p>
+        <ul>
+          <li>Gained exposure to satellite launch vehicle assembly, welding, CNC machining, tool design, quality control, and cross-departmental operations.</li>
+        </ul>
+      </div>
     </section>
 
-    <section>
-      <h2>VOLUNTEERING</h2>
-      Treasurer – Rotaract Club (2021–2022)<br>
-      Volunteer – NSS & Red Cross Youth Wing (2018–2022)
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="entry">
+        <span class="date">Jan 2025 – Apr 2025</span>
+        <h3>Aerodynamic Design of a Fowler Flap for a Hybrid Laminar Flow Control Airfoil</h3>
+        <p>Studienarbeit - in association with Sustainable and Energy-Efficient Aviation (SE²A) Cluster, Germany</p>
+        <ul>
+          <li>Designed and Optimized a Fowler flap for a hybrid laminar flow control (HLFC) airfoil using SU2 with the k-ω SST turbulence model and an automated Python-CFD workflow (PyAeroSweep), achieving up to 4.5% gain in lift (CLmax).</li>
+          <li>Conducted Mesh and Parameter sensitivity studies, and applied One-At-a-Time optimization to refine flap geometry for takeoff and landing conditions.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <span class="date">Jan 2025</span>
+        <h3>Developing Methodology for Model Fitting to be used in Fluid-Structure Coupled Problem</h3>
+        <p>Course Project - in association with Chair of Structural Analysis, TU München, Germany</p>
+        <ul>
+          <li>Modeled fluid–structure interaction of a slender beam in a wind tunnel using Kratos Multiphysics with velocity and deformation sensor data at two points.</li>
+          <li>Developed a system identification and optimization workflow to determine Young's modulus at multiple beam segments, evaluating coupling strategies (Gauss–Seidel, Jacobi) for accuracy and efficiency.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <span class="date">Oct 2021 – Jun 2022</span>
+        <h3>Design and Fabrication of Quad-Plane for All-Terrain applications</h3>
+        <p>Bachelor Thesis, India</p>
+        <ul>
+          <li>Led a team of four to design and fabricate a fixed-wing eVTOL UAV (1.2 m wingspan, 3 kg MTOW) optimized for medical supply delivery.</li>
+          <li>Performed initial aerodynamic design in XFLR5, CAD modeling in SolidWorks, and CFD-based aerodynamic optimization and structural validation in Ansys Workbench.</li>
+          <li>Designed and 3D-printed propeller ducts to enhance propulsion efficiency and safety.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <span class="date">Apr 2021 – Aug 2021</span>
+        <h3>Finite Element Analysis of an Aircraft Wing using Aluminium Alloys and CFRP materials</h3>
+        <p>Pre Final Year Thesis - Bachelor, India</p>
+        <ul>
+          <li>Led a four-person team performing numerical mesh generation, finite element analysis and simulation of an ATR 72-600 wing under takeoff and landing loads using SolidWorks, XFLR5, and Ansys Workbench.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <span class="date">Jun 2021 – Apr 2022</span>
+        <h3>SAE International - SAE Aero Design West 2022 - CA, USA - Vymanika</h3>
+        <p>SAE Aero Design, India</p>
+        <ul>
+          <li>Captain of a 14-member team, leading all project phases for an RC aircraft (1.2 m wingspan, 3 kg MTOW), including design, aerodynamic and structural analysis, simulation, fabrication, and competition.</li>
+          <li>Managed full-scale build and integration while performing CAD in SolidWorks, aerodynamic modeling in OpenVSP/XFLR5, CFD and FEA in Ansys Workbench.</li>
+          <li>Co-authored Technical Design Report and delivered Technical Presentation.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <span class="date">Apr 2021 – Jun 2021</span>
+        <h3>SAEINDIA - Aerothon 2021 - Virtual Aero Design Contest - Vymanika</h3>
+        <p>SAE Aero Design, India</p>
+        <ul>
+          <li>Captain of a seven-member team leading all aspects of UAV design, aerodynamic and structural analysis, simulation (5.28 m wingspan, 25 kg MTOW).</li>
+          <li>Lead CAD designer and aerodynamicist, developing designs in SolidWorks/XFLR5 and performing CFD & structural optimization in Ansys Workbench.</li>
+          <li>Contributed to design optimization and co-authored Technical Reports and delivered Technical Presentations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p><strong>Languages:</strong> English (Fluent), German (DSH-1/B2), Hindi (Fluent), Kannada (Native).</p>
+      <p><strong>Programming:</strong> Python, C & C++ (Basic), MATLAB & Simulink (Basic).</p>
+      <p><strong>Mesh Generation:</strong> Ansys Workbench (Mesh), Fidelity Pointwise.</p>
+      <p><strong>CFD & Aerodynamics:</strong> SU2, Ansys Fluent, XFLR5.</p>
+      <p><strong>CAD & Parametric Design:</strong> CATIA V5, SolidWorks (Certified Professional), 3DEXPERIENCE (Basic), OpenVSP.</p>
+      <p><strong>Post-processing & Visualization:</strong> Ansys CFD-Post, ParaView.</p>
+      <p><strong>Process Automation & Tools:</strong> Python scripting, MS Office Suite, Google Workspace, LaTeX, Git, Windows, Linux.</p>
+    </section>
+
+    <section id="volunteering">
+      <h2>Volunteering</h2>
+      <div class="entry">
+        <span class="date">Jul 2021 – Jun 2022</span>
+        <h3>Treasurer</h3>
+        <p>Rotaract Club of Vidyavardhaka College of Engineering, India</p>
+        <ul>
+          <li>Coordinated events and awareness campaigns on entrepreneurship, mental health, and other community initiatives.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <span class="date">Dec 2018 – Jul 2022</span>
+        <h3>Volunteer</h3>
+        <p>NSS and Red Cross Youth Wing, India</p>
+        <ul>
+          <li>Coordinated outreach activities in needy villages, including surveys, awareness campaigns, and empowerment initiatives.</li>
+        </ul>
+      </div>
     </section>
   </div>
 </body>
