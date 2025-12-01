@@ -8,7 +8,6 @@
     <meta name="description" content="Curriculum Vitae of Shrinidhi Holenarsipura Murali Madhava" />
     <meta name="author" content="Shrinidhi Holenarsipura Murali Madhava" />
 
-    <!-- Styles -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -18,7 +17,6 @@
     <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
 </head>
 <body>
-
 <div class="fh5co-loader"></div>
 <div id="page">
 
@@ -33,7 +31,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="work.html">Work</a></li>
                     <li><a href="play.html">Play</a></li>
-                    <li><a href="cv.html">CV</a></li>
+                    <li class="active"><a href="cv.html">CV</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -47,13 +45,13 @@
         </div>
     </nav>
 
-    <!-- CV Page Content -->
-    <div id="fh5co-work" class="fh5co-light-grey">
+    <!-- CV Content -->
+    <div id="fh5co-work" style="padding:80px 0; background:#f8f9fa;">
         <div class="container">
             <div class="row animate-box">
                 <div class="col-md-10 col-md-offset-1 text-center fh5co-heading">
                     <h2>Curriculum Vitae</h2>
-                    <a href="CV_Shrinidhi_Holenarsipura" download class="btn btn-primary btn-lg" style="margin:20px 0;">
+                    <a href="CV_Shrinidhi_Holenarsipura.pdf" download class="btn btn-primary btn-lg" style="margin:30px 0; padding:12px 40px; font-size:18px;">
                         Download CV as PDF
                     </a>
                 </div>
@@ -62,43 +60,74 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="row">
-                        <!-- Photo + Contact Info -->
+
+                        <!-- Left Column: Photo + Header -->
                         <div class="col-md-4 text-center animate-box">
-                            <img src="images/Shrinidhi.jpg" alt="Shrinidhi" class="img-responsive" style="border-radius:50%; width:250px; margin:0 auto; border:5px solid #fff; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
-                            <h3 style="margin-top:30px;">Shrinidhi Holenarsipura Murali Madhava</h3>
-                            <p>
+                            <div style="width:220px; height:220px; border-radius:50%; overflow:hidden; margin:0 auto 30px; border:8px solid white; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+                                <img src="images/Shrinidhi.jpg" alt="Shrinidhi" style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <h3 style="font-size:26px; margin-bottom:5px;">SHRINIDHI</h3>
+                            <h4 style="font-size:18px; color:#555; margin-top:0;">Holenarsipura Murali Madhava</h4>
+                            <p style="line-height:1.8; font-size:15px;">
                                 ZI. 3524, RiedenKamp 9, 38108 Braunschweig, Germany<br>
-                                DOB: 01 Apr 2000 | Indian Nationality<br>
+                                DoB: 01 Apr 2000<br>
+                                Nationality: Indian<br>
                                 (+49) 0155 1045 2146<br>
                                 <a href="mailto:shrinidhiaero@gmail.com">shrinidhiaero@gmail.com</a><br>
                                 <a href="https://linkedin.com/in/shrinidhihm">linkedin.com/in/shrinidhihm</a>
                             </p>
                         </div>
 
-                        <!-- Main CV Content -->
+                        <!-- Right Column: Full CV Content -->
                         <div class="col-md-8 animate-box">
-                            <h3>Personal Profile</h3>
+                            <h3 style="border-bottom:2px solid #333; padding-bottom:8px; margin-bottom:20px;">PERSONAL PROFILE</h3>
                             <p>Master’s student with a focus on aerodynamics, with hands-on experience in CFD, turbulence modeling, and simulation-driven design. Skilled in optimization and analysis of complex systems, motivated to apply theory to practical aerospace projects and deliver innovative solutions in interdisciplinary teams.</p>
 
-                            <h3>Education</h3>
-                            <ul class="cv-list">
-                                <li><strong>Master of Science | Computational Sciences in Engineering</strong><br>TU Braunschweig, Germany <span class="pull-right">Oct 2022 – Present</span></li>
-                                <li><strong>Bachelor of Engineering | Mechanical Engineering</strong><br>Vishvesvaraya Technological University, Mysuru, India <span class="pull-right">Aug 2018 – June 2022</span></li>
-                            </ul>
+                            <h3 style="border-bottom:2px solid #333; padding-bottom:8px; margin:35px 0 20px;">EDUCATION</h3>
+                            <p><strong>Master of Science | Computational Sciences in Engineering</strong><br>
+                               Technische Universität Braunschweig, Germany<br>
+                               <em>Relevant Coursework:</em> Fluid Mechanics, Finite-Volume-Method, High Lift Aerodynamics, Fluid-Structure Interaction, Flow-Induced Vibrations, Multidisciplinary Design Optimization (MDO), Applied Topics in MDO, Thermodynamics & Statistics, Aerothermodynamics<br>
+                               <span class="pull-right"><strong>Oct 2022 – Present</strong></span></p>
 
-                            <h3>Work Experience & Research</h3>
-                            <ul class="cv-list">
-                                <li><strong>Research Assistant (HiWi)</strong> – Institut für Flugzeugbau und Leichtbau<br>UNICADO: University Conceptual Aircraft Design & Optimization framework • Python-based tool development<br><span class="pull-right">Mar 2025 – Present</span></li>
-                                <li><strong>Research Assistant (HiWi)</strong> – Institut für Flugzeugbau und Leichtbau<br>Extended WuFoil: ML-based aerodynamic analysis tool (Gmsh, SU2, PyTorch)<br><span class="pull-right">June 2024 – Feb 2025</span></li>
-                                <li><strong>Research Assistant (HiWi)</strong> – Institut für Strömungsmechanik<br>Early-stage aircraft design cost estimation in Verkehrsflugzeugen I<br><span class="pull-right">Dec 2024 – Jan 2025</span></li>
-                                <li><strong>Research Assistant (HiWi)</strong> – Institut für Flugzeugbau und Leichtbau<br>Extended PyAeroSweep: High-lift & FSI analysis tool<br><span class="pull-right">Aug 2023 – Apr 2024</span></li>
-                                <li><strong>Intern</strong> – Hindustan Aeronautics Limited (Aircraft Division)<br>Gained exposure to satellite launch vehicle assembly, CNC machining quality control<br><span class="pull-right">Aug 2021 – Sept 2021</span></li>
-                            </ul>
+                            <p><strong>Bachelor of Engineering | Mechanical Engineering</strong><br>
+                               Visvesvaraya Technological University, Mysuru, India<br>
+                               <em>Relevant Coursework:</em> Fluid Mechanics, Heat Transfer, Basic & Advanced Thermodynamics, Engineering Graphics, Computer Aided Machine Drawing, Computer Aided Modelling and Analysis<br>
+                               <span class="pull-right"><strong>Aug 2018 – June 2022</strong></span></p>
 
-                            <h3>Skills</h3>
-                            <p><strong>Languages:</strong> Python, MATLAB, C++, LaTeX<br>
-                               <strong>Tools:</strong> ANSYS Fluent, OpenFOAM, SU2, Gmsh, Fidelity, Pointwise, SolidWorks, CATIA<br>
-                               <strong>Other:</strong> CFD, Turbulence Modeling, High-Lift Aerodynamics, MDO, FSI, Optimization</p>
+                            <h3 style="border-bottom:2px solid #333; padding-bottom:8px; margin:35px 0 20px;">WORK EXPERIENCE</h3>
+
+                            <p><strong>Research Assistant (HiWi)</strong> – Institut für Flugzeugbau und Leichtbau<br>
+                               <strong>Technische Universität Braunschweig, Germany</strong><br>
+                               • Contributing to the UNICADO - University Conceptual Aircraft Design and Optimization framework by supporting the testing and documentation of Python-based optimization loops leveraging Design of Experiments (DoE) and Surrogate Modelling techniques.<br>
+                               • Extending WuFoil, a Python-based aerodynamic analysis tool integrating Gmsh, SU2, and ML-based airfoil shape optimization.<br>
+                               <span class="pull-right"><strong>Mar 2025 – Present</strong></span></p>
+
+                            <p><strong>Research Assistant (HiWi)</strong> – Institut für Flugzeugbau und Leichtbau<br>
+                               <strong>Technische Universität Braunschweig, Germany</strong><br>
+                               • Supported the redevelopment of lecture materials for “Entwerfen von Verkehrsflugzeugen I”, covering aircraft sizing, aerodynamics, performance, and cost estimation in early-stage aircraft design.<br>
+                               <span class="pull-right"><strong>June 2024 – Feb 2025</strong></span></p>
+
+                            <p><strong>Research Assistant (HiWi)</strong> – Institut für Strömungsmechanik<br>
+                               <strong>Technische Universität Braunschweig, Germany</strong><br>
+                               • Assisted in setting up a droplet velocity and size measurement rig in the icing wind tunnel for optical characterization of multiphase flow.<br>
+                               <span class="pull-right"><strong>Dec 2024 – Jan 2025</strong></span></p>
+
+                            <p><strong>Research Assistant (HiWi)</strong> – Institut für Flugzeugbau und Leichtbau<br>
+                               <strong>Technische Universität Braunschweig, Germany</strong><br>
+                               • Extended PyAeroSweep, a Python-based tool for aircraft analysis and conceptual design, by implementing Spalart–Allmaras and k–ω SST turbulence models for various high-lift configurations.<br>
+                               • Enhanced automated mesh generation (structured and unstructured) and CFD simulation pipelines using Fidelity Pointwise and SU2 on Linux.<br>
+                               • Authored technical documentation and supported integration of the tools into aircraft design studies.<br>
+                               <span class="pull-right"><strong>Aug 2023 – Apr 2024</strong></span></p>
+
+                            <p><strong>Intern</strong> – Hindustan Aeronautics Limited – Aerospace Division<br>
+                               Bangalore, India<br>
+                               • Gained exposure to satellite launch vehicle assembly, welding, CNC machining, tool design, quality control, and cross-departmental operations.<br>
+                               <span class="pull-right"><strong>Aug 2021 – Sept 2021</strong></span></p>
+
+                            <h3 style="border-bottom:2px solid #333; padding-bottom:8px; margin:35px 0 20px;">SKILLS</h3>
+                            <p><strong>Programming & Scripting:</strong> Python (NumPy, Pandas, Matplotlib, Scikit-learn), MATLAB, C++, LaTeX<br>
+                               <strong>Engineering Software:</strong> ANSYS Fluent, OpenFOAM, SU2, Gmsh, Fidelity Pointwise, Pointwise, SolidWorks, CATIA V5<br>
+                               <strong>Domains:</strong> Computational Fluid Dynamics (CFD), Turbulence Modeling, High-Lift Aerodynamics, Multidisciplinary Design Optimization (MDO), Fluid-Structure Interaction (FSI), Aerodynamic Shape Optimization, Mesh Generation, Linux/Unix Systems</p>
                         </div>
                     </div>
                 </div>
