@@ -3,53 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Sahil Shah Clone</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div id="container">
-        <aside id="sidebar">
-            <div class="profile-container">
-                <img src="https://via.placeholder.com/150" alt="Profile Photo" class="profile-img">
-                <h1 class="name">Your Name</h1>
-                <p class="tagline">Designer & Engineer</p>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">SAHIL SHAH</a>
+        </div>
+        <div class="nav-center">
+            <a href="#">WORK</a>
+            <a href="#">PLAY</a>
+            <a href="#">CONTACT</a>
+        </div>
+        <div class="nav-right">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <h1 class="page-title">A LITTLE ABOUT ME</h1>
+
+        <div class="bio-section">
+            <div class="bio-image">
+                <img src="https://via.placeholder.com/400" alt="Profile Photo">
             </div>
 
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Play</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="bio-text">
+                <h2 class="sub-title">DESIGNER & ENGINEER</h2>
+                
+                <p>I am a Mechanical Engineering graduate student at MIT with a healthy obsession for designing and making things.</p>
+                
+                <p>After receiving my undergraduate degree from the University of Alberta, I worked briefly as a Computational Fluid Dynamics (CFD) consultant before returning to graduate school to pursue my love for design and prototyping.</p>
+                
+                <p>Stationed at the GEAR Lab, I now design, prototype, and test scalable technology for resource-constrained communities. My specific research is focused on the development of efficient desalination solutions for drinking water production in India.</p>
 
-            <div class="footer-info">
-                <p>&copy; 2025 Your Name</p>
+                <div class="bio-socials">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-        </aside>
+        </div>
+    </main>
 
-        <main id="content">
-            <div class="hero">
-                <img src="https://source.unsplash.com/random/1200x600/?technology" alt="Hero Image">
-            </div>
-
-            <div class="content-body">
-                <h2>A little about me</h2>
-                <p class="intro-text">
-                    I am a graduate student with a healthy obsession for designing and making things.
-                </p>
-                <p>
-                    Stationed at the lab, I now design, prototype, and test scalable technology. 
-                    My specific research is focused on efficient solutions for the real world.
-                </p>
-                <br>
-                <p>This is where you write your bio, just like Sahil did.</p>
-            </div>
-        </main>
-    </div>
+    <footer>
+        <p>&copy; Copyright, Sahil Shah 2017</p>
+        <p class="small">Please refrain from using or reproducing any of the website's content without first requesting my approval.</p>
+        <p class="small">This website was designed using a template which was adopted from FreeHTML5.co and modified for my specific use.</p>
+    </footer>
 
 </body>
 </html>
