@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET & FONTS */
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +6,17 @@
 }
 
 body {
-    font-family: 'Karla', sans-serif;
-    color: #444; /* Dark grey text like the image */
+    font-family: 'Karla', sans-serif; /* Clean sans-serif look */
+    color: #444; 
     background-color: #fff;
-    line-height: 1.8; /* Lots of breathing room for text */
+    line-height: 1.8;
 }
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+/* Font Awesome for social icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
 
 a {
     text-decoration: none;
@@ -22,16 +28,16 @@ a:hover {
     color: #888;
 }
 
-/* 1. NAVBAR STYLING */
+/* 1. NAVBAR STYLING (Sticky Top Bar) */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 60px; /* Tall padding like the screenshot */
+    padding: 40px 60px; 
     background-color: #f2f2f2; /* Light grey header background */
     font-size: 14px;
     letter-spacing: 1px;
-    font-weight: 700; /* Bold text */
+    font-weight: 700; 
     text-transform: uppercase;
 }
 
@@ -47,11 +53,11 @@ a:hover {
 
 .nav-right a {
     margin-left: 15px;
-    font-size: 18px; /* Slightly larger icons */
+    font-size: 18px; 
     color: #888;
 }
 
-/* 2. MAIN LAYOUT */
+/* 2. CORE LAYOUT */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -63,16 +69,16 @@ a:hover {
     font-size: 32px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 80px; /* Big gap between title and bio */
+    margin-bottom: 80px; 
     letter-spacing: 1px;
     color: #000;
 }
 
-/* 3. BIO SECTION (Grid) */
+/* 3. HOME PAGE (About Section) */
 .bio-section {
     display: flex;
     justify-content: center;
-    gap: 60px; /* Space between image and text */
+    gap: 60px; 
 }
 
 .bio-image img {
@@ -82,7 +88,7 @@ a:hover {
 }
 
 .bio-text {
-    max-width: 500px; /* Keeps line length readable */
+    max-width: 500px;
 }
 
 .sub-title {
@@ -90,7 +96,7 @@ a:hover {
     color: #888;
     letter-spacing: 2px;
     margin-bottom: 30px;
-    font-weight: 400; /* Not too bold */
+    font-weight: 400; 
     text-transform: uppercase;
 }
 
@@ -105,19 +111,112 @@ a:hover {
 }
 
 .bio-socials a {
-    color: #bbb; /* Very light grey icons in the body */
+    color: #bbb;
     font-size: 20px;
     margin-right: 15px;
 }
 
-/* 4. FOOTER */
+/* 4. GALLERY PAGES (WORK/PLAY) */
+.gallery {
+    display: grid;
+    /* 3 columns on desktop, exactly like the video */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hover effect from the video */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* 5. CONTACT PAGE */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+}
+
+.contact-info {
+    padding-top: 20px;
+}
+
+.contact-info h3 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #000;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* 6. FOOTER */
 footer {
-    background-color: #f2f2f2; /* Same grey as header */
+    background-color: #f2f2f2; 
     text-align: center;
     padding: 60px 20px;
     font-size: 12px;
     color: #777;
-    margin-top: 100px; /* Pushes footer down */
+    margin-top: 100px; 
 }
 
 footer p {
@@ -137,13 +236,26 @@ footer p {
         padding: 20px;
     }
 
+    .nav-center {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .bio-section {
-        flex-direction: column; /* Stack image on top of text */
+        flex-direction: column; 
         align-items: center;
-        text-align: center;
     }
 
     .bio-text {
-        text-align: left; /* Keep text left-aligned for readability */
+        text-align: left; 
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile/tablet */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack contact info and form */
     }
 }
