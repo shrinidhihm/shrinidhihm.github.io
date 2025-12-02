@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133665844-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-133665844-1');
+        </script>
+        
+        <!-- META DATA -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sahil's Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Sahil Shah's Online Portfolio" />
+        <meta name="keywords" content="Sahil, Sahil Shah, MIT, Alberta, Massachusetts Institute of Technology, Product Design, Machine Design, Mechanical, Engineering" />
+        <meta name="author" content="Sahil Shah" />
+
+
+	   <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+	   <!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
+	
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Icomoon Icon Fonts-->
+        <link rel="stylesheet" href="css/icomoon.css">
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Modernizr JS -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+	</head>
+    
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+
+    <!-- Navigation Bar-->
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="fh5co-top-logo">
+				<div id="fh5co-logo"><a href="index.html">Sahil Shah</a></div>
+			</div>
+			<div class="fh5co-top-menu menu-1 text-center">
+				<ul>
+                    <li><a href="work.html">Work</a></li>
+					<li><a href="play.html">Play</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div class="fh5co-top-social menu-1 text-right">
+				<ul class="fh5co-social">
+					<li><a href="https://github.com/sahils713"><i class="icon-github"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/sahil-shah-0126bb39/"><i class="icon-linkedin"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+    <!-- Content -->
+	<div id="fh5co-author">
+		<div class="container">
+            <!-- Project Summary -->
+			<div class="row top-line animate-box">
+                <div class="col-md-4 col-md-offset-1">
+                <p class="animate-box"><img src="images/sprinklerCFD.jpg" class="img-responsive" alt="Free HTML5 Template by FreeHTML5.co"></p>
+                </div>
+				<div class="col-md-6 text-left fh5co-heading">
+					<h2>Explosion Mitigation Using Water Curtains</h2>
+					<p>I developed and validated a CFD model to capture air-entrainment caused by water spray curtains and study their effect on the dispersion of heavy gases. The purpose of this model was to assist with the design of fire and explosion mitigation systems for gas and chemical processing plants.</p>
+                    
+                    <p>This work was presented at the Mary Kay O'Connor Symposium for Process Safety in 2014.</p>
+					
+                    <div class= "row">
+                        <div class="role col-md-6">
+                            <h3>Contributions</h3>
+                            <ul>
+                                <li>Research</li>
+                                <li>Simulation</li>
+                                <li>Analysis</li>
+                            </ul>
+                        </div>
+
+                        <div class="role col-md-6">
+                            <h3>Collaborators</h3>
+                            <ul>
+                                <li>Bharat Tulsyan</li>
+                            </ul>
+                        </div>
+                    </div>
+
+					<p><a href="files/Using Multi-physics CFD to Model Water Spray Curtain.pdf" class="btn btn-primary">See Presentation</a></p>
+				</div>
+			</div>
+            
+            <!-- WORK -->
+            
+            <!-- Motivation -->
+			<div class="row info-block">
+				<div class="col-md-10 col-md-offset-1">
+                    <div class="row">
+                        <div class="col-md-12 "animate-box"">
+                        <h3>Motivation</h3>
+                        <p>The release of dense gases presents a high risk of fire and explosion because they spread on the ground where they are less affected by dispersion by winds. The <a href="https://www.youtube.com/watch?v=csX1UCb3Kd0">Buncefield Vapour Explosion of 2005</a>, considered to be the largest explosion in Europe since the end World War II (BBC), was caused by the spread of such a gas-cloud to a diameter of ~360 m (COMAH, UK).</p>
+
+                        <p>Deluge or water curtain systems have been proposed as an effective means for entraining air and causing forced mechanical dispersion of the gas-cloud. </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 animate-box">
+                            <img class="block-image" src="images/water_curtain/beforeCurtain.jpg">
+                        </div>
+                        <div class="col-md-6 animate-box">
+                            <img class="block-image" src="images/water_curtain/afterCurtain.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Methods -->
+            <div class="row info-block">
+				<div class="col-md-10 col-md-offset-1">
+                    <div class="col-md-7 animate-box">
+                        <h3>Methods</h3>
+                        <p>We analyzed how effectively Eulerian-Lagrangian Multiphase CFD could predict the dilution capability of water curtains and compared it to experimental results. The gas mixture and air was represented by the Eulerian phase, while the water droplets were represented by the Lagrangian Phase.</p>
+                        
+                        <p>The CFD model was developed using CD-Adapco's Starm CCM+. The geometry of the experimental set-up used by Hald (2005) was replicated.  For each simulation, the ratio of the momentum between the water flow from the spray curtain to the momentum of the gas cloud (RM) was varied. The ratio of the average gas-cloud concentration before and after the spray-curtain, known as the dilution factor (FD), was measured.</p>
+                    </div>
+                    <div class="col-md-5 animate-box">
+                        <img class="block-image" src=images/water_curtain/CFDmesh.jpg>
+                    </div>
+                </div>
+            </div>
+                        
+            <!-- Results -->
+            <div class="info-block">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-4 animate-box">
+                            <h3>Results</h3>
+                            <p>CFD was found to over-predict the dilution factor (FD) but captured the relationship with the momentum ratio (RM) well. More importantly, the transition in the behaviour from low RM to high RM (at RM = ~3) was also captured by the model.</p>
+                            
+                            <p>A visual comparison of the CFD results to Hald's experiment also indicated good agreement between the modelled and actual interaction between the gas cloud and the water spray curtain.</p>
+                        </div>
+                        <div class="col-md-8">
+                            <br>
+                            <img src ="images/water_curtain/waterCurtainPlot.jpg" class="block-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                            <div class="col-md-6">
+                                <img src ="images/water_curtain/RM2_comparison.jpg" class="block-image">
+                            </div>
+                            <div class="col-md-6">
+                                <img src ="images/water_curtain/RM10_comparison.jpg" class="block-image">
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row info-block">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row row-pt-md portfolio-navigation">
+						<div class="col-xs-4 text-left">
+							<a href="rc_cars.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Prev </a>
+						</div>
+						<div class="col-xs-4 text-center">
+							<a href="work.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> View All</a>
+						</div>
+						<div class="col-xs-4 text-right">
+							<a href="perturbation_device.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+                    
+        <!-- FOOTER -->
+        <footer id="fh5co-footer" role="contentinfo">
+            <div class="container">
+                <div class="row copyright">
+                    <div class="col-md-12 text-center">
+                        <p>
+                            <small class="block">&copy;Sahil Shah, 2019</small>
+                            <small>Please refrain from using or reproduce any of the website's content without first requesting my approval.</small> 
+                            <small class="block">This website was designed using a template which was adopted from <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> and modified for my specific use.</small>
+                        </p>
+
+                        <ul class="fh5co-social">
+					       <li><a href="https://github.com/sahils713"><i class="icon-github"></i></a></li>
+					       <li><a href="www.linkedin.com/in/sahil-shah-0126bb39"><i class="icon-linkedin"></i></a></li>
+				        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+    
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+        
+
+    
+	</body>
+</html>
+
