@@ -1,32 +1,50 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <!-- Google Analytics & Meta (unchanged) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7DQBCSFZ40"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7DQBCSFZ40');</script>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fowler Flap for HLFC Airfoil – Shrinidhi Holenarsipura</title>
-    <meta name="description" content="Studienarbeit 2025: Aerodynamic optimization of a Fowler flap for HLFC airfoil – +4.56% CLmax">
-    <meta name="keywords" content="Fowler Flap, HLFC, CFD, PyAeroSweep, SU2, TU Braunschweig, SE2A">
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7DQBCSFZ40"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7DQBCSFZ40');
+        </script>
+       
+        <!-- META DATA -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Aerodynamic Design of a Fowler Flap – Shrinidhi Holenarsipura</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Aerodynamic optimization of a Fowler flap for an HLFC airfoil using CFD – Shrinidhi Holenarsipura" />
+        <meta name="keywords" content="Shrinidhi, Fowler Flap, HLFC Airfoil, Aerodynamics, CFD, Optimization, TU Braunschweig" />
+        <meta name="author" content="Shrinidhi Holenarsipura Murali Madhava" />
 
-    <link rel="stylesheet" href="../css/animate.css">
-    <link rel="stylesheet" href="../css/icomoon.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+        <!-- Styles -->
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/icomoon.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <script src="../js/modernizr-2.6.2.min.js"></script>
 </head>
-
+   
 <body>
 <div class="fh5co-loader"></div>
 <div id="page">
 
-    <!-- Navigation (unchanged) -->
+    <!-- Navigation -->
     <nav class="fh5co-nav" role="navigation">
         <div class="container">
-            <div class="fh5co-top-logo"><div id="fh5co-logo"><a href="../index.html">Shrinidhi Holenarsipura</a></div></div>
+            <div class="fh5co-top-logo">
+                <div id="fh5co-logo"><a href="../index.html">Shrinidhi Holenarsipura</a></div>
+            </div>
             <div class="fh5co-top-menu menu-1 text-center">
-                <ul><li><a href="../work.html">Work</a></li><li><a href="../play.html">Play</a></li><li><a href="../cv.html">CV</a></li><li><a href="../contact.html">Contact</a></li></ul>
+                <ul>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../play.html">Play</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
             </div>
             <div class="fh5co-top-social menu-1 text-right">
                 <ul class="fh5co-social">
@@ -38,91 +56,143 @@
         </div>
     </nav>
 
+    <!-- Content -->
     <div id="fh5co-author">
         <div class="container">
 
-            <!-- BIG, BEAUTIFUL, CENTERED HERO -->
-            <div class="row top-line animate-box">
-                <div class="col-md-10 col-md-offset-1 text-center">
-                    <img src="../images/studienarbeit/title_page_official.jpg" 
-                         class="img-responsive center-block" 
-                         style="max-width: 100%; height: auto; margin: 40px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.2); border-radius: 6px;"
-                         alt="Studienarbeit 2025 – Aerodynamic Design of a Fowler Flap for a HLFC Airfoil">
+            <!-- Project Summary -->
+                <div class="row top-line animate-box">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                        <img src="../images/studienarbeit/Flap_15_no_grid_and_gradient_With_Legends.png" 
+                            class="img-responsive center-block" 
+                            style="max-width: 100%; height: auto; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);"
+                            alt="Studienarbeit 2025 – Aerodynamic Design of a Fowler Flap for a HLFC Airfoil">
+                    </div>
                 </div>
-            </div>
-
-            <!-- PROJECT SUMMARY – now properly centered below hero -->
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                    <h2>Aerodynamic Design of a Fowler Flap<br>for a Hybrid Laminar Flow Control Airfoil</h2>
-                    <p class="lead">Studienarbeit ⋅ TU Braunschweig ⋅ April 2025</p>
-                    <p>Manual optimization using PyAeroSweep and SU2. Over 1000 steady RANS simulations resulted in <strong>+4.14 % C<sub>L,max</sub></strong> (15°) and <strong>+4.56 % C<sub>L,max</sub></strong> (30°) compared to baseline.</p>
+                <div class="col-md-6 text-left fh5co-heading">
+                    <h2>Aerodynamic Design of a Fowler Flap for a Hybrid Laminar Flow Control Airfoil</h2>
+                    <p>Studienarbeit project focused on maximizing lift (CLmax) for a Fowler flap on an HLFC airfoil at 15° (takeoff) and 30° (landing) deflections. Conducted 1000+ CFD runs with manual OAT optimization, achieving 4.14% and 4.56% improvements in CLmax.</p>
                     
-                    <p>Supervised by <strong>Prof. Dr.-Ing. Ingo Staack</strong> and <strong>Dr.-Ing. Stanislav Karpuk</strong><br>Institute of Aircraft Design and Lightweight Structures (IFL) ⋅ SE²A Cluster of Excellence</p>
+                    <p>Supervised by Prof. Dr.-Ing. Ingo Staack and Dr.-Ing. Stanislav Karpuk at IFL, TU Braunschweig, as part of SE2A Cluster of Excellence. Issued Dec 2024, submitted April 2025.</p>
 
-                    <div class="row" style="margin-top: 30px;">
-                        <div class="col-md-6">
-                            <h4>Role</h4>
-                            <ul class="list-unstyled">
-                                <li>PyAeroSweep automation</li>
-                                <li>Mesh & parameter studies</li>
-                                <li>OAT optimization</li>
-                                <li>Flow analysis</li>
+                    <div class="row">
+                        <div class="role col-md-6">
+                            <h3>My Role</h3>
+                            <ul>
+                                <li>Adapted PyAeroSweep framework for airfoil CFD</li>
+                                <li>Mesh & parameter sensitivity studies</li>
+                                <li>OAT optimization (10 parameters)</li>
+                                <li>Flow visualization & analysis</li>
+                                <li>Comparative evaluation of designs</li>
                             </ul>
                         </div>
-                        <div class="col-md-6">
-                            <h4>Tools</h4>
-                            <ul class="list-unstyled">
-                                <li>Python ⋅ PyAeroSweep</li>
-                                <li>Fidelity Pointwise</li>
-                                <li>SU2 (RANS k-ω SST)</li>
-                                <li>ParaView ⋅ Excel</li>
+                        <div class="role col-md-6">
+                            <h3>Tools & Methods</h3>
+                            <ul>
+                                <li>PyAeroSweep (Python framework)</li>
+                                <li>Fidelity Pointwise (meshing)</li>
+                                <li>SU2 (CFD with RANS k-ω SST)</li>
+                                <li>ParaView & Excel (post-processing)</li>
+                                <li>PARSEC parameterization</li>
                             </ul>
                         </div>
                     </div>
 
-                    <p style="margin-top: 30px;">
-                        <a href="../files/5304013_Studienarbeit_2025.pdf" class="btn btn-primary btn-lg">Full Report (78 pages)</a>
-                        <a href="../files/Aerodynamic_Design_of_a_Fowler_Flap.pptx" class="btn btn-primary btn-lg">Presentation</a>
+                    <p>
+                        <a href="../files/5304013_Studienarbeit_2025.pdf" class="btn btn-primary">Full Report</a>
+                        <a href="../files/Aerodynamic_Design_of_a_Fowler_Flap.pptx" class="btn btn-primary">Presentation</a>
+                        <a href="https://github.com/stankarpuk93/PyAeroSweep" target="_blank" class="btn btn-primary">GitHub Repo</a>
                     </p>
                 </div>
             </div>
 
-            <!-- MOTIVATION + CITED IMAGE -->
-            <div class="row info-block animate-box">
+            <!-- Motivation -->
+            <div class="row info-block">
                 <div class="col-md-10 col-md-offset-1">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <h3>Motivation</h3>
-                            <p>High-lift devices are critical for safe takeoff and landing. This work contributes to sustainable aviation by improving high-lift performance on next-generation HLFC wings (EU Flightpath 2050 goals).</p>
-                        </div>
-                        <div class="col-md-5">
-                            <img src="../images/studienarbeit/High_Lift_Graph_Jochen_Wild.png" class="img-responsive" style="max-width: 95%;">
-                            <p style="font-size: 13px; color: #666; margin-top: 10px; text-align: center;">
-                                Effect of high-lift devices on C<sub>L</sub> vs α<br>
-                                <em>Source: J. Wild, “High-Lift Aerodynamics”, CRC Press, 2022</em>
-                            </p>
-                        </div>
+                    <div class="col-md-7 animate-box">
+                        <h3>Motivation</h3>
+                        <p>Driven by EU Flightpath 2050 goals for 75% CO2 reduction per passenger-km and 90% NOx cut. High-lift devices like Fowler flaps are essential for low-speed phases, increasing CLmax by up to 100%. This project optimizes flap design for an HLFC airfoil to enhance efficiency and sustainability.</p>
+                    </div>
+                    <div class="col-md-5 animate-box">
+                        <img class="block-image img-responsive" 
+                            src="../images/studienarbeit/High_Lift_Graph_Jochen_Wild.png" 
+                            alt="Effect of high-lift devices on lift coefficient vs angle of attack">
+                        <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                            Effect of high-lift devices on C<sub>L</sub> vs α<br>
+                            <em>Source: J. Wild, “High-Lift Aerodynamics”, CRC Press, 2022</em>
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- REST OF YOUR CONTENT – images scaled down slightly for mobile -->
-            <div class="row info-block animate-box">
-                <div class="col-md-10 col-md-offset-1">
-                    <h3 class="text-center">Key Results</h3>
-                    <img src="../images/studienarbeit/Cl_vs_alpha_30.png" class="img-responsive center-block" style="max-width: 90%; margin: 20px 0;">
-                    <img src="../images/studienarbeit/eddy_viscosity_comparison.jpg" class="img-responsive center-block" style="max-width: 90%; margin: 20px 0;">
+            <!-- Methodology -->
+            <div class="row info-block">
+                <div class="col-md-5 col-md-offset-1 animate-box">
+                    <h3>Methodology</h3>
+                    <p>Adapted PyAeroSweep for automated geometry (PARSEC), meshing (Pointwise hybrid unstructured with T-Rex for boundary layers), CFD (SU2 steady RANS k-ω SST), and post-processing. Focused on flap parameterization with gaps (x_gap, y_gap) for slot flow optimization.</p>
+                    <img class="block-image" src="../images/studienarbeit/PyAeroSweep.png" alt="PyAeroSweep framework workflow">
                 </div>
             </div>
 
-            <!-- Navigation -->
+            <!-- Trade Studies -->
+            <div class="row info-block">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="col-md-4 animate-box">
+                        <h3>Mesh Sensitivity</h3>
+                        <p>Tested coarse, baseline, fine meshes. Baseline (112k cells) chosen for 0.27% CLmax difference vs fine, balancing accuracy and cost.</p>
+                    </div>
+                    <div class="col-md-4 animate-box">
+                        <img class="block-image" src="../images/studienarbeit/Mesh_Sensivity_CLmax_vs_No_of_Cells.png" alt="Mesh refinement vs CLmax">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-1 animate-box">
+                    <h3>Parameter Sensitivity</h3>
+                    <p>OAT optimization of 10 parameters across α sweeps. x_gap & y_gap most sensitive; optimized to 0.75% & 1.97% of chord for better slot flow and separation delay.</p>
+                </div>
+                    <div class="col-md-4 animate-box">
+                        <img class="block-image" src="../images/studienarbeit/Strategy.png" alt="Parameter Sensitivity Study - Strategy">
+                    </div>
+            </div>
+
+            <!-- Results -->
+            <div class="row info-block">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="col-md-4 animate-box">
+                        <h3>Key Improvements</h3>
+                        <p>CLmax increased by 4.14% at 15° deflection and 4.56% at 30°. Better L/D at low α; reduced separation via optimized gaps/shapes.</p>
+                    </div>
+                    <div class="col-md-6 animate-box">
+                        <img class="block-image" src="../images/studienarbeit/Cl_vs_alpha_30.png" alt="CL vs α at 30° deflection">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-1 animate-box">
+                    <img class="block-image" src="../images/fowler/eddy_viscosity_comparison.jpg" alt="Eddy viscosity baseline vs optimized">
+                </div>
+            </div>
+
+            <!-- Summary & Acknowledgments -->
+            <div class="row info-block">
+                <div class="col-md-10 col-md-offset-1 animate-box">
+                    <h3>Summary</h3>
+                    <p>1000+ CFD runs yielded optimized flap with cleaner channel flow, delayed separation, and higher CLmax. Foundation for URANS and automated (SBO) optimization in future work.</p>
+                    <h3>Acknowledgments</h3>
+                    <p>Thanks to supervisors Prof. Dr.-Ing. Ingo Staack and Dr.-Ing. Stanislav Karpuk at IFL, TU Braunschweig.</p>
+                </div>
+            </div>
+
+            <!-- Project Navigation -->
             <div class="row info-block">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="row row-pt-md portfolio-navigation">
-                        <div class="col-xs-4 text-left"><a href="highlift.html" class="btn btn-primary btn-outline">Previous</a></div>
-                        <div class="col-xs-4 text-center"><a href="../work.html" class="btn btn-primary btn-outline">All Projects</a></div>
-                        <div class="col-xs-4 text-right"><a href="evtoll.html" class="btn btn-primary btn-outline">Next</a></div>
+                        <div class="col-xs-4 text-left">
+                            <a href="highlift.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Previous</a>
+                        </div>
+                        <div class="col-xs-4 text-center">
+                            <a href="../work.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All Projects</a>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <a href="evtoll.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,23 +200,30 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer id="fh5co-footer" role="contentinfo">
         <div class="container">
             <div class="row copyright">
                 <div class="col-md-12 text-center">
-                    <p><small class="block">© 2025 Shrinidhi Holenarsipura Murali Madhava</small></p>
+                    <p>
+                        <small class="block">&copy; 2025, Shrinidhi Holenarsipura Murali Madhava</small>
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
 </div>
 
-<div class="gototop js-top"><a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a></div>
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
 
+<!-- Scripts -->
 <script src="../js/jquery.min.js"></script>
 <script src="../js/jquery.easing.1.3.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/jquery.waypoints.min.js"></script>
 <script src="../js/main.js"></script>
+
 </body>
 </html>
