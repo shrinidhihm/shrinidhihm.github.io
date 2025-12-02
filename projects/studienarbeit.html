@@ -127,7 +127,7 @@
 
             <!-- Methodology -->
             <div class="row info-block">
-                <div class="col-md-10 col-md-offset-1 animate-box">
+                <div class="col-md-5 col-md-offset-1 animate-box">
                     <h3>Methodology</h3>
                     <p>Adapted PyAeroSweep for automated geometry (PARSEC), meshing (Pointwise hybrid unstructured with T-Rex for boundary layers), CFD (SU2 steady RANS k-ω SST), and post-processing. Focused on flap parameterization with gaps (x_gap, y_gap) for slot flow optimization.</p>
                     <img class="block-image" src="../images/studienarbeit/PyAeroSweep.png" alt="PyAeroSweep framework workflow">
@@ -141,7 +141,7 @@
                         <h3>Mesh Sensitivity</h3>
                         <p>Tested coarse, baseline, fine meshes. Baseline (112k cells) chosen for 0.27% CLmax difference vs fine, balancing accuracy and cost.</p>
                     </div>
-                    <div class="col-md-8 animate-box">
+                    <div class="col-md-4 animate-box">
                         <img class="block-image" src="../images/studienarbeit/Mesh_Sensivity_CLmax_vs_No_of_Cells.png" alt="Mesh refinement vs CLmax">
                     </div>
                 </div>
@@ -149,12 +149,15 @@
                     <h3>Parameter Sensitivity</h3>
                     <p>OAT optimization of 10 parameters across α sweeps. x_gap & y_gap most sensitive; optimized to 0.75% & 1.97% of chord for better slot flow and separation delay.</p>
                 </div>
+                    <div class="col-md-4 animate-box">
+                        <img class="block-image" src="../images/studienarbeit/Strategy.png" alt="Parameter Sensitivity Study - Strategy">
+                    </div>
             </div>
 
             <!-- Results -->
             <div class="row info-block">
                 <div class="col-md-10 col-md-offset-1">
-                    <div class="col-md-6 animate-box">
+                    <div class="col-md-4 animate-box">
                         <h3>Key Improvements</h3>
                         <p>CLmax increased by 4.14% at 15° deflection and 4.56% at 30°. Better L/D at low α; reduced separation via optimized gaps/shapes.</p>
                     </div>
