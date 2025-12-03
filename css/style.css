@@ -114,19 +114,13 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 20%;
 }
 .fh5co-nav #fh5co-logo {
-    white-space: nowrap !important;     /* this is the magic line */
-    font-size: 20px !important;         /* keep your size
-    line-height: 1 !important;          /* removes the gap between lines */
-    letter-spacing: 1px;                /* optional – looks nicer */
-    display: inline-block;              /* extra safety */
-}
-
-/* On small screens make it a tiny bit smaller so it never breaks */
-@media screen and (max-width: 768px) {
-    .fh5co-nav #fh5co-logo {
-        font-size: 17px !important;
-        letter-spacing: 0.8px;
-    }
+  font-size: 20px;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat", Arial, sans-serif;
 }
 .fh5co-nav .fh5co-social {
   margin: 3px 0 0 0;
