@@ -654,9 +654,6 @@ h1, h2, h3, h4, h5, h6, figure {
   padding-right: 10px;
 }
 
-
-
-
 .skills h3 {
   font-size: 16px;
 }
@@ -1334,3 +1331,22 @@ blockquote .person cite {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.author .desc,
+.author .desc p,
+.author .desc span {
+    color: #444444 !important;
+}
+
+.author .desc span {
+    color: #555555 !important;   /* Job title slightly darker */
+}
+
+.fh5co-social-icons li a {
+    color: #777777 !important;
+}
+
+.fh5co-social-icons li a:hover {
+    color: #3498db !important;
+}
