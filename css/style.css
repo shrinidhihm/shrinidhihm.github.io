@@ -1380,3 +1380,36 @@ label,
 .form-control {
     color: #444444 !important;
 }
+
+
+/* ===== BUTTON COLOR FIX – Modern dark/professional look ===== */
+
+/* Primary buttons (Send Message, Download Report, etc.) */
+.btn-primary {
+    background: #2c3e50 !important;   /* Deep blue-grey – professional and clean */
+    border-color: #2c3e50 !important;
+    color: #ffffff !important;
+}
+
+/* Hover/focus/active state */
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background: #34495e !important;   /* Slightly darker on hover */
+    border-color: #34495e !important;
+    color: #ffffff !important;
+}
+
+/* Optional: If you have outline buttons, fix them too */
+.btn-primary.btn-outline {
+    background: transparent !important;
+    color: #2c3e50 !important;
+    border-color: #2c3e50 !important;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-primary.btn-outline:focus,
+.btn-primary.btn-outline:active {
+    background: #2c3e50 !important;
+    color: #ffffff !important;
+}
