@@ -1332,4 +1332,51 @@ blockquote .person cite {
 
 /*# sourceMappingURL=style.css.map */
 
+/* ===== SITE-WIDE READABILITY FIX – Dark text, keep original sizes/layout ===== */
 
+/* Override the main inherited text color from body */
+body {
+    color: #444444 !important;   /* Dark grey for all normal text */
+}
+
+/* Paragraphs and list items – ensure they inherit the new dark color */
+p,
+li,
+.fh5co-contact-info ul li {
+    color: inherit !important;
+}
+
+/* Links and accents – darker but still subtle */
+a,
+.fh5co-social-icons li a,
+.btn-primary {
+    color: #666666 !important;
+}
+
+/* Hover/active states – make menu highlights clearer */
+a:hover,
+a:focus,
+.fh5co-nav ul li.active > a,
+.fh5co-nav ul li a:hover {
+    color: #2c3e50 !important;   /* Deep blue-grey */
+    border-bottom-color: #2c3e50 !important;
+}
+
+/* Contact page icons (::before markers like map/email) */
+.fh5co-contact-info ul li:before {
+    color: #666666 !important;
+}
+
+/* All Icomoon icons (social, markers, etc.) */
+i[class^="icon-"] {
+    color: #666666 !important;
+}
+
+/* Form elements */
+label,
+.form-control::placeholder {
+    color: #555555 !important;
+}
+.form-control {
+    color: #444444 !important;
+}
