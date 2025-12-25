@@ -1333,20 +1333,49 @@ blockquote .person cite {
 /*# sourceMappingURL=style.css.map */
 
 
-.author .desc,
-.author .desc p,
-.author .desc span {
+* ===== GLOBAL COLOR FIX – Make everything readable and professional ===== */
+
+/* Main text and icon color override */
+.color-element,
+a,
+a:hover,
+a:focus,
+.fh5co-social a,
+.fh5co-contact-info li,
+.fh5co-contact-info a,
+.fh5co-nav a,
+.fh5co-nav .active a,
+.fh5co-nav a:hover,
+.icon-arrow-up,
+.fh5co-heading p,
+.fh5co-contact-info h3,
+.form-control::placeholder {
+    color: #555555 !important;   /* Dark grey – readable but soft */
+}
+
+/* Active menu item and hover states – make them stand out more */
+.fh5co-nav .active a,
+.fh5co-nav a:hover {
+    color: #2c3e50 !important;   /* Deep blue-grey for highlight */
+    border-bottom: 2px solid #2c3e50;
+}
+
+/* Form labels and placeholder text */
+label,
+.form-control {
     color: #444444 !important;
 }
 
-.author .desc span {
-    color: #555555 !important;   /* Job title slightly darker */
+/* Specific fix for contact page address and email */
+.fh5co-contact-info ul li {
+    color: #555555 !important;
 }
 
-.fh5co-social-icons li a {
-    color: #777777 !important;
-}
-
-.fh5co-social-icons li a:hover {
-    color: #3498db !important;
+/* Make the map marker icon (and all Icomoon icons) darker */
+.icon-map-marker,
+.icon-email,
+.icon-linkedin,
+.icon-github,
+i[class^="icon-"] {
+    color: #666666 !important;
 }
