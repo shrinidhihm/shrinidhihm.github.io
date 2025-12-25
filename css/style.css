@@ -654,33 +654,29 @@ h1, h2, h3, h4, h5, h6, figure {
   padding-right: 10px;
 }
 
+/* Make text dark and readable */
+
 .author .desc {
-    color: #333333 !important;   /* Forces dark grey text */
+    color: #444444;   /* Dark grey for all text in the description area */
+}
+
+.author .desc span {
+    color: #666666;   /* Slightly darker for the job title – keeps it subtle but visible */
 }
 
 .author .desc p {
-    color: #444444;
-    font-size: 10px;
-    line-height: 1.8;
-    margin-bottom: 24px;
+    color: #444444;   /* Ensures paragraphs are properly dark */
 }
 
-/* Make job title bigger and bolder */
-.author .desc span {
-    font-size: 12px !important;     /* Much more prominent */
-    color: #2c3e50 !important;
-    font-weight: 600;
-    letter-spacing: 0;
-}
-
-/* Darker social icons */
+/* Social icons – make them visible but not too bright */
 .fh5co-social-icons li a {
-    color: #666666 !important;
+    color: #777777;
 }
 
 .fh5co-social-icons li a:hover {
-    color: #3498db !important;
+    color: #3498db;   /* Optional: nice blue on hover */
 }
+
 
 .skills h3 {
   font-size: 16px;
