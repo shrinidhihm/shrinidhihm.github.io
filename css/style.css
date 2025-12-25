@@ -1413,3 +1413,17 @@ label,
     background: #2c3e50 !important;
     color: #ffffff !important;
 }
+
+/* ===== HEADER MENU TEXT – Clean dark grey ===== */
+
+.fh5co-nav ul li a {
+    color: #555555 !important;   /* Medium dark grey for normal items */
+    font-weight: 500 !important; /* Optional: slightly bolder for clarity */
+}
+
+.fh5co-nav ul li a:hover,
+.fh5co-nav ul li a:focus,
+.fh5co-nav ul li.active > a {
+    color: #2c3e50 !important;   /* Deep blue-grey for hover & active page */
+    border-bottom: 2px solid #2c3e50 !important; /* Strong underline on active/hover */
+}
