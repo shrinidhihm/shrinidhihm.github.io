@@ -660,14 +660,14 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .author .desc p {
     color: #444444;
-    font-size: 17px;
+    font-size: 10px;
     line-height: 1.8;
     margin-bottom: 24px;
 }
 
 /* Make job title bigger and bolder */
 .author .desc span {
-    font-size: 24px !important;     /* Much more prominent */
+    font-size: 12px !important;     /* Much more prominent */
     color: #2c3e50 !important;
     font-weight: 600;
     letter-spacing: 0;
