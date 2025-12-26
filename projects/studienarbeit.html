@@ -134,15 +134,18 @@
             <div class="row info-block">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="row">
-                        <div class="col-md-4 animate-box">
+                        <!-- Narrow text column on the left -->
+                        <div class="col-md-5 animate-box">
                             <h3>Methodology</h3>
                             <p>Adapted PyAeroSweep for automated geometry (PARSEC), meshing (Pointwise hybrid unstructured with T-Rex for boundary layers), CFD (SU2 steady RANS k-ω SST), and post-processing. Focused on flap parameterization with gaps (x_gap, y_gap) for slot flow optimization.</p>
                         </div>
-                        <div class="col-md-8 animate-box">
-                            <img class="block-image img-responsive" 
-                            src="../images/studienarbeit/PyAeroSweep.png" 
-                            alt="PyAeroSweep framework workflow"
-                            style="max-width: 120%; height: auto; margin-left: -10%;">
+
+                        <!-- Image column takes the rest, but image overflows full-width -->
+                        <div class="col-md-7 animate-box text-center">
+                            <img class="block-image img-responsive center-block" 
+                                src="../images/studienarbeit/PyAeroSweep.png" 
+                                alt="PyAeroSweep framework workflow"
+                                style="max-width: 140%; height: auto; display: block; margin: 0 auto;">
                         </div>
                     </div>
                 </div>
