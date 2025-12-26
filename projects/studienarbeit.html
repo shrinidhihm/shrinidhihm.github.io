@@ -132,19 +132,43 @@
                 </div>
             </div>
 
-            <!-- Methodology -->
+           <!-- Methodology -->
             <div class="row info-block">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="row">
-                        <!-- Narrow text column on the left -->
                         <div class="col-md-12 animate-box">
                             <h3>Methodology</h3>
-                            <p>Adapted PyAeroSweep for automated CFD analysis of the HLFC airfoil with a Fowler flap. The workflow integrates:  
-                            1. <strong>Geometry Definition:</strong> Used PARSEC parameterization for the main airfoil, droop nose (15° fixed), and flap. Key flap parameters include chord ratio (c_f/c = 0.3), gaps (x_gap, y_gap), leading-edge radius (r_le_flap), and deflection (delta_f = 15°/30°). These control slot geometry and flow attachment (see baseline values in report Table 2.2).  
-                            2. <strong>Mesh Generation:</strong> Employed Fidelity Pointwise for hybrid unstructured meshes (triangles with T-Rex prismatic layers near walls). Targeted Y+ ≈1 for boundary-layer resolution, with parameters like number of layers (40), growth rate (1.2), and initial step size (Δs) calculated via Reynolds number and friction coefficient.  
-                            3. <strong>CFD Simulation:</strong> Ran steady RANS simulations in SU2 with k-ω SST turbulence model, ideal for adverse pressure gradients and separation in flap flows. Freestream conditions: Mach 0.21, altitude 0m, AoA sweeps from -2° to stall. Convergence via residuals, Cauchy criterion on C<sub>L</sub> (eps=5e-07), and max iterations (25,000).  
-                            4. <strong>Post-Processing:</strong> Extracted coefficients from .csv files (MS Excel) and visualized flow (e.g., velocity contours, separation) in ParaView from .vtu files.</p>
-                            <p>This setup enabled over 1,000 runs, balancing computational cost with accuracy for practical optimization.</p>
+                            <p>Adapted the PyAeroSweep framework for fully automated CFD analysis of an HLFC airfoil equipped with a Fowler flap. The workflow integrates four key stages:</p>
+
+                            <h4>1. Geometry Definition</h4>
+                            <ul>
+                                <li>Employed PARSEC parameterization for the main airfoil, fixed 15° droop nose, and Fowler flap</li>
+                                <li>Key flap design variables: chord ratio (c<sub>f</sub>/c = 0.3), horizontal/vertical gaps (x_gap, y_gap), leading-edge radius (r_le_flap), and deflection angles (δ<sub>f</sub> = 15°/30°)</li>
+                                <li>These parameters control slot geometry and flow attachment (baseline values in report Table 2.2)</li>
+                            </ul>
+
+                            <h4>2. Mesh Generation</h4>
+                            <ul>
+                                <li>Used Fidelity Pointwise to generate hybrid unstructured meshes (triangular core + T-Rex anisotropic prismatic layers near walls)</li>
+                                <li>Targeted Y+ ≈ 1 for accurate boundary-layer resolution</li>
+                                <li>Typical settings: 40 prismatic layers, growth rate 1.2, initial Δs calculated from Re and skin-friction coefficient</li>
+                            </ul>
+
+                            <h4>3. CFD Simulation</h4>
+                            <ul>
+                                <li>Steady RANS simulations with SU2 open-source solver</li>
+                                <li>Turbulence model: k-ω SST (well-suited for adverse pressure gradients and separation on flaps)</li>
+                                <li>Freestream conditions: Mach 0.21, sea-level altitude, AoA sweeps from -2° to stall</li>
+                                <li>Convergence criteria: density residual drop, Cauchy criterion on C<sub>L</sub> (ε = 5×10<sup>-7</sup>), max 25,000 iterations</li>
+                            </ul>
+
+                            <h4>4. Post-Processing</h4>
+                            <ul>
+                                <li>Extracted aerodynamic coefficients (C<sub>L</sub>, C<sub>D</sub>, etc.) from SU2 .csv history files using MS Excel</li>
+                                <li>Visualized flow fields (velocity contours, separation zones, pressure distributions) in ParaView from .vtu output</li>
+                            </ul>
+
+                            <p>This automated pipeline enabled over 1,000 simulations while maintaining a balance between computational cost and numerical accuracy—essential for practical parametric optimization studies.</p>
                         </div>
                     </div>
 
@@ -164,9 +188,9 @@
                             <img class="block-image img-responsive center-block" 
                                 src="../images/studienarbeit/flap_parameters_1.png" 
                                 alt="Definitions of flap parameters 1"
-                                style="max-width: 190%; height: auto; display: block; margin: 0 auto;">
+                                style="max-width: 2400%; height: auto; display: block; margin: 0 auto;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure 2.5: (a) Horizontal overlap (x_gap) and (b) vertical gap (y_gap), critical for optimizing channel flow through the slot.<br>
+                                Figure: (a) Horizontal overlap (x_gap) and (b) vertical gap (y_gap), critical for optimizing channel flow through the slot.<br>
                                 <em>Source: <a href="https://www.researchgate.net/publication/265052122_3D_Flap_Design_using_Navier-Stokes_Equations_and_Evolutionary_Optimization_Techniques_on_an_Industrial_Platform" target="_blank" rel="noopener noreferrer">Minervino et al., EUROGEN, 2011</a></em>
                             </p>
                         </div>
