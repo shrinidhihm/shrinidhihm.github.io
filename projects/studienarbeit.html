@@ -60,55 +60,52 @@
     <div id="fh5co-author">
         <div class="container">
 
-            <!-- Project Summary -->
+            <!-- Project Summary - Centered, stacked layout -->
             <div class="row top-line animate-box">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="row">
-                        <!-- Thumbnail Image on the Left -->
-                        <div class="col-md-4 animate-box text-center">
-                            <img src="../images/studienarbeit/thumbnail.png" 
-                                class="img-responsive center-block" 
-                                style="width: auto; max-width: 150%; height: auto; display: block; margin: 0 auto; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);"
-                                alt="Studienarbeit 2025 – Aerodynamic Design of a Fowler Flap for a HLFC Airfoil">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <!-- Thumbnail Image - Centered at top, full natural width but capped -->
+                    <img src="../images/studienarbeit/thumbnail.png" 
+                        class="img-responsive center-block" 
+                        style="max-width: 100%; height: auto; display: block; margin: 0 auto 40px auto;"
+                        alt="Studienarbeit 2025 – Aerodynamic Design of a Fowler Flap for a HLFC Airfoil">
+
+                    <!-- Title and all text below the image -->
+                    <h2>Aerodynamic Design of a Fowler Flap for a Hybrid Laminar Flow Control Airfoil</h2>
+                    
+                    <p>Studienarbeit project focused on maximizing lift (C<sub>L,max</sub>) for a Fowler flap on an HLFC airfoil at 15° (takeoff) and 30° (landing) deflections. Conducted 1000+ CFD runs with manual OAT optimization, achieving 4.14% and 4.56% improvements in C<sub>L,max</sub>.</p>
+                    
+                    <p>Supervised by Prof. Dr.-Ing. Ingo Staack and Dr.-Ing. Stanislav Karpuk at IFL, TU Braunschweig, as part of SE2A Cluster of Excellence. Issued Dec 2024, submitted April 2025.</p>
+
+                    <!-- Roles -->
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="role col-md-6">
+                            <h3>My Role</h3>
+                            <ul>
+                                <li>Adapted PyAeroSweep framework for airfoil CFD</li>
+                                <li>Mesh & parameter sensitivity studies</li>
+                                <li>OAT optimization (10 parameters)</li>
+                                <li>Flow visualization & analysis</li>
+                                <li>Comparative evaluation of designs</li>
+                            </ul>
                         </div>
-
-                        <!-- Title, Description, Roles, Buttons on the Right -->
-                        <div class="col-md-8 animate-box">
-                            <h2>Aerodynamic Design of a Fowler Flap for a Hybrid Laminar Flow Control Airfoil</h2>
-                            <p>Studienarbeit project focused on maximizing lift (C<sub>L,max</sub>) for a Fowler flap on an HLFC airfoil at 15° (takeoff) and 30° (landing) deflections. Conducted 1000+ CFD runs with manual OAT optimization, achieving 4.14% and 4.56% improvements in C<sub>L,max</sub>.</p>
-                            
-                            <p>Supervised by Prof. Dr.-Ing. Ingo Staack and Dr.-Ing. Stanislav Karpuk at IFL, TU Braunschweig, as part of SE2A Cluster of Excellence. Issued Dec 2024, submitted April 2025.</p>
-
-                            <div class="row">
-                                <div class="role col-md-6">
-                                    <h3>My Role</h3>
-                                    <ul>
-                                        <li>Adapted PyAeroSweep framework for airfoil CFD</li>
-                                        <li>Mesh & parameter sensitivity studies</li>
-                                        <li>One At a Time (OAT) optimization (10 parameters)</li>
-                                        <li>Flow visualization & analysis</li>
-                                        <li>Comparative evaluation of designs</li>
-                                    </ul>
-                                </div>
-                                <div class="role col-md-6">
-                                    <h3>Tools & Methods</h3>
-                                    <ul>
-                                        <li>PyAeroSweep (Python framework)</li>
-                                        <li>Fidelity Pointwise (meshing)</li>
-                                        <li>SU2 (CFD with RANS k-ω SST)</li>
-                                        <li>ParaView & MS Excel (post-processing)</li>
-                                        <li>PARSEC parameterization</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <p class="mt-4">
-                                <a href="../files/5304013_Studienarbeit_2025.pdf" class="btn btn-primary">Full Report</a>
-                                <a href="../files/Aerodynamic_Design_of_a_Fowler_Flap.pdf" class="btn btn-primary">Presentation</a>
-                                <a href="https://github.com/stankarpuk93/PyAeroSweep" target="_blank" class="btn btn-primary">GitHub Repo</a>
-                            </p>
+                        <div class="role col-md-6">
+                            <h3>Tools & Methods</h3>
+                            <ul>
+                                <li>PyAeroSweep (Python framework)</li>
+                                <li>Fidelity Pointwise (meshing)</li>
+                                <li>SU2 (CFD with RANS k-ω SST)</li>
+                                <li>ParaView & MS Excel (post-processing)</li>
+                                <li>PARSEC parameterization</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <!-- Buttons -->
+                    <p style="margin-top: 50px;">
+                        <a href="../files/5304013_Studienarbeit_2025.pdf" class="btn btn-primary">Full Report</a>
+                        <a href="../files/Aerodynamic_Design_of_a_Fowler_Flap.pdf" class="btn btn-primary">Presentation</a>
+                        <a href="https://github.com/stankarpuk93/PyAeroSweep" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                    </p>
                 </div>
             </div>
 
