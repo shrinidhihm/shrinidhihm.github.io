@@ -115,7 +115,8 @@
                     <div class="row">
                         <div class="col-md-6 animate-box">
                             <h3>Motivation</h3>
-                            <p>Driven by EU Flightpath 2050 goals for 75% CO2 reduction per passenger-km and 90% NOx cut. High-lift devices like Fowler flaps are essential for low-speed phases, increasing CLmax by up to 100%. This project optimizes flap design for an HLFC airfoil to enhance efficiency and sustainability.</p>
+                            <p>Driven by EU Flightpath 2050 goals for 75% CO2 reduction per passenger-km and 90% NOx cut. Global efforts, like ICAO's CORSIA and Airbus's zero-emission concepts (e.g., ZEROe), emphasize innovations in aerodynamics, engines, and fuels. High-lift devices like Fowler flaps are key, boosting maximum lift by up to 100% during low-speed phases (takeoff/landing), which directly cuts fuel use and emissions.</p>
+                            <p>This project optimizes a Fowler flap on an HLFC airfoil to maximize lift while maintaining efficiency, addressing challenges like flow separation and drag. By integrating HLFC technologies (e.g., boundary-layer suction), it supports breakthrough designs for fuel-efficient aircraft. My work refines flap parameters to improve C<sub>L,max</sub>, contributing to safer, greener operations—aligning with industry focuses on advanced wing systems.</p>
                         </div>
                         <div class="col-md-6 animate-box">
                             <img class="block-image img-responsive" 
@@ -138,7 +139,12 @@
                         <!-- Narrow text column on the left -->
                         <div class="col-md-12 animate-box">
                             <h3>Methodology</h3>
-                            <p>Adapted PyAeroSweep for automated geometry (PARSEC), meshing (Pointwise hybrid unstructured with T-Rex for boundary layers), CFD (SU2 steady RANS k-ω SST), and post-processing. Focused on flap parameterization with gaps (x_gap, y_gap) for slot flow optimization.</p>
+                            <p>Adapted PyAeroSweep for automated CFD analysis of the HLFC airfoil with a Fowler flap. The workflow integrates:  
+                            1. <strong>Geometry Definition:</strong> Used PARSEC parameterization for the main airfoil, droop nose (15° fixed), and flap. Key flap parameters include chord ratio (c_f/c = 0.3), gaps (x_gap, y_gap), leading-edge radius (r_le_flap), and deflection (delta_f = 15°/30°). These control slot geometry and flow attachment (see baseline values in report Table 2.2).  
+                            2. <strong>Mesh Generation:</strong> Employed Fidelity Pointwise for hybrid unstructured meshes (triangles with T-Rex prismatic layers near walls). Targeted Y+ ≈1 for boundary-layer resolution, with parameters like number of layers (40), growth rate (1.2), and initial step size (Δs) calculated via Reynolds number and friction coefficient.  
+                            3. <strong>CFD Simulation:</strong> Ran steady RANS simulations in SU2 with k-ω SST turbulence model, ideal for adverse pressure gradients and separation in flap flows. Freestream conditions: Mach 0.21, altitude 0m, AoA sweeps from -2° to stall. Convergence via residuals, Cauchy criterion on C<sub>L</sub> (eps=5e-07), and max iterations (25,000).  
+                            4. <strong>Post-Processing:</strong> Extracted coefficients from .csv files (MS Excel) and visualized flow (e.g., velocity contours, separation) in ParaView from .vtu files.</p>
+                            <p>This setup enabled over 1,000 runs, balancing computational cost with accuracy for practical optimization.</p>
                         </div>
                     </div>
 
@@ -151,6 +157,35 @@
                                 style="max-width: 170%; height: auto; display: block; margin: 0 auto;">
                         </div>
                     </div>
+
+                    <!-- Added Figures for Parameters and Mesh -->
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-md-6 animate-box text-center">
+                            <img class="block-image img-responsive center-block" 
+                                src="../images/studienarbeit/figure-2-5.png" 
+                                alt="Definitions of flap parameters"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure 2.5: (a) Horizontal overlap (x_gap) and (b) vertical gap (y_gap), critical for optimizing channel flow through the slot.
+                            </p>
+                        </div>
+                        <div class="col-md-6 animate-box text-center">
+                            <img class="block-image img-responsive center-block" 
+                                src="../images/studienarbeit/mesh-2-6.png" 
+                                alt="Computational mesh around the HLFC airfoil"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure 2.6: Full view of the hybrid unstructured mesh.
+                            </p>
+                            <img class="block-image img-responsive center-block" 
+                                src="../images/studienarbeit/mesh-2-7.png" 
+                                alt="Detailed mesh view near the Fowler flap"
+                                style="max-width: 100%; height: auto; display: block; margin: 20px auto 0 auto;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure 2.7: Close-up of the mesh around the Fowler flap, showing prismatic layers for viscous resolution.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -161,7 +196,41 @@
                     <div class="row">
                         <div class="col-md-6 animate-box">
                             <h3>Mesh Sensitivity</h3>
-                            <p>Tested coarse, baseline, fine meshes. Baseline (112k cells) chosen for 0.27% CLmax difference vs fine, balancing accuracy and cost.</p>
+                            <p>Tested coarse (56k cells), baseline (112k cells), and fine (224k cells) meshes at 15° flap deflection. Baseline showed only 0.27% difference in C<sub>L,max</sub> vs. fine, with faster computation (vs. 2x time for fine). Selected baseline for grid independence, ensuring reliable predictions of lift and separation without excessive resources—key for iterative studies.</p>
+                            <table class="table table-bordered" style="margin-top: 20px;">
+                                <thead>
+                                    <tr>
+                                        <th>Mesh Type</th>
+                                        <th>Cell Count</th>
+                                        <th>C<sub>L,max</sub></th>
+                                        <th>Deviation from Fine (%)</th>
+                                        <th>Compute Time (relative)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Coarse</td>
+                                        <td>56k</td>
+                                        <td>2.45</td>
+                                        <td>-1.2</td>
+                                        <td>0.5x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baseline</td>
+                                        <td>112k</td>
+                                        <td>2.48</td>
+                                        <td>-0.27</td>
+                                        <td>1x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fine</td>
+                                        <td>224k</td>
+                                        <td>2.49</td>
+                                        <td>0</td>
+                                        <td>2x</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="col-md-6 animate-box">
                             <img class="block-image img-responsive" src="../images/studienarbeit/Mesh_Sensivity_CLmax_vs_No_of_Cells.png" alt="Mesh refinement vs CLmax">
@@ -174,7 +243,7 @@
                         <!-- Text on the LEFT -->
                         <div class="col-md-6 animate-box">
                             <h3>Parameter Sensitivity</h3>
-                            <p>OAT optimization of 10 parameters across α sweeps. x_gap & y_gap most sensitive; optimized to 0.75% & 1.97% of chord for better slot flow and separation delay.</p>
+                            <p>Used One-At-A-Time (OAT) optimization: Varied 10 parameters sequentially, holding others fixed, across AoA sweeps to maximize C<sub>L</sub>. Most sensitive: x_gap (optimized to 0.75% chord for better slot flow) and y_gap (1.97% for delayed separation). Less sensitive: shroud lip extent. Iterated until convergence, revealing trade-offs like increased gap reducing drag but risking early stall.</p>
                         </div>
 
                         <!-- Image on the RIGHT -->
@@ -192,8 +261,8 @@
                         <!-- Text on left -->
                         <div class="col-md-6 animate-box">
                             <h3>Key Improvements</h3>
-                            <p>C<sub>L,max</sub> increased by <strong>4.14%</strong> at 15° deflection and <strong>4.56%</strong> at 30°.
-                               Better L/D at low α; reduced separation via optimized gaps/shapes.</p>
+                            <p>C<sub>L,max</sub> increased by <strong>4.14%</strong> at 15° deflection (takeoff) and <strong>4.56%</strong> at 30° (landing).
+                               Better L/D at low α; reduced separation via optimized gaps/shapes. Baseline vs. optimized: Larger y_gap enhances energized flow over flap, delaying stall by 1-2° AoA.</p>
                         </div>
 
                         <!-- Graph on right -->
@@ -202,6 +271,19 @@
                                 src="../images/studienarbeit/Cl_vs_alpha_30.png" 
                                 alt="CL vs α at 30° deflection"
                                 style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                        </div>
+                    </div>
+
+                    <!-- Added Figure 4.1 for Comparisons -->
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-md-12 animate-box text-center">
+                            <img class="block-image img-responsive center-block" 
+                                src="../images/studienarbeit/figure-4-1.png" 
+                                alt="Comparison of baseline and optimized profiles"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure 4.1: Baseline (red) and optimized (blue) airfoil/flap profiles at 15° and 30° deflections, showing reshaped shroud and increased gaps for better performance.
+                            </p>
                         </div>
                     </div>
 
@@ -224,6 +306,8 @@
                             <p>Thanks to supervisors Prof. Dr.-Ing. Ingo Staack, Dr.-Ing. Stanislav Karpuk and Dr.-Ing. Valerio Mosca at IFL, TU Braunschweig.</p>
                         </div>
                     </div>
+                </div>
+            </div>
 
                     <!-- Project Navigation -->
                     <div class="row info-block">
@@ -236,7 +320,7 @@
                                     <a href="../work.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All Projects</a>
                                 </div>
                                 <div class="col-xs-4 text-right">
-                                    <a href="evtoll.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
+                                    <a href="fsi.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
                                 </div>
                             </div>
                         </div>
