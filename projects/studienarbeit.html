@@ -56,7 +56,7 @@
         </div>
     </nav>
 
-    <!-- Content -->
+       <!-- Content -->
     <div id="fh5co-author">
         <div class="container">
 
@@ -120,7 +120,8 @@
                         <div class="col-md-3 animate-box">
                             <img class="block-image img-responsive" 
                                 src="../images/studienarbeit/High_Lift_Graph_Jochen_Wild.png" 
-                                alt="Effect of high-lift devices on lift coefficient vs angle of attack">
+                                alt="Effect of high-lift devices on lift coefficient vs angle of attack"
+                                style="max-width: 120%; height: auto; display: block; margin: 0 auto;">>
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
                                 Effect of high-lift devices on C<sub>L</sub> vs α<br>
                                 <em>Source: J. Wild, “High-Lift Aerodynamics”, CRC Press, 2022</em>
@@ -169,59 +170,63 @@
 
                     <!-- Parameter Sensitivity -->
                     <div class="row" style="margin-top: 60px;">
-                        <div class="col-md-7 animate-box">
+                        <!-- Image on the LEFT -->
+                        <div class="col-md-6 animate-box text-center">
+                            <img class="block-image img-responsive center-block" 
+                                src="../images/studienarbeit/Strategy.png" 
+                                alt="Parameter Sensitivity Study - Strategy"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                        </div>
+
+                        <!-- Text on the RIGHT -->
+                        <div class="col-md-6 animate-box">
                             <h3>Parameter Sensitivity</h3>
                             <p>OAT optimization of 10 parameters across α sweeps. x_gap & y_gap most sensitive; optimized to 0.75% & 1.97% of chord for better slot flow and separation delay.</p>
                         </div>
-                        <div class="col-md-5 animate-box">
-                            <img class="block-image img-responsive" src="../images/studienarbeit/Strategy.png" alt="Parameter Sensitivity Study - Strategy">
-                        </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Results -->
-            <div class="row info-block">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="col-md-4 animate-box">
-                        <h3>Key Improvements</h3>
-                        <p>CLmax increased by 4.14% at 15° deflection and 4.56% at 30°. Better L/D at low α; reduced separation via optimized gaps/shapes.</p>
+                    <!-- Results -->
+                    <div class="row info-block">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="col-md-4 animate-box">
+                                <h3>Key Improvements</h3>
+                                <p>CLmax increased by 4.14% at 15° deflection and 4.56% at 30°. Better L/D at low α; reduced separation via optimized gaps/shapes.</p>
+                            </div>
+                            <div class="col-md-6 animate-box">
+                                <img class="block-image" src="../images/studienarbeit/Cl_vs_alpha_30.png" alt="CL vs α at 30° deflection">
+                            </div>
+                        </div>
+                        <div class="col-md-10 col-md-offset-1 animate-box">
+                            <img class="block-image" src="../images/fowler/eddy_viscosity_comparison.jpg" alt="Eddy viscosity baseline vs optimized">
+                        </div>
                     </div>
-                    <div class="col-md-6 animate-box">
-                        <img class="block-image" src="../images/studienarbeit/Cl_vs_alpha_30.png" alt="CL vs α at 30° deflection">
-                    </div>
-                </div>
-                <div class="col-md-10 col-md-offset-1 animate-box">
-                    <img class="block-image" src="../images/fowler/eddy_viscosity_comparison.jpg" alt="Eddy viscosity baseline vs optimized">
-                </div>
-            </div>
 
-            <!-- Summary & Acknowledgments -->
-            <div class="row info-block">
-                <div class="col-md-8 col-md-offset-2 animate-box">
-                    <h3>Summary</h3>
-                    <p>1000+ CFD runs yielded optimized flap with cleaner channel flow, delayed separation, and higher CLmax. Foundation for URANS and automated (SBO) optimization in future work.</p>
-                    <h3>Acknowledgments</h3>
-                    <p>Thanks to supervisors Prof. Dr.-Ing. Ingo Staack, Dr.-Ing. Stanislav Karpuk and Dr.-Ing. Valerio Mosca at IFL, TU Braunschweig.</p>
-                </div>
-            </div>
-
-            <!-- Project Navigation -->
-            <div class="row info-block">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="row row-pt-md portfolio-navigation">
-                        <div class="col-xs-4 text-left">
-                            <a href="highlift.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Previous</a>
-                        </div>
-                        <div class="col-xs-4 text-center">
-                            <a href="../work.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All Projects</a>
-                        </div>
-                        <div class="col-xs-4 text-right">
-                            <a href="evtoll.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
+                    <!-- Summary & Acknowledgments -->
+                    <div class="row info-block">
+                        <div class="col-md-8 col-md-offset-2 animate-box">
+                            <h3>Summary</h3>
+                            <p>1000+ CFD runs yielded optimized flap with cleaner channel flow, delayed separation, and higher CLmax. Foundation for URANS and automated (SBO) optimization in future work.</p>
+                            <h3>Acknowledgments</h3>
+                            <p>Thanks to supervisors Prof. Dr.-Ing. Ingo Staack, Dr.-Ing. Stanislav Karpuk and Dr.-Ing. Valerio Mosca at IFL, TU Braunschweig.</p>
                         </div>
                     </div>
-                </div>
-            </div>
+
+                    <!-- Project Navigation -->
+                    <div class="row info-block">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="row row-pt-md portfolio-navigation">
+                                <div class="col-xs-4 text-left">
+                                    <a href="highlift.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Previous</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="../work.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All Projects</a>
+                                </div>
+                                <div class="col-xs-4 text-right">
+                                    <a href="evtoll.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
         </div>
     </div>
