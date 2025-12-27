@@ -146,7 +146,7 @@
                             <h4>1. Geometry Definition</h4>
                             <ul>
                                 <li>Employed PARSEC parameterization for the main airfoil, fixed 15° droop nose, and Fowler flap</li>
-                                <li>Key flap design variables: chord ratio (cf<sub>f</sub>_c = 0.3), horizontal/vertical gaps (x_gap, y_gap), leading-edge radius (r_le_flap), and deflection angles (δ<sub>f</sub> = 15°/30°)</li>
+                                <li>Key flap design variables: chord ratio (cf_c = 0.3), horizontal/vertical gaps (x_gap, y_gap), leading-edge radius (r_le_flap), and deflection angles (δ<sub>f</sub> = 15°/30°)</li>
                                 <li>These parameters control slot geometry and flow attachment (baseline values in report Table 2.2)</li>
                             </ul>
 
@@ -292,12 +292,20 @@
 
                     <!-- Parameter Sensitivity -->
                     <div class="row" style="margin-top: 60px;">
-
-                        <!-- Text on the LEFT -->
-                        <div class="col-md-6 animate-box">
+                        <div class="col-md-12 animate-box">
                             <h3>Parameter Sensitivity</h3>
-                            <p>Used One-At-A-Time (OAT) optimization: Varied 10 parameters sequentially, holding others fixed, across AoA sweeps to maximize C<sub>L</sub>. Most sensitive: x_gap (optimized to 0.75% chord for better slot flow) and y_gap (1.97% for delayed separation). Less sensitive: shroud lip extent. Iterated until convergence, revealing trade-offs like increased gap reducing drag but risking early stall.</p>
+                            <ul>
+                                <li>Conducted One-At-A-Time (OAT) parametric study to maximize C<sub>L</sub> at flap deflections of 15° (takeoff) and 30° (landing)</li>
+                                <li>Systematically varied 10 flap parameters individually while holding others fixed at baseline or current best values</li>
+                                <li>AoA sweeps: 4°, 6°, 8°, 10–15° (1° steps near peak lift for higher resolution)</li>
+                                <li>Greater sensitivity observed at 30° deflection; primary focus shifted there</li>
+                                <li>Most influential parameters: horizontal overlap (x_gap) and vertical gap (y_gap)</li>
+                                <li>Optimized values: x_gap reduced to ~0.75% chord and y_gap increased to ~1.97% chord</li>
+                                <li>These changes improved slot channel flow, reduced instabilities, and contributed to higher C<sub>L,max</sub></li>
+                                <li>Less sensitive parameters included shroud lip extent and conical curve ratio</li>
+                            </ul>
                         </div>
+                    </div>
 
                         <!-- Image on the RIGHT -->
                         <div class="col-md-6 animate-box text-center">
