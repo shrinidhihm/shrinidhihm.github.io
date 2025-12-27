@@ -235,9 +235,9 @@
                     </div>
 
                     <div class="row" style="margin-top: 30px;">
-                        <!-- Table: Narrower column to give more space to graph -->
-                        <div class="col-md-5 col-sm-12 animate-box text-center" style="padding-right: 40px;">
-                            <table class="table table-striped table-hover table-bordered" style="width: 92%; margin: 0 auto; font-size: 15px;">
+                        <!-- Table on the left -->
+                        <div class="col-md-6 col-sm-12 animate-box text-center" style="padding-right: 30px;">
+                            <table class="table table-striped table-hover table-bordered" style="width: 88%; margin: 0 auto; font-size: 15px;">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th style="text-align: center; padding: 12px;">Mesh Type</th>
@@ -272,18 +272,17 @@
                             </p>
                         </div>
 
-                        <!-- Graph: Wider column with contained oversized image -->
-                        <div class="col-md-7 col-sm-12 animate-box text-center" style="padding-left: 40px; overflow: hidden;">
-                            <div style="position: relative; left: 50%; transform: translateX(-50%); width: 130%; max-width: none;">
-                                <img class="block-image center-block" 
-                                     src="../images/studienarbeit/Mesh_Sensivity_CLmax_vs_No_of_Cells.png" 
-                                     alt="C_L,max convergence with mesh refinement"
-                                     style="width: 100%; height: auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
-                            </div>
+                        <div class="col-md-6 col-sm-12 animate-box text-center" style="padding-left: 30px;">
+                            <img class="block-image img-responsive center-block" 
+                                 src="../images/studienarbeit/Mesh_Sensivity_CLmax_vs_No_of_Cells.png" 
+                                 alt="C_L,max convergence with mesh refinement"
+                                 style="max-width: 115%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
                             <p style="font-size: 14px; color: #666; margin-top: 20px; text-align: center; min-height: 60px; display: flex; align-items: center; justify-content: center;">
                                 Figure: C<sub>L,max</sub> vs. number of cells – demonstrating grid independence
                             </p>
                         </div>
+
+                        
                     </div>
 
                     <!-- Parameter Sensitivity -->
