@@ -399,6 +399,66 @@
                         </div>
                     </div>
 
+                                        <!-- Limitations and Future Work -->
+                    <div class="row info-block" style="margin-top: 60px;">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h3>Limitations & Future Work</h3>
+
+                            <h4>Solver Framework (PyAeroSweep & SU2)</h4>
+                            <ul>
+                                <li>Limited to steady RANS simulations (k-ω SST)</li>
+                                <li>Unsteady flow structures in separated regions and wakes not captured</li>
+                                <li>Impacts accuracy of drag, stall behaviour and detailed flow prediction</li>
+                                <li><strong>Future:</strong> Explore URANS simulations for better handling of time-dependent effects</li>
+                            </ul>
+
+                            <h4>Workflow Stability</h4>
+                            <ul>
+                                <li>Occasional PyAeroSweep crashes / incomplete output files</li>
+                                <li>Required frequent manual restarts and supervision</li>
+                                <li><strong>Future:</strong> Improve script robustness and error handling to enable fully unattended runs</li>
+                            </ul>
+                            <div style="text-align: center; margin: 20px 0;">
+                                <img class="block-image img-responsive center-block" 
+                                     src="../images/studienarbeit/runtime_error.png" 
+                                     alt="PyAeroSweep terminal error example"
+                                     style="max-width: 90%; height: auto;">
+                                <p style="font-size: 14px; color: #666; margin-top: 12px;">
+                                    Figure: Example of PyAeroSweep workflow error in terminal
+                                </p>
+                            </div>
+
+                            <h4>Mesh Quality & Computational Resources</h4>
+                            <ul>
+                                <li>Equiangle skewness visible in flap cutout, shroud tip and flap leading edge</li>
+                                <li>Further refinement could improve flow resolution in critical regions</li>
+                                <li>Long simulation times on workstation (Intel i7-10700K, 32 GB RAM)</li>
+                                <li><strong>Future:</strong> Use HPC cluster for finer meshes and faster parametric studies</li>
+                            </ul>
+                            <div style="text-align: center; margin: 20px 0;">
+                                <img class="block-image img-responsive center-block" 
+                                     src="../images/studienarbeit/Equiangle_Skewness.png" 
+                                     alt="Equiangle skewness distribution of baseline mesh"
+                                     style="max-width: 90%; height: auto;">
+                                <p style="font-size: 14px; color: #666; margin-top: 12px;">
+                                    Figure: Equiangle skewness distribution – baseline mesh
+                                </p>
+                            </div>
+
+                            <h4>Manual & Time-Intensive Process</h4>
+                            <ul>
+                                <li>~700 systematic + >300 failed/rerun cases → over 1,000 CFD runs total</li>
+                                <li>Semi-manual parameter variation, data extraction and post-processing</li>
+                                <li>Risk of data loss when restarting interrupted sweeps</li>
+                                <li><strong>Future:</strong> Implement surrogate-based optimization (SBO) or automatic MDO algorithms</li>
+                            </ul>
+
+                            <p style="margin-top: 30px; font-style: italic;">
+                                Despite these limitations, the obtained lift improvements demonstrate the value of the developed rapid CFD workflow for early-stage high-lift design studies.
+                            </p>
+                        </div>
+                    </div>
+
                     <!-- Summary & Acknowledgments -->
                     <div class="row" style="margin-top: 60px;">
                         <div class="col-md-12 animate-box">
