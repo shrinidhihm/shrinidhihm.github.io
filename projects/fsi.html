@@ -13,10 +13,10 @@
         <!-- META DATA -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Aerodynamic Design of a Fowler Flap – Shrinidhi Holenarsipura</title>
+        <title>Developing Methodology for Model Fitting in Fluid-Structure Interaction – Shrinidhi Holenarsipura</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Aerodynamic optimization of a Fowler flap for an HLFC airfoil using CFD – Shrinidhi Holenarsipura" />
-        <meta name="keywords" content="Shrinidhi, Fowler Flap, HLFC Airfoil, Aerodynamics, CFD, Optimization, TU Braunschweig" />
+        <meta name="description" content="Methodology for system identification in FSI problems using Kratos Multiphysics and optimization – Shrinidhi Holenarsipura" />
+        <meta name="keywords" content="FSI, Fluid-Structure Interaction, Kratos Multiphysics, System Identification, Optimization, Digital Twin, TU Munich" />
         <meta name="author" content="Shrinidhi Holenarsipura Murali Madhava" />
 
         <!-- Styles -->
@@ -64,49 +64,55 @@
             <div class="row top-line animate-box">
                 <div class="col-md-8 col-md-offset-2 text-left">
                     <!-- Thumbnail Image - Centered at top, full natural width but capped -->
-                    <img src="../images/studienarbeit/thumbnail.png" 
+                    <img src="../images/fsi/thumbnail.png" 
                         class="img-responsive center-block" 
                         style="max-width: 100%; height: auto; display: block; margin: 0 auto 40px auto;"
-                        alt="Studienarbeit 2025 – Aerodynamic Design of a Fowler Flap for a HLFC Airfoil">
+                        alt="Fluid-Structure Interaction Project Thumbnail">
 
                     <!-- Title and Intro Text -->
                     <h2>Developing Methodology for Model Fitting to be used in Fluid-Structure Coupled Problem</h2>
                     
-                    <p>Studienarbeit focused on maximizing the lift coefficient (<i>C<sub>L,max</sub></i>) of a Fowler flap on an HLFC airfoil with fixed drooping nose, targeting takeoff (15° deflection) and landing (30° deflection) configurations.</p>
+                    <p>This Fluid Structure Interaction project develops a methodology for system identification in FSI problems by integrating digital twin concepts with numerical simulations using Kratos Multiphysics.</p>
                     
-                    <p>Through mesh sensitivity analysis, parametric studies, and manual One-At-A-Time (OAT) optimization using the PyAeroSweep framework (Fidelity Pointwise + SU2 steady RANS), over 1,000 CFD simulations were conducted. The optimized design achieved <strong>4.14% higher C<sub>L,max</sub></strong> at 15° and <strong>4.56% higher C<sub>L,max</sub></strong> at 30° compared to the baseline, with improved flow attachment and reduced slot instabilities.</p>
+                    <p>A simplified internal fluid flow over a slender beam in a channel is modeled, where three different Young's moduli are identified through velocity measurements and deformation sensors. An optimization process using Differential Evolution iteratively refines material parameters to minimize errors between measured and computed data, enhancing accuracy for digital twin applications.</p>
 
-                    <p>Supervised by Dr.-Ing. Ihar Antonau at the Chair of Structural Analysis, TU München. </a>.<br>
-                    </p>
+                    <p>Supervised by Dr.-Ing. Ihar Antonau at the Chair of Structural Analysis, TU München.</p>
 
-                    <!-- Roles -->
+                    <!-- Roles, Contributors, Tools -->
                     <div class="row" style="margin-top: 40px;">
-                        <div class="role col-md-6 text-left">
+                        <div class="role col-md-4 text-left">
                             <h3>My Role</h3>
                             <ul>
-                                <li>Adapted PyAeroSweep framework for airfoil CFD</li>
-                                <li>Mesh & parameter sensitivity studies</li>
-                                <li>One At a Time (OAT) optimization (10 parameters)</li>
-                                <li>Flow visualization & analysis</li>
-                                <li>Comparative evaluation of designs</li>
+                                <li>Mesh manipulation and sensor placement</li>
+                                <li>Fluid and structural solver setup</li>
+                                <li>Coupling strategy implementation</li>
+                                <li>Optimization framework development</li>
+                                <li>Benchmarking and results analysis</li>
                             </ul>
                         </div>
-                        <div class="role col-md-6 text-left">
+                        <div class="role col-md-4 text-left">
+                            <h3>Contributors</h3>
+                            <ul>
+                                <li>Bhakti Sheth</li>
+                                <li>Rohin Ramisetty</li>
+                            </ul>
+                        </div>
+                        <div class="role col-md-4 text-left">
                             <h3>Tools & Methods</h3>
                             <ul>
-                                <li>PyAeroSweep (Python framework)</li>
-                                <li>Fidelity Pointwise (meshing)</li>
-                                <li>SU2 (CFD with RANS k-ω SST)</li>
-                                <li>ParaView & MS Excel (post-processing)</li>
-                                <li>PARSEC parameterization</li>
+                                <li>Kratos Multiphysics</li>
+                                <li>CoSimulationApplication</li>
+                                <li>Differential Evolution (DE)</li>
+                                <li>Gauss-Seidel coupling</li>
+                                <li>Python for optimization</li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- Buttons -->
                     <p style="margin-top: 50px;">
-                        <a href="../files/FSI/FSI_Group_1_PPT.pdf" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Full Report</a>
-                        <a href="../files/FSI/FSI_Report_Group_1.pdf" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Presentation</a>
+                        <a href="../files/FSI/FSI_Report_Group_1.pdf" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Full Report</a>
+                        <a href="../files/FSI/FSI_Group_1_PPT.pdf" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Presentation</a>
                     </p>
                 </div>
             </div>
@@ -117,17 +123,17 @@
                     <div class="row">
                         <div class="col-md-6 animate-box">
                             <h3>Motivation</h3>
-                            <p>Driven by EU Flightpath 2050 goals for 75% CO2 reduction per passenger-km and 90% NOx cut. Global efforts, like ICAO's CORSIA and Airbus's zero-emission concepts (e.g., ZEROe), emphasize innovations in aerodynamics, engines, and fuels. High-lift devices like Fowler flaps are key, boosting maximum lift by up to 100% during low-speed phases (takeoff/landing), which directly cuts fuel use and emissions.</p>
-                            <p>This project optimizes a Fowler flap on an HLFC airfoil to maximize lift while maintaining efficiency, addressing challenges like flow separation and drag. By integrating HLFC technologies (e.g., boundary-layer suction), it supports breakthrough designs for fuel-efficient aircraft. My work refines flap parameters to improve C<sub>L,max</sub>, contributing to safer, greener operations—aligning with industry focuses on advanced wing systems.</p>
+                            <p>The study of Fluid-Structure Interaction (FSI) is pivotal in understanding the complex interplay between fluid flow and structural response, a phenomenon that spans a wide range of natural and engineered systems. From biological processes, such as blood flow in arteries, to large-scale engineering applications like aircraft wings and bridges, FSI plays a critical role in ensuring the safety, efficiency, and performance of systems.</p>
+                            <p>Coupled simulations are essential for accurate predictions in multi-physics environments, but they pose challenges like numerical stability, high computational costs, and interface handling. This project addresses these by developing methodologies for system identification and optimization in FSI, leveraging tools like Kratos Multiphysics for real-world applications in aerospace, biomedical, and energy sectors.</p>
                         </div>
                         <div class="col-md-6 animate-box">
                             <img class="block-image img-responsive" 
-                                src="../images/studienarbeit/High_Lift_Graph_Jochen_Wild.png" 
-                                alt="Effect of high-lift devices on lift coefficient vs angle of attack"
-                                style="max-width: 170%; height: auto; display: block; margin: 0 auto;">
+                                src="../images/fsi/fig1.png" 
+                                alt="Complete Set-up of the FSI Model"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Effect of high-lift devices on C<sub>L</sub> vs α<br>
-                                <em>Source: J. Wild, “High-Lift Aerodynamics”, CRC Press, 2022</em>
+                                Figure 1: Complete Set-up<br>
+                                <em>Source: Project Report</em>
                             </p>
                         </div>
                     </div>
@@ -140,37 +146,29 @@
                     <div class="row">
                         <div class="col-md-12 animate-box">
                             <h3>Methodology</h3>
-                            <p>Adapted the PyAeroSweep framework for fully automated CFD analysis of an HLFC airfoil equipped with a Fowler flap. The workflow integrates four key stages:</p>
+                            <p>This study employs a computational framework for solving FSI problems using Kratos Multiphysics, integrating numerical modeling with optimization techniques for system identification. The fluid and structural domains are governed by the incompressible Navier-Stokes equations and linear elasticity theory, respectively, discretized using FEM.</p>
 
-                            <h4>1. Geometry Definition</h4>
+                            <h4>1. Governing Equations</h4>
                             <ul>
-                                <li>Employed PARSEC parameterization for the main airfoil, fixed 15° droop nose, and Fowler flap</li>
-                                <li>Key flap design variables: chord ratio (cf_c = 0.3), horizontal/vertical gaps (x_gap, y_gap), leading-edge radius (r_le_flap), and deflection angles (δ<sub>f</sub> = 15°/30°)</li>
-                                <li>These parameters control slot geometry and flow attachment (baseline values in report Table 2.2)</li>
+                                <li>Fluid: Incompressible Navier-Stokes with VMS/SUPG stabilization</li>
+                                <li>Structure: Linear elasticity with Newmark-beta integration</li>
                             </ul>
 
-                            <h4>2. Mesh Generation</h4>
+                            <h4>2. Computational Framework</h4>
                             <ul>
-                                <li>Used Fidelity Pointwise to generate hybrid unstructured meshes (triangular core + T-Rex anisotropic prismatic layers near walls)</li>
-                                <li>Targeted Y+ ≈ 1 for accurate boundary-layer resolution</li>
-                                <li>Typical settings: maximum 100 T-Rex layers, full 60 layers, growth rate 1.15, initial spacing calculated from Reynolds number and skin-friction coefficient</li>
+                                <li>Partitioned approach with Dirichlet-Neumann coupling</li>
+                                <li>Gauss-Seidel strong coupling for stability</li>
+                                <li>Data mapping using nearest neighbor</li>
+                                <li>Solvers: GMRES/BiCGSTAB with ILU/AMG preconditioners</li>
                             </ul>
 
-                            <h4>3. CFD Simulation</h4>
+                            <h4>3. Optimization Framework</h4>
                             <ul>
-                                <li>Steady RANS simulations with SU2 open-source solver</li>
-                                <li>Turbulence model: k-ω SST (well-suited for adverse pressure gradients and separation on flaps)</li>
-                                <li>Freestream conditions: Mach 0.21, sea-level altitude, AoA sweeps from -2° to stall</li>
-                                <li>Convergence criteria: density residual drop, Cauchy criterion on C<sub>L</sub> (ε = 5×10<sup>-7</sup>), max 25,000 iterations</li>
+                                <li>Objective: Minimize squared error between computed and measured responses</li>
+                                <li>Method: Differential Evolution (DE) for nonlinear optimization</li>
                             </ul>
 
-                            <h4>4. Post-Processing</h4>
-                            <ul>
-                                <li>Extracted aerodynamic coefficients (C<sub>L</sub>, C<sub>D</sub>, etc.) from SU2 .csv history files using MS Excel</li>
-                                <li>Visualized flow fields (velocity contours, separation zones, pressure distributions) in ParaView from .vtu output</li>
-                            </ul>
-
-                            <p>This automated pipeline enabled over 1,000 simulations while maintaining a balance between computational cost and numerical accuracy—essential for practical parametric optimization studies.</p>
+                            <p>This methodology combines advanced coupling strategies, solver optimizations, and robust optimization techniques to ensure accurate and efficient FSI simulations.</p>
                         </div>
                     </div>
 
@@ -178,48 +176,40 @@
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-md-12 animate-box text-center">
                                 <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/PyAeroSweep.png" 
-                                alt="PyAeroSweep framework workflow"
-                                style="max-width: 170%; height: auto; display: block; margin: 0 auto;">
-                            <p> Figure: PyAeroSweep Framework.</p>
+                                src="../images/fsi/fig6.png" 
+                                alt="Optimization Strategy Flowchart"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                            <p> Figure 6: Optimization Strategy.</p>
                         </div>
                     </div>
 
-                    <!-- Added Figures for Parameters and Mesh -->
+                    <!-- Added Figures for Mesh and Sensors -->
                     <div class="row" style="margin-top: 60px;">
                         <div class="col-md-10 col-md-offset-1 text-center animate-box">  
                             <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/flap_parameters_1.png" 
-                                alt="Definitions of flap parameters 1"
-                                style="max-width: 180%; max-height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Flap design parameters and flap leading edge design parameteres. <br>
-                                <em>Source: <a href="https://www.researchgate.net/publication/265052122_3D_Flap_Design_using_Navier-Stokes_Equations_and_Evolutionary_Optimization_Techniques_on_an_Industrial_Platform" target="_blank" rel="noopener noreferrer">Minervino et al., EUROGEN, 2011</a></em>
-                            </p>
-                        </div>
-                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/flap_parameters_2.png" 
-                                alt="Definitions of flap parameters 2"
-                                style="max-width: 170%; height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: (a) Horizontal overlap (x_gap) and (b) vertical gap (y_gap), critical for optimizing channel flow through the slot.
-                            </p>
-                        </div>
-                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/full_mesh_1.png" 
-                                alt="Computational mesh around the HLFC airfoil"
+                                src="../images/fsi/fig2.png" 
+                                alt="Mesh and Split Details"
                                 style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Full view of the hybrid unstructured mesh.
+                                Figure 2: Mesh and Split Details.
                             </p>
+                        </div>
+                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
                             <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/full_mesh_2.png" 
-                                alt="Detailed mesh view near the Fowler flap"
-                                style="max-width: 100%; height: auto; display: block; margin: 20px auto 0 auto;">
+                                src="../images/fsi/fig4.png" 
+                                alt="Location of Displacement Sensors"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Close-up of the mesh around the Fowler flap, showing prismatic layers for viscous resolution.
+                                Figure 4: Location of Displacement Sensors.
+                            </p>
+                        </div>
+                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
+                            <img class="block-image img-responsive center-block" 
+                                src="../images/fsi/fig5.png" 
+                                alt="Location of Velocity Sensors"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure 5: Location of Velocity Sensors.
                             </p>
                         </div>
                     </div>
@@ -229,147 +219,98 @@
             <!-- Trade Studies -->
             <div class="row info-block">
                 <div class="col-md-8 col-md-offset-2">
-                    <!-- Mesh Sensitivity -->
+                    <!-- Benchmarking -->
                     <div class="row" style="margin-top: 60px;">
                         <div class="col-md-12 animate-box">
-                            <h3>Mesh Sensitivity</h3>
-                            <p>Tested coarse (≈84k cells), baseline (≈112k cells), and fine (≈138k cells) meshes at 15° flap deflection. The baseline mesh was selected due to only a 0.27% difference in C<sub>L,max</sub> from the fine mesh, while offering significantly lower computational cost—essential for conducting over 1,000 parametric runs in the optimization study.</p>
+                            <h3>Benchmarking & Testing</h3>
+                            <p>Benchmarking validated the mesh manipulation and split implementation. Displacement responses for continuous and split walls overlapped perfectly, confirming no computational artifacts. Stiffness variations in split halves showed expected deformation patterns.</p>
                         </div>
                     </div>
 
                     <div class="row" style="margin-top: 30px;">
-                        <!-- Table on the left -->
-                        <div class="col-md-5 col-sm-12 animate-box text-center" style="padding-right: 30px;">
-                            <table class="table table-striped table-hover table-bordered" style="width: 88%; margin: 0 auto; font-size: 15px;">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th style="text-align: center; padding: 12px;">Mesh Type</th>
-                                        <th style="text-align: center; padding: 12px;">Cell Count</th>
-                                        <th style="text-align: center; padding: 12px;">C<sub>L,max</sub></th>
-                                        <th style="text-align: center; padding: 12px;">Δ from Baseline (%)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td style="text-align: center; padding: 10px;">Fine</td>
-                                        <td style="text-align: center; padding: 10px;">138,244</td>
-                                        <td style="text-align: center; padding: 10px;">2.956</td>
-                                        <td style="text-align: center; padding: 10px; white-space: nowrap;">+0.27</td>
-                                    </tr>
-                                    <tr style="background-color: #d4edda; font-weight: bold;">
-                                        <td style="text-align: center; padding: 10px;">Baseline</td>
-                                        <td style="text-align: center; padding: 10px;">111,992</td>
-                                        <td style="text-align: center; padding: 10px;">2.948</td>
-                                        <td style="text-align: center; padding: 10px; white-space: nowrap;">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center; padding: 10px;">Coarse</td>
-                                        <td style="text-align: center; padding: 10px;">84,225</td>
-                                        <td style="text-align: center; padding: 10px;">2.956</td>
-                                        <td style="text-align: center; padding: 10px; white-space: nowrap;">–0.71</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p style="font-size: 14px; color: #666; margin-top: 20px; text-align: center; min-height: 60px; display: flex; align-items: center; justify-content: center;">
-                                Table: Mesh convergence results (15° flap deflection)
-                            </p>
-                        </div>
-
-                        <!-- Graph on the right -->
-                        <div class="col-md-7 col-sm-12 animate-box text-center" style="padding-left: 30px;">
+                        <div class="col-md-6 col-sm-12 animate-box text-center">
                             <img class="block-image img-responsive center-block" 
-                                 src="../images/studienarbeit/Mesh_Sensivity_CLmax_vs_No_of_Cells.png" 
-                                 alt="C_L,max convergence with mesh refinement"
-                                 style="max-width: 115%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
-                            <p style="font-size: 14px; color: #666; margin-top: 20px; text-align: center;">
-                                Figure: C<sub>L,max</sub> vs. number of cells – demonstrating grid independence
+                                 src="../images/fsi/fig9.png" 
+                                 alt="Comparing Continuous and Split Wall"
+                                 style="max-width: 100%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure 9: Comparing Continuous and Split Wall
                             </p>
                         </div>
 
-                        
+                        <div class="col-md-6 col-sm-12 animate-box text-center">
+                            <img class="block-image img-responsive center-block" 
+                                 src="../images/fsi/fig10.png" 
+                                 alt="Bottom Stiffer Relative to Top"
+                                 style="max-width: 100%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure 10: Bottom Stiffer Relative to Top
+                            </p>
+                        </div>
                     </div>
 
-                    <!-- Parameter Sensitivity -->
+                    <!-- Coupling Strategies -->
                     <div class="row" style="margin-top: 60px;">
 
                         <!-- Text on the LEFT -->
                         <div class="col-md-6 animate-box">
-                            <h3>Parameter Sensitivity</h3>
-                            <ul>
-                                <li>Conducted One-At-A-Time (OAT) parametric study to maximize C<sub>L</sub> at flap deflections of 15° (takeoff) and 30° (landing).</li>
-                                <li>Systematically varied 10 flap parameters individually while holding others fixed at baseline or current best values.</li>
-                                <li>AoA sweeps: 4°, 6°, 8°, 10–15° (1° steps near peak lift for higher resolution).</li>
-                                <li>Greater sensitivity observed at 30° deflection; primary focus shifted there.</li>
-                                <li>Most influential parameters: horizontal overlap (x_gap) and vertical gap (y_gap).</li>
-                                <li>Optimized values: x_gap reduced to ~0.75% chord and y_gap increased to ~1.97% chord.</li>
-                                <li>These changes improved slot channel flow, reduced instabilities, and contributed to higher C<sub>L,max</sub>.</li>
-                                <li>Less sensitive parameters included shroud lip extent and conical curve ratio.</li>
-                            </ul>
+                            <h3>Comparison of Coupling Strategies</h3>
+                            <p>Evaluated Gauss-Seidel strong/weak, Jacobi weak against benchmark. Gauss-Seidel strong matched benchmark closely with fast convergence. Weak couplings converged slower, while Jacobi weak showed oscillations and divergence, unsuitable for strong FSI.</p>
                         </div>
 
                         <!-- Image on the RIGHT -->
                         <div class="col-md-6 animate-box text-center">
                             <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/Strategy.png" 
-                                alt="Parameter Sensitivity Study - Strategy"
+                                src="../images/fsi/fig17.png" 
+                                alt="Coupling Strategy Comparison"
                                 style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure 17: Coupling Strategy
+                            </p>
                         </div>
 
                     </div>
 
-                    <!-- Key Improvements / Results -->
+                    <!-- Optimization Results -->
                     <div class="row" style="margin-top: 60px;">
                         <div class="col-md-12 animate-box">
-                            <h3>Key Improvements</h3>
-                            <p>The optimized Fowler flap achieved a <strong>4.14% increase in C<sub>L,max</sub></strong> at 15° deflection (takeoff) and a <strong>4.56% increase in C<sub>L,max</sub></strong> at 30° deflection (landing) compared to the baseline.</p>
-                            <p>These gains result from larger slot gaps and refined shroud geometry, leading to improved lift-to-drag ratio at low angles of attack, reduced flow separation on the flap, and decreased instabilities in the slot channel flow across the tested angle-of-attack range.</p>
+                            <h3>Optimization Results</h3>
+                            <p>DE optimization reduced objective function J rapidly, stabilizing at 2.5e-3. Young's moduli approached 2.3 MPa with oscillations due to unscaled data and bounds. Demonstrated effectiveness despite limitations.</p>
                         </div>
                     </div>
 
-                    <!-- Side-by-side C_L vs α plots -->
+                    <!-- Side-by-side plots -->
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-md-6 col-sm-12 animate-box text-center">
                             <img class="block-image img-responsive center-block" 
-                                 src="../images/studienarbeit/Cl_vs_alpha_15.png" 
-                                 alt="C_L vs α at 15° flap deflection"
+                                 src="../images/fsi/fig15.png" 
+                                 alt="Optimization of Function J"
                                  style="max-width: 100%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: C<sub>L</sub> vs. α comparison — baseline vs. optimized (15° flap deflection, takeoff)
+                                Figure 15: Optimization of Function J
                             </p>
                         </div>
 
                         <div class="col-md-6 col-sm-12 animate-box text-center">
                             <img class="block-image img-responsive center-block" 
-                                 src="../images/studienarbeit/Cl_vs_alpha_30.png" 
-                                 alt="C_L vs α at 30° flap deflection"
+                                 src="../images/fsi/fig16.png" 
+                                 alt="Optimization of Young's Modulus"
                                  style="max-width: 100%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: C<sub>L</sub> vs. α comparison — baseline vs. optimized (30° flap deflection, landing)
+                                Figure 16: Optimization of Young's Modulus
                             </p>
                         </div>
                     </div>
 
-                    <!-- Added Outline Figures for Comparisons -->
+                    <!-- Velocity Visualizations -->
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-md-12 animate-box text-center">
                             <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/outline_all.png" 
-                                alt="Comparison of baseline and optimized profiles"
+                                src="../images/fsi/fig13.png" 
+                                alt="Velocity During Ramp-up"
                                 style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Clean (green), Baseline (red) and Optimized (blue) airfoil profiles at 15° flap deflection.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-12 animate-box text-center">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/outline_flap.png" 
-                                alt="Comparison of baseline and optimized profiles"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Baseline (red) and Optimized (blue) flap profiles.
+                                Figure 13: Velocity - During the Ramp-up
                             </p>
                         </div>
                     </div>
@@ -377,48 +318,11 @@
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-md-12 animate-box text-center">
                             <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/outline_15.png" 
-                                alt="Comparison of baseline and optimized profiles"
+                                src="../images/fsi/fig14.png" 
+                                alt="Velocity After Settling"
                                 style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Baseline (red) vs. Optimized (blue) airfoil/flap profile at 15° deflection (takeoff configuration).
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-12 animate-box text-center">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/outline_30.png" 
-                                alt="Comparison of baseline and optimized profiles"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Baseline (red) vs. Optimized (blue) airfoil/flap profile at 30° deflection (landing configuration).
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Full-width Turbulemnt Kinetic Energy image below -->
-                    <div class="row" style="margin-top: 60px;">
-                        <div class="col-md-12 text-center animate-box">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/TKE_AOA15_15.png" 
-                                alt="Eddy viscosity baseline vs optimized"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Turbulent kinetic energy contours: Baseline (Top) and Optimized (bottom) configurations at 15-degree AoA and 15-degree flap deflection.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 60px;">
-                        <div class="col-md-12 text-center animate-box">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/studienarbeit/TKE_AOA13_30.png" 
-                                alt="Eddy viscosity baseline vs optimized"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Turbulent kinetic energy contours: Baseline (Top) and Optimized (bottom) configurations at 13-degree AoA and 30-degree flap deflection.
+                                Figure 14: Velocity - After Settling
                             </p>
                         </div>
                     </div>
@@ -428,57 +332,18 @@
                         <div class="col-md-12">
                             <h3>Limitations & Future Work</h3>
 
-                            <h4>Solver Framework (PyAeroSweep & SU2)</h4>
                             <ul>
-                                <li>Limited to steady RANS simulations (k-ω SST)</li>
-                                <li>Unsteady flow structures in separated regions and wakes not captured</li>
-                                <li>Impacts accuracy of drag, stall behaviour and detailed flow prediction</li>
-                                <li><strong>Future:</strong> Explore URANS simulations for better handling of time-dependent effects</li>
-                            </ul>
-
-                            <h4>Workflow Stability</h4>
-                            <ul>
-                                <li>Occasional PyAeroSweep crashes / incomplete output files</li>
-                                <li>Required frequent manual restarts and supervision</li>
-                                <li><strong>Future:</strong> Improve script robustness and error handling to enable fully unattended runs</li>
-                            </ul>
-                            <div style="text-align: center; margin: 20px 0;">
-                                <img class="block-image img-responsive center-block" 
-                                     src="../images/studienarbeit/runtime_error.png" 
-                                     alt="PyAeroSweep terminal error example"
-                                     style="max-width: 90%; height: auto;">
-                                <p style="font-size: 14px; color: #666; margin-top: 12px;">
-                                    Figure: Example of PyAeroSweep workflow error in terminal
-                                </p>
-                            </div>
-
-                            <h4>Mesh Quality & Computational Resources</h4>
-                            <ul>
-                                <li>Equiangle skewness visible in flap cutout, shroud tip and flap leading edge</li>
-                                <li>Further refinement could improve flow resolution in critical regions</li>
-                                <li>Long simulation times on workstation (Intel i7-10700K, 32 GB RAM)</li>
-                                <li><strong>Future:</strong> Use HPC cluster for finer meshes and faster parametric studies</li>
-                            </ul>
-                            <div style="text-align: center; margin: 20px 0;">
-                                <img class="block-image img-responsive center-block" 
-                                     src="../images/studienarbeit/Equiangle_Skewness.png" 
-                                     alt="Equiangle skewness distribution of baseline mesh"
-                                     style="max-width: 90%; height: auto;">
-                                <p style="font-size: 14px; color: #666; margin-top: 12px;">
-                                    Figure: Equiangle skewness distribution – baseline mesh
-                                </p>
-                            </div>
-
-                            <h4>Manual & Time-Intensive Process</h4>
-                            <ul>
-                                <li>~700 systematic + >300 failed/rerun cases → over 1,000 CFD runs total</li>
-                                <li>Semi-manual parameter variation, data extraction and post-processing</li>
-                                <li>Risk of data loss when restarting interrupted sweeps</li>
-                                <li><strong>Future:</strong> Implement surrogate-based optimization (SBO) or automatic MDO algorithms</li>
+                                <li>Unscaled velocity data dominated error function in multi-sensor optimization</li>
+                                <li>Constrained Young's modulus bounds limited refinement</li>
+                                <li>Oscillations in convergence due to nonlinear, multi-modal search space</li>
+                                <li><strong>Future:</strong> Implement data scaling for equitable error contributions</li>
+                                <li>Extend to 3D structures and complex geometries</li>
+                                <li>Incorporate adaptive meshing and advanced preconditioners</li>
+                                <li>Enhance automation for segmentation and parameter handling</li>
                             </ul>
 
                             <p style="margin-top: 30px; font-style: italic;">
-                                Despite these limitations, the obtained lift improvements demonstrate the value of the developed rapid CFD workflow for early-stage high-lift design studies.
+                                The framework provides a solid foundation for advancing FSI simulations in engineering applications.
                             </p>
                         </div>
                     </div>
@@ -488,18 +353,14 @@
                         <div class="col-md-12">
                             <h3 style="text-align: left;">Summary</h3>
 
-                            <p>This project optimized a Fowler flap for a Hybrid Laminar Flow Control (HLFC) airfoil to maximize lift during takeoff (15° deflection) and landing (30° deflection).</p>
+                            <p>This project developed a methodology for model fitting in fluid-structure coupled problems using Kratos Multiphysics. Through simulation of a beam in a fluid channel, sensor data integration, and DE optimization, we refined material parameters for accurate system identification.</p>
 
-                            <p>Using the PyAeroSweep framework with Fidelity Pointwise meshing and SU2 steady RANS (k-ω SST) simulations, a mesh sensitivity study established a reliable baseline grid. A detailed parametric study of flap design variables was conducted through over 1,000 CFD runs.</p>
-
-                            <p>The final optimized design achieved a <strong>4.14% increase in C<sub>L,max</sub></strong> at 15° deflection and a <strong>4.56% increase in C<sub>L,max</sub></strong> at 30° deflection relative to the baseline. Flow visualizations confirmed improved flow attachment over the flap and reduced instabilities in the slot channel across the angle-of-attack range.</p>
-
-                            <p>Despite limitations of steady RANS and manual workflow intensity, the study successfully met its objective and provides valuable insights into high-lift optimization for HLFC airfoils, establishing a foundation for future research with advanced methods.</p>
+                            <p>Benchmarking validated the approach, while coupling strategy comparisons highlighted Gauss-Seidel strong as optimal for stability. Optimization achieved efficient error reduction, supporting digital twin applications in multi-physics environments.</p>
 
                             <h3 style="text-align: left; margin-top: 60px;">Acknowledgments</h3>
 
                             <p style="text-align: left;">
-                                Thanks to supervisors Prof. Dr.-Ing. Ingo Staack, Dr.-Ing. Stanislav Karpuk, and Dr.-Ing. Valerio Mosca at the Institute of Aircraft Design and Lightweight Structures (IFL), TU Braunschweig.
+                                Thanks to contributors Bhakti Sheth and Rohin Ramisetty, and supervisor Dr.-Ing. Ihar Antonauk at the Chair of Structural Analysis, TU München.
                             </p>
                         </div>
                     </div>
@@ -511,13 +372,13 @@
                         <div class="col-md-10 col-md-offset-1">
                             <div class="row row-pt-md portfolio-navigation">
                                 <div class="col-xs-4 text-left">
-                                    <a href="highlift.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Previous</a>
+                                    <a href="studienarbeit.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Previous</a>
                                 </div>
                                 <div class="col-xs-4 text-center">
                                     <a href="../work.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All Projects</a>
                                 </div>
                                 <div class="col-xs-4 text-right">
-                                    <a href="fsi.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
+                                    <a href="next.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
                                 </div>
                             </div>
                         </div>
