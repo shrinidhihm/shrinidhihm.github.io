@@ -98,7 +98,7 @@
                                 <li>Develop an optimization process to identify correct material parameters</li>
                                 <li>Study the effect of different coupling methods on the system identification</li>
                             </ul>
-                            <!-- Added Equation for Objective Function -->
+                        <!-- Added Equation for Objective Function -->
                         <div style="margin-top: 30px; margin-bottom: 30px; text-align: center;">
                             <p>The objective function \( J \) for optimization is defined as:</p>
                             \[ J = \frac{1}{2} \sum_{t=1}^{N} \sum_{i=1}^{M} \left[ h_i^c(t) - h_i^m(t) \right]^2 \]
@@ -138,14 +138,26 @@
                 </div>
             </div>
 
-            <!-- Motivation - Now text-only, cleaner and focused -->
+            <!-- Motivation -->
             <div class="row info-block">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="row">
-                        <div class="col-md-12 animate-box">  <!-- Changed to full width -->
+                        <div class="col-md-6 animate-box">
                             <h3>Motivation</h3>
                             <p>The study of Fluid-Structure Interaction (FSI) is pivotal in understanding the complex interplay between fluid flow and structural response, a phenomenon that spans a wide range of natural and engineered systems. From biological processes, such as blood flow in arteries, to large-scale engineering applications like aircraft wings and bridges, FSI plays a critical role in ensuring the safety, efficiency, and performance of systems.</p>
-                            <p>Coupled simulations are essential for accurate predictions in multi-physics environments, but they pose challenges like numerical stability, high computational costs, and interface handling. This project addresses these by developing methodologies for system identification and optimization in FSI, leveraging tools like Kratos Multiphysics for real-world applications in aerospace, biomedical, and energy sectors.</p>
+                            <p>FSI describes the bidirectional interplay between fluid flow and structural response. For example, arterial blood flow influences vascular walls, aerodynamic forces shape aircraft wings, and wind-induced vibrations affect bridges. Capturing these interactions requires solving governing equations for both domains simultaneously with proper interface information exchange. Traditional uncoupled simulations fail to capture interdependencies, leading to inaccurate predictions. Coupled FSI simulations are necessary to account for transient deformations, dynamic loads, and geometric changes.</p>
+                            <p>Coupled problems are fundamental in multi-physics simulations. In aerospace, aerodynamic loading on wings alters shape, modifying airflow in a feedback loop. In biomedical engineering, artificial heart valves' motion is dictated by blood flow and leaflet compliance. Kratos Multiphysics facilitates these simulations, balancing accuracy, efficiency, and stability. This study develops an FSI model integrating Finite Element and Finite Volume Methods for real-world applications.</p>
+                            <p>FSI challenges include nonlinearity, interface handling, numerical stability, and computational cost. This project addresses these by developing methodologies for system identification and optimization in FSI, leveraging Kratos Multiphysics for applications in aerospace, biomedical, and energy sectors.</p>
+                        </div>
+                        <div class="col-md-6 animate-box">
+                            <img class="block-image img-responsive" 
+                                src="../images/fsi/fig1.png" 
+                                alt="Complete Set-up of the FSI Model"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure 1: Complete Set-up<br>
+                                <em>Source: Project Report</em>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -157,13 +169,21 @@
                     <div class="row">
                         <div class="col-md-12 animate-box">
                             <h3>Methodology</h3>
-                            <p>This study employs a computational framework for solving FSI problems using Kratos Multiphysics, integrating numerical modeling with optimization techniques for system identification. The fluid and structural domains are governed by the incompressible Navier-Stokes equations and linear elasticity theory, respectively, discretized using FEM.</p>
+                            <p>This study employs a computational framework for solving FSI problems using Kratos Multiphysics, integrating numerical modeling with optimization techniques for system identification. The fluid and structural domains are governed by the incompressible Navier-Stokes equations and linear elasticity theory, respectively, discretized using FEM. The coupling is achieved through a partitioned approach with Dirichlet-Neumann scheme, where the fluid solver imposes velocity constraints, and the structural solver computes reaction forces. Relaxation techniques enhance convergence and stability.</p>
+                            <p>The solution process uses iterative solvers like GMRES and BiCGSTAB with preconditioners such as ILU and AMG. Parallel computing with OpenMP accelerates computations. An optimization framework adjusts Young's modulus to minimize errors between simulated and measured responses.</p>
 
                             <h4>1. Governing Equations</h4>
                             <ul>
                                 <li>Fluid: Incompressible Navier-Stokes with VMS/SUPG stabilization</li>
                                 <li>Structure: Linear elasticity with Newmark-beta integration</li>
                             </ul>
+                            <p>The Navier-Stokes equations for the fluid domain:</p>
+                            \[ \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}, \]
+                            \[ \nabla \cdot \mathbf{u} = 0. \]
+                            <p>Structural mechanics:</p>
+                            \[ \rho_s \frac{\partial^2 \mathbf{d}}{\partial t^2} = \nabla \cdot \sigma + \mathbf{b}, \]
+                            \[ \sigma = \mathbf{C} : \varepsilon, \]
+                            \[ \varepsilon = \frac{1}{2} \left( \nabla \mathbf{d} + \nabla \mathbf{d}^T \right). \]</p>
 
                             <h4>2. Computational Framework</h4>
                             <ul>
@@ -171,6 +191,7 @@
                                 <li>Gauss-Seidel strong coupling for stability</li>
                                 <li>Data mapping using nearest neighbor</li>
                                 <li>Solvers: GMRES/BiCGSTAB with ILU/AMG preconditioners</li>
+                                <li>Parallel computing with OpenMP</li>
                             </ul>
 
                             <h4>3. Optimization Framework</h4>
@@ -178,6 +199,8 @@
                                 <li>Objective: Minimize squared error between computed and measured responses</li>
                                 <li>Method: Differential Evolution (DE) for nonlinear optimization</li>
                             </ul>
+                            <p>The objective function:</p>
+                            \[ J = \frac{1}{2} \sum_{t=1}^{N} \sum_{i=1}^{M} \left[ h_i^c(t) - h_i^m(t) \right]^2 \]
 
                             <p>This methodology combines advanced coupling strategies, solver optimizations, and robust optimization techniques to ensure accurate and efficient FSI simulations.</p>
                         </div>
@@ -234,8 +257,8 @@
                     <!-- Benchmarking -->
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-md-12 animate-box">
-                            <h3>Benchmarking & Testing</h3>
-                            <p>Benchmarking validated the mesh manipulation and split implementation. Displacement responses for continuous and split walls overlapped perfectly, confirming no computational artifacts. Stiffness variations in split halves showed expected deformation patterns.</p>
+                            <p>Benchmarking validated the mesh manipulation and split implementation. The displacement vs. time response for a continuous wall without a slit serves as the baseline, exhibiting smooth deformation under loading conditions. Introducing a split alters the structural response, as discontinuities affect stiffness and load distribution.</p>
+                            <p>Displacement responses for continuous and split walls overlapped perfectly, confirming no computational artifacts from the split. Stiffness variations in split halves showed expected deformation patterns, with the stiffer bottom half exhibiting less displacement, validating the implementation.</p>
                         </div>
                     </div>
 
@@ -261,13 +284,15 @@
                         </div>
                     </div>
 
-                    <!-- Coupling Strategies -->
-                    <div class="row" style="margin-top: 40px;">
+                    <!-- Comparison of Coupling Strategies -->
+                    <div class="row" style="margin-top: 60px;">
 
                         <!-- Text on the LEFT -->
                         <div class="col-md-6 animate-box">
                             <h3>Comparison of Coupling Strategies</h3>
-                            <p>Evaluated Gauss-Seidel strong/weak, Jacobi weak against benchmark. Gauss-Seidel strong matched benchmark closely with fast convergence. Weak couplings converged slower, while Jacobi weak showed oscillations and divergence, unsuitable for strong FSI.</p>
+                            <p>The behavior of different coupling strategies—Gauss-Seidel strong, Gauss-Seidel weak, Jacobi weak, and the benchmark simulation—offers critical insights into their suitability for strongly coupled FSI problems. Gauss-Seidel methods rely on sequential updates, where one domain's solution informs the other within the same iteration, allowing strong coupling to synchronize responses effectively.</p>
+                            <p>Gauss-Seidel strong matched the benchmark closely with minimal deviation and faster convergence due to efficient data exchange. Gauss-Seidel weak, while stable and cheaper, converges slower without iterative dependency for nonlinear interactions. Jacobi methods use parallel updates, making them less stable; Jacobi weak showed oscillations and divergence as exchanged data may not align, unsuitable for strongly coupled systems.</p>
+                            <p>These findings emphasize solver selection for capturing bidirectional interactions and achieving stable solutions.</p>
                         </div>
 
                         <!-- Image on the RIGHT -->
@@ -284,10 +309,11 @@
                     </div>
 
                     <!-- Optimization Results -->
-                    <div class="row" style="margin-top: 40px;">
+                    <div class="row" style="margin-top: 60px;">
                         <div class="col-md-12 animate-box">
                             <h3>Optimization Results</h3>
-                            <p>DE optimization reduced objective function J rapidly, stabilizing at 2.5e-3. Young's moduli approached 2.3 MPa with oscillations due to unscaled data and bounds. Demonstrated effectiveness despite limitations.</p>
+                            <p>The optimization results for the four sensors show a rapid reduction in the objective function \( J \) from \( 5 \times 10^{-3} \) to \( 2.5 \times 10^{-3} \) within the first five iterations, followed by stabilization. This indicates the DE algorithm effectively minimized the error between computed and measured data, achieving convergence efficiently.</p>
+                            <p>The remaining residual error suggests challenges such as unscaled velocity contributions and constrained Young's modulus bounds limiting refinement. The process aimed to converge \( E_1 \) and \( E_2 \) toward 2.3 MPa, but persistent oscillations indicate issues in stable refinement. Initial iterations show fluctuations as DE explores the solution space; values approach 2.3 MPa later, but limits restricted the search. Despite limitations, the framework maintains realistic properties and refines them iteratively, demonstrating effectiveness for system identification in FSI simulations.</p>
                         </div>
                     </div>
 
@@ -403,15 +429,21 @@
                     </div>
 
                     <!-- Summary & Acknowledgments -->
-                    <div class="row info-block" style="margin-top: 20px;">
+                    <div class="row info-block" style="margin-top: 60px;">
                         <div class="col-md-12">
                             <h3 style="text-align: left;">Summary</h3>
 
-                            <p>This project developed a methodology for model fitting in fluid-structure coupled problems using Kratos Multiphysics. Through simulation of a beam in a fluid channel, sensor data integration, and DE optimization, we refined material parameters for accurate system identification.</p>
+                            <p>This study presents a robust and adaptive framework for FSI simulations coupled with optimization strategies, demonstrating its potential for addressing complex structural optimization challenges. Through the development and analysis of an automated beam segmentation and optimization process, the study successfully highlighted the interplay between material property distribution and structural performance within a dynamic fluid environment.</p>
 
-                            <p>Benchmarking validated the approach, while coupling strategy comparisons highlighted Gauss-Seidel strong as optimal for stability. Optimization achieved efficient error reduction, supporting digital twin applications in multi-physics environments.</p>
+                            <p>The methodology’s ability to handle both equal and unequal segmentation with optimal Young’s modulus values underscores its versatility and reliability in generating targeted design modifications. By leveraging optimization techniques, the framework minimized beam deflection efficiently while preserving the integrity of the structural simulation, providing a seamless balance between accuracy and computational feasibility.</p>
 
-                            <h3 style="text-align: left; margin-top: 40px;">Acknowledgments</h3>
+                            <p>A detailed analysis of coupling strategies revealed the significance of choosing appropriate solvers in FSI problems. The Gauss-Seidel strong coupling method emerged as the most reliable approach for ensuring accurate synchronization between fluid and structural domains, closely replicating benchmark simulations with faster convergence.</p>
+
+                            <p>In contrast, weak coupling methods demonstrated slower convergence, with the Jacobi weak strategy exhibiting significant oscillations due to its parallel update mechanism, which is ill-suited for strongly coupled systems. These findings emphasize the importance of solver selection in capturing bidirectional interactions and achieving stable, accurate solutions.</p>
+
+                            <p>This study concludes with a reaffirmation of the importance of solver accuracy, optimization adaptability, and computational efficiency in achieving reliable solutions for strongly coupled systems. The developed framework serves as a stepping stone toward more sophisticated methodologies, fostering further innovation in the field of FSI modeling and optimization.</p>
+
+                            <h3 style="text-align: left; margin-top: 60px;">Acknowledgments</h3>
 
                             <p style="text-align: left;">
                                 Thanks to contributors Bhakti Sheth and Rohin Ramisetty, and supervisor Dr.-Ing. Ihar Antonauk at the Chair of Structural Analysis, TU München.
