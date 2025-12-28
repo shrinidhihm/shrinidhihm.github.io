@@ -248,19 +248,19 @@
                             <img class="block-image img-responsive center-block" 
                                 src="../images/fsi/fig9.png" 
                                 alt="Comparing Continuous and Split Wall"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
+                                style="max-width: 80%; height: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
                                 Figure: Comparing Continuous and Split Wall
                             </p>
                         </div>
                     </div>
 
-                    <div class="row" style="margin-top: 60px;">
+                    <div class="row" style="margin-top: 20px;">
                         <div class="col-md-10 col-md-offset-1 text-center animate-box">
                             <img class="block-image img-responsive center-block" 
                                 src="../images/fsi/fig10.png" 
                                 alt="Bottom Stiffer Relative to Top"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
+                                style="max-width: 80%; height: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
                                 Figure: Bottom Stiffer Relative to Top
                             </p>
@@ -291,51 +291,47 @@
                     </div>
 
                     <!-- Optimization Results -->
-                    <div class="row" style="margin-top: 20px;">
+                    <div class="row" style="margin-top: 60px;">
                         <div class="col-md-12 animate-box">
-                            <h3>Optimization Results</h3>
-                            <p>The optimization results for the four sensors show a rapid reduction in the objective function \( J \) from \( 5 \times 10^{-3} \) to \( 2.5 \times 10^{-3} \) within the first five iterations, followed by stabilization. This indicates the DE algorithm effectively minimized the error between computed and measured data, achieving convergence efficiently.</p>
-                    </div>
-
-                    <!-- Stacked plots: One on top of the other -->
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-10 col-md-offset-1 col-sm-12 animate-box text-center">
-                            
-                            <!-- First plot: Optimization of Function J -->
-                            <div style="margin-bottom: 40px;">
-                                <img class="block-image img-responsive center-block" 
-                                    src="../images/fsi/fig15.jpg" 
-                                    alt="Optimization of Function J"
-                                    style="max-width: 100%; max-height: 600px; height: auto; width: auto; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px; object-fit: contain;">
-                                <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                    Figure: Optimization of Function J
-                                </p>
-                            </div>
+                            <h3 style="margin-bottom: 10px;">Optimization Results</h3>
                         </div>
                     </div>
 
-                            <!-- Optimization Results -->
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-md-12 text-left animate-box">
-                            <p>The remaining residual error suggests challenges such as unscaled velocity contributions and constrained Young's modulus bounds limiting refinement. The process aimed to converge \( E_1 \) and \( E_2 \) toward 2.3 MPa, but persistent oscillations indicate issues in stable refinement. Initial iterations show fluctuations as DE explores the solution space; values approach 2.3 MPa later, but limits restricted the search. Despite limitations, the framework maintains realistic properties and refines them iteratively, demonstrating effectiveness for system identification in FSI simulations.</p>
+                    <!-- First paragraph + first image -->
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 animate-box">
+                            <p>The optimization results for the four sensors show a rapid reduction in the objective function \( J \) from \( 5 \times 10^{-3} \) to \( 2.5 \times 10^{-3} \) within the first five iterations, followed by stabilization. This indicates the DE algorithm effectively minimized the error between computed and measured data, achieving efficient convergence.</p>
                         </div>
                     </div>
-                            
-                    <!-- Stacked plots: One on top of the other -->
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-10 col-md-offset-1 col-sm-12 animate-box text-center">
-                            
-                            <!-- Second plot: Optimization of Young's Modulus -->
-                            <div>
-                                <img class="block-image img-responsive center-block" 
-                                    src="../images/fsi/fig16.jpg" 
-                                    alt="Optimization of Young's Modulus"
-                                    style="max-width: 100%; max-height: 600px; height: auto; width: auto; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px; object-fit: contain;">
-                                <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                    Figure: Optimization of Young's Modulus
-                                </p>
-                            </div>
 
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
+                            <img class="block-image img-responsive center-block" 
+                                src="../images/fsi/fig15.jpg" 
+                                alt="Optimization of Function J"
+                                style="max-width: 100%; max-height: 600px; height: auto; width: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px; object-fit: contain;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure: Optimization of Function J
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Second paragraph + second image -->
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-md-10 col-md-offset-1 animate-box">
+                            <p>The remaining residual error suggests challenges such as unscaled velocity contributions and constrained Young's modulus bounds limiting full refinement. The process aimed to converge \( E_1 \) and \( E_2 \) toward 2.3 MPa, but persistent oscillations occurred due to the nonlinear search space. Despite these limitations, the framework successfully refined material properties iteratively, demonstrating its effectiveness for system identification in FSI simulations.</p>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
+                            <img class="block-image img-responsive center-block" 
+                                src="../images/fsi/fig16.jpg" 
+                                alt="Optimization of Young's Modulus"
+                                style="max-width: 100%; max-height: 600px; height: auto; width: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px; object-fit: contain;">
+                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
+                                Figure: Optimization of Young's Modulus
+                            </p>
                         </div>
                     </div>
 
