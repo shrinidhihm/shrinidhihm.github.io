@@ -135,11 +135,9 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="row">
                         <div class="col-md-12 animate-box">  <!-- Changed to full width -->
-                            <h3>Motivation</h3>
-                            <p>The study of Fluid-Structure Interaction (FSI) is pivotal in understanding the complex interplay between fluid flow and structural response, a phenomenon that spans a wide range of natural and engineered systems. From biological processes, such as blood flow in arteries, to large-scale engineering applications like aircraft wings and bridges, FSI plays a critical role in ensuring the safety, efficiency, and performance of systems.</p>
-                            <p>FSI describes the bidirectional interplay between fluid flow and structural response. For example, arterial blood flow influences vascular walls, aerodynamic forces shape aircraft wings, and wind-induced vibrations affect bridges. Capturing these interactions requires solving governing equations for both domains simultaneously with proper interface information exchange. Traditional uncoupled simulations fail to capture interdependencies, leading to inaccurate predictions. Coupled FSI simulations are necessary to account for transient deformations, dynamic loads, and geometric changes.</p>
-                            <p>Coupled problems are fundamental in multi-physics simulations. In aerospace, aerodynamic loading on wings alters shape, modifying airflow in a feedback loop. In biomedical engineering, artificial heart valves' motion is dictated by blood flow and leaflet compliance. Kratos Multiphysics facilitates these simulations, balancing accuracy, efficiency, and stability. This study develops an FSI model integrating Finite Element and Finite Volume Methods for real-world applications.</p>
-                            <p>FSI challenges include nonlinearity, interface handling, numerical stability, and computational cost. This project addresses these by developing methodologies for system identification and optimization in FSI, leveraging Kratos Multiphysics for applications in aerospace, biomedical, and energy sectors.</p>
+                            <p>Fluid-Structure Interaction (FSI) governs critical real-world phenomena where fluid forces deform structures and structural changes alter flow — from blood flow in arteries and heart valves to aerodynamic loads on aircraft wings and wind-induced bridge vibrations.</p>
+                            <p>Accurate prediction requires tightly coupled simulations that solve fluid and structural equations simultaneously with proper interface handling. Traditional uncoupled approaches often fail to capture these bidirectional effects, leading to inaccurate results.</p>
+                            <p>This project develops a methodology for system identification in FSI using Kratos Multiphysics. By combining numerical simulation with data-driven optimization (Differential Evolution), material parameters (Young's modulus) are refined from virtual sensor data — advancing digital twin concepts for structural monitoring in aerospace, biomedical, and energy applications.</p>
                         </div>
                     </div>
                 </div>
@@ -290,7 +288,7 @@
                     </div>
 
                     <!-- Optimization Results -->
-                    <div class="row" style="margin-top: 60px;">
+                    <div class="row" style="margin-top: 20px;">
                         <div class="col-md-12 animate-box">
                             <h3>Optimization Results</h3>
                             <p>The optimization results for the four sensors show a rapid reduction in the objective function \( J \) from \( 5 \times 10^{-3} \) to \( 2.5 \times 10^{-3} \) within the first five iterations, followed by stabilization. This indicates the DE algorithm effectively minimized the error between computed and measured data, achieving convergence efficiently.</p>
@@ -313,7 +311,7 @@
 
                             <!-- Optimization Results -->
                     <div class="row" style="margin-top: 60px;">
-                        <div class="col-md-12 animate-box">
+                        <div class="col-md-12 text-left animate-box">
                             <p>The remaining residual error suggests challenges such as unscaled velocity contributions and constrained Young's modulus bounds limiting refinement. The process aimed to converge \( E_1 \) and \( E_2 \) toward 2.3 MPa, but persistent oscillations indicate issues in stable refinement. Initial iterations show fluctuations as DE explores the solution space; values approach 2.3 MPa later, but limits restricted the search. Despite limitations, the framework maintains realistic properties and refines them iteratively, demonstrating effectiveness for system identification in FSI simulations.</p>
                         </div>
                     </div>
