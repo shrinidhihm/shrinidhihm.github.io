@@ -236,28 +236,31 @@
                      <!-- Benchmarking -->
                     <div class="row" style="margin-top: 20px;">
                         <div class="col-md-12 animate-box">
-                            <h3>Benchmarking & Testing</h3>
-                            <p>Benchmarking validated the mesh manipulation and split implementation (Figure-Left). The displacement vs. time response for a continuous wall without a slit serves as the baseline, exhibiting smooth deformation under loading conditions. Introducing a split alters the structural response, as discontinuities affect stiffness and load distribution.</p>
-                            <p>Displacement responses for continuous and split walls overlapped perfectly (Figure-Right), confirming no computational artifacts from the split. Stiffness variations in split halves showed expected deformation patterns, with the stiffer bottom half exhibiting less displacement, validating the implementation.</p>
+                            <h3 style="margin-bottom: 10px;">Benchmarking & Testing</h3>
+                            <p>Benchmarking validated the mesh manipulation and split implementation. The displacement vs. time response for a continuous wall without a slit serves as the baseline, exhibiting smooth deformation under loading conditions. Introducing a split alters the structural response, as discontinuities affect stiffness and load distribution.</p>
+                            <p>Displacement responses for continuous and split walls overlapped perfectly, confirming no computational artifacts from the split. Stiffness variations in split halves showed expected deformation patterns, with the stiffer bottom half exhibiting less displacement, validating the implementation.</p>
                         </div>
                     </div>
 
-                    <div class="row" style="margin-top: 30px;">
-                        <div class="col-md-6 col-sm-12 animate-box text-center">
+                    <!-- Stacked Images -->
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
                             <img class="block-image img-responsive center-block" 
-                                 src="../images/fsi/fig9.png" 
-                                 alt="Comparing Continuous and Split Wall"
-                                 style="max-width: 100%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
+                                src="../images/fsi/fig9.png" 
+                                alt="Comparing Continuous and Split Wall"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
                                 Figure: Comparing Continuous and Split Wall
                             </p>
                         </div>
+                    </div>
 
-                        <div class="col-md-6 col-sm-12 animate-box text-center">
+                    <div class="row" style="margin-top: 60px;">
+                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
                             <img class="block-image img-responsive center-block" 
-                                 src="../images/fsi/fig10.png" 
-                                 alt="Bottom Stiffer Relative to Top"
-                                 style="max-width: 100%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
+                                src="../images/fsi/fig10.png" 
+                                alt="Bottom Stiffer Relative to Top"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
                                 Figure: Bottom Stiffer Relative to Top
                             </p>
@@ -266,26 +269,25 @@
 
                     <!-- Comparison of Coupling Strategies -->
                     <div class="row" style="margin-top: 60px;">
-
-                        <!-- Text on the LEFT -->
-                        <div class="col-md-6 animate-box">
-                        <h3 style="margin-bottom: 10px;">Comparison of Coupling Strategies</h3>
+                        <div class="col-md-12 animate-box">
+                            <h3>Comparison of Coupling Strategies</h3>
                             <p>The behavior of different coupling strategies—Gauss-Seidel strong, Gauss-Seidel weak, Jacobi weak, and the benchmark simulation—offers critical insights into their suitability for strongly coupled FSI problems. Gauss-Seidel methods rely on sequential updates, where one domain's solution informs the other within the same iteration, allowing strong coupling to synchronize responses effectively.</p>
                             <p>Gauss-Seidel strong matched the benchmark closely with minimal deviation and faster convergence due to efficient data exchange. Gauss-Seidel weak, while stable and cheaper, converges slower without iterative dependency for nonlinear interactions. Jacobi methods use parallel updates, making them less stable; Jacobi weak showed oscillations and divergence as exchanged data may not align, unsuitable for strongly coupled systems.</p>
-                            <p>These findings emphasize solver selection for capturing bidirectional interactions and achieving stable solutions.</p>
+                            <p>These findings emphasize the importance of solver selection for capturing bidirectional interactions and achieving stable, accurate solutions.</p>
                         </div>
+                    </div>
 
-                        <!-- Image on the RIGHT -->
-                        <div class="col-md-6 animate-box text-center">
+                    <!-- Image below text -->
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
                             <img class="block-image img-responsive center-block" 
                                 src="../images/fsi/fig17.png" 
                                 alt="Coupling Strategy Comparison"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
                             <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Coupling Strategy
+                                Figure: Coupling Strategy Comparison
                             </p>
                         </div>
-
                     </div>
 
                     <!-- Optimization Results -->
