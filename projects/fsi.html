@@ -130,25 +130,23 @@
                 </div>
             </div>
 
-           <!-- Motivation -->
+           <!-- Motivation + Methodology (merged into one info-block) -->
             <div class="row info-block" style="margin-top: 10px;">
                 <div class="col-md-8 col-md-offset-2">
+                    <!-- Motivation -->
                     <div class="row">
                         <div class="col-md-12 animate-box">
                             <h3>Motivation</h3>
-                            <p>Fluid-Structure Interaction (FSI) governs critical real-world phenomena where fluid forces deform structures and structural changes alter flow, from blood flow in arteries and heart valves to aerodynamic loads on aircraft wings and wind-induced bridge vibrations.</p>
+                            <p>Fluid-Structure Interaction (FSI) governs critical real-world phenomena where fluid forces deform structures and structural changes alter flow — from blood flow in arteries and heart valves to aerodynamic loads on aircraft wings and wind-induced bridge vibrations.</p>
                             <p>Accurate prediction requires tightly coupled simulations that solve fluid and structural equations simultaneously with proper interface handling. Traditional uncoupled approaches often fail to capture these bidirectional effects, leading to inaccurate results.</p>
-                            <p>This project develops a methodology for system identification in FSI using Kratos Multiphysics. By combining numerical simulation with data-driven optimization (Differential Evolution), material parameters (Young's modulus) are refined from virtual sensor data, advancing digital twin concepts for structural monitoring in aerospace, biomedical, and energy applications.</p>
+                            <p>This project develops a methodology for system identification in FSI using Kratos Multiphysics. By combining numerical simulation with data-driven optimization (Differential Evolution), material parameters (Young's modulus) are refined from virtual sensor data — advancing digital twin concepts for structural monitoring in aerospace, biomedical, and energy applications.</p>
                         </div>
                     </div>
-                </div>
-            </div>
 
-          <!-- Methodology -->
-            <div class="row info-block">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="row">
+                    <!-- Methodology (directly below, no extra wrapper) -->
+                    <div class="row" style="margin-top: 50px;">
                         <div class="col-md-12 animate-box">
+                            <h3>Methodology</h3>
                             <h3>Methodology</h3>
                             <p>This study employs a computational framework for solving FSI problems using Kratos Multiphysics, integrating numerical modeling with optimization techniques for system identification. The fluid and structural domains are governed by the incompressible Navier-Stokes equations and linear elasticity theory, respectively, discretized using FEM. The coupling is achieved through a partitioned approach with Dirichlet-Neumann scheme, where the fluid solver imposes velocity constraints, and the structural solver computes reaction forces. Relaxation techniques enhance convergence and stability.</p>
                             <p>The solution process uses iterative solvers like GMRES and BiCGSTAB with preconditioners such as ILU and AMG. Parallel computing with OpenMP accelerates computations. An optimization framework adjusts Young's modulus to minimize errors between simulated and measured responses.</p>
@@ -227,14 +225,9 @@
                             </p>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Trade Studies -->
-            <div class="row info-block">
-                <div class="col-md-8 col-md-offset-2">
-                     <!-- Benchmarking -->
-                    <div class="row" style="margin-top: 20px;">
+                    <!-- Trade Studies starts directly below with controlled spacing -->
+                    <div class="row" style="margin-top: 70px;">  <!-- Controls the gap -->
                         <div class="col-md-12 animate-box">
                             <h3 style="margin-bottom: 10px;">Benchmarking & Testing</h3>
                             <p>Benchmarking validated the mesh manipulation and split implementation. The displacement vs. time response for a continuous wall without a slit serves as the baseline, exhibiting smooth deformation under loading conditions. Introducing a split alters the structural response, as discontinuities affect stiffness and load distribution.</p>
@@ -274,7 +267,7 @@
                     </div>
 
                     <!-- Comparison of Coupling Strategies -->
-                    <div class="row" style="margin-top: 60px;">
+                    <div class="row" style="margin-top: 40px;">
                         <div class="col-md-12 animate-box">
                             <h3>Comparison of Coupling Strategies</h3>
                             <p>The behavior of different coupling strategies such as Gauss-Seidel strong, Gauss-Seidel weak, Jacobi weak, and the benchmark simulation offers critical insights into their suitability for strongly coupled FSI problems. Gauss-Seidel methods rely on sequential updates, where one domain's solution informs the other within the same iteration, allowing strong coupling to synchronize responses effectively.</p>
@@ -297,7 +290,7 @@
                     </div>
 
                     <!-- Optimization Results -->
-                    <div class="row" style="margin-top: 60px;">
+                    <div class="row" style="margin-top: 40px;">
                         <div class="col-md-12 animate-box">
                             <h3 style="margin-bottom: 10px;">Optimization Results</h3>
                         </div>
@@ -421,7 +414,7 @@
                             </p>
 
                             <!-- Summary -->
-                            <h3 style="text-align: left; margin-top: 50px;">Summary</h3>
+                            <h3 style="text-align: left; margin-top: 40px;">Summary</h3>
                             <p>This study presents a robust and adaptive framework for FSI simulations coupled with optimization strategies, demonstrating its potential for addressing complex structural optimization challenges. Through the development and analysis of an automated beam segmentation and optimization process, the study successfully highlighted the interplay between material property distribution and structural performance within a dynamic fluid environment.</p>
 
                             <p>The methodology’s ability to handle both equal and unequal segmentation with optimal Young’s modulus values underscores its versatility and reliability in generating targeted design modifications. By leveraging optimization techniques, the framework minimized beam deflection efficiently while preserving the integrity of the structural simulation, providing a seamless balance between accuracy and computational feasibility.</p>
