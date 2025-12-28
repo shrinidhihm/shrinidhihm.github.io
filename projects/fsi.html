@@ -26,6 +26,9 @@
         <link rel="stylesheet" href="../css/style.css">
 
         <script src="../js/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
 </head>
    
 <body>
@@ -96,15 +99,14 @@
                                 <li>Study the effect of different coupling methods on the system identification</li>
                             </ul>
                             <!-- Added Equation for Objective Function -->
-                            <p style="margin-top: 20px; text-align: center;">
-                                The objective function \( J \) for optimization is defined as:
-                            </p>
-                            <div style="text-align: center; margin: 20px 0;">
-                                \[ J = \frac{1}{2} \sum_{i=1}^{M} \sum_{t=1}^{N} \left[ h_i^c(t) - h_i^m(t) \right]^2 \]
-                            </div>
-                            <p style="font-size: 14px; color: #666; text-align: center; margin-bottom: 30px;">
+                            <!-- Added Equation for Objective Function -->
+                        <div style="margin-top: 30px; margin-bottom: 30px; text-align: center;">
+                            <p>The objective function \( J \) for optimization is defined as:</p>
+                            \[ J = \frac{1}{2} \sum_{i=1}^{M} \sum_{t=1}^{N} \left[ h_i^c(t) - h_i^m(t) \right]^2 \]
+                            <p style="font-size: 14px; color: #666; margin-top: 12px;">
                                 where \( h_i^c(t) \) is the computed value and \( h_i^m(t) \) is the measured value at sensor \( i \) and time \( t \).
                             </p>
+                        </div>
                         </div>
                     </div>
 
