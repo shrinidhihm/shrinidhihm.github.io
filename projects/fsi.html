@@ -60,14 +60,20 @@
     <div id="fh5co-author">
         <div class="container">
 
-            <!-- Project Summary - Centered, stacked layout -->
+           <!-- Project Summary - Centered, stacked layout -->
             <div class="row top-line animate-box">
                 <div class="col-md-8 col-md-offset-2 text-left">
-                    <!-- Thumbnail Image - Centered at top, full natural width but capped -->
+                    
+                    <!-- Thumbnail Image - Hero at top, now with caption -->
                     <img src="../images/fsi/thumbnail.png" 
                         class="img-responsive center-block" 
-                        style="max-width: 100%; height: auto; display: block; margin: 0 auto 40px auto;"
-                        alt="Fluid-Structure Interaction Project Thumbnail">
+                        style="max-width: 100%; height: auto; display: block; margin: 0 auto 20px auto; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+                        alt="Complete Set-up of the FSI Model">
+
+                    <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; margin-bottom: 50px;">
+                        <strong>Figure 1:</strong> Complete Set-up of the FSI Model (Beam in Fluid Channel with Sensor Locations)<br>
+                        <em>Source: Project Report</em>
+                    </p>
 
                     <!-- Title and Intro Text -->
                     <h2>Developing Methodology for Model Fitting to be used in Fluid-Structure Coupled Problem</h2>
@@ -78,16 +84,17 @@
 
                     <p>Supervised by Dr.-Ing. Ihar Antonau at the Chair of Structural Analysis, TU München.</p>
 
-                    <!-- Roles, Contributors, Tools -->
+                    <!-- Project Tasks, Contributors, Tools -->
                     <div class="row" style="margin-top: 40px;">
                         <div class="role col-md-4 text-left">
-                            <h3>My Role</h3>
+                            <h3>Project Tasks</h3>
                             <ul>
-                                <li>Mesh manipulation and sensor placement</li>
-                                <li>Fluid and structural solver setup</li>
-                                <li>Coupling strategy implementation</li>
-                                <li>Optimization framework development</li>
-                                <li>Benchmarking and results analysis</li>
+                                <li>Understand the coupled problem</li>
+                                <li>Get the interested values from the model at the given locations</li>
+                                <li>Compute the displacement/velocities (measured in x-direction) of the two sensors with prescribed Young's moduli for E1, E2, E3</li>
+                                <li>Build a response function to compute the sensor error between statistical quantities (e.g., average) of measured and computed data from the simulation</li>
+                                <li>Develop an optimization process to identify correct material parameters</li>
+                                <li>Study the effect of different coupling methods on the system identification</li>
                             </ul>
                         </div>
                         <div class="role col-md-4 text-left">
@@ -117,24 +124,14 @@
                 </div>
             </div>
 
-            <!-- Motivation -->
+            <!-- Motivation - Now text-only, cleaner and focused -->
             <div class="row info-block">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="row">
-                        <div class="col-md-6 animate-box">
+                        <div class="col-md-12 animate-box">  <!-- Changed to full width -->
                             <h3>Motivation</h3>
                             <p>The study of Fluid-Structure Interaction (FSI) is pivotal in understanding the complex interplay between fluid flow and structural response, a phenomenon that spans a wide range of natural and engineered systems. From biological processes, such as blood flow in arteries, to large-scale engineering applications like aircraft wings and bridges, FSI plays a critical role in ensuring the safety, efficiency, and performance of systems.</p>
                             <p>Coupled simulations are essential for accurate predictions in multi-physics environments, but they pose challenges like numerical stability, high computational costs, and interface handling. This project addresses these by developing methodologies for system identification and optimization in FSI, leveraging tools like Kratos Multiphysics for real-world applications in aerospace, biomedical, and energy sectors.</p>
-                        </div>
-                        <div class="col-md-6 animate-box">
-                            <img class="block-image img-responsive" 
-                                src="../images/fsi/thumbnail.png" 
-                                alt="Complete Set-up of the FSI Model"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure 1: Complete Set-up<br>
-                                <em>Source: Project Report</em>
-                            </p>
                         </div>
                     </div>
                 </div>
