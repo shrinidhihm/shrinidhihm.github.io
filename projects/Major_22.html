@@ -15,8 +15,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Design and Fabrication of Quad-Plane for All Terrain Applications – Shrinidhi Holenarsipura</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Methodology for system identification in FSI problems using Kratos Multiphysics and optimization – Shrinidhi Holenarsipura" />
-        <meta name="keywords" content="FSI, Fluid-Structure Interaction, Kratos Multiphysics, System Identification, Optimization, Digital Twin, TU Munich" />
+        <meta name="description" content="Design and fabrication of a fixed-wing VTOL UAV for all-terrain applications, combining quadcopter and airplane functionalities – Shrinidhi Holenarsipura" />
+        <meta name="keywords" content="Quad-Plane, VTOL, UAV, Drone, Aerospace, Mechanical Engineering, XFLR5, SolidWorks" />
         <meta name="author" content="Shrinidhi Holenarsipura Murali Madhava" />
 
         <!-- Styles -->
@@ -77,11 +77,11 @@
                     <!-- Title and Intro Text -->
                     <h2>Design and Fabrication of Quad-Plane for All Terrain Applications</h2>
                     
-                    <p>This Fluid Structure Interaction project develops a methodology for system identification in FSI problems by integrating digital twin concepts with numerical simulations using Kratos Multiphysics.</p>
+                    <p>This project presents the design of a fixed-wing Vertical Take-Off and Landing (VTOL) heavy-duty UAV “Quad Plane”. The VTOL is one of the most rapidly growing technology in the field of unmanned aerial vehicle, with VTOL the aircraft can achieve longer flight time and range and able to take-off/land on any terrain without any requirement of runaways with a maximum payload of 3Kg.</p>
                     
-                    <p>A simplified internal fluid flow over a slender beam in a channel is modeled, where three different Young's moduli are identified through velocity measurements and deformation sensors. An optimization process using Differential Evolution iteratively refines material parameters to minimize errors between measured and computed data, enhancing accuracy for digital twin applications.</p>
+                    <p>The study carried out is on the flight characteristics, such as roll, pitch, and yaw. XFLR5 software is used to understand the aerodynamic characteristics. This project will also give a better understanding of how it transits from a quad mode to a perpendicular motor borne flight mode. The usage of ducted propellers leads to efficient flight, thereby increasing the flight time and also helps in covering more distance in limited amount of time.</p>
 
-                    <p>Supervised by Dr. Ashok B C at the Deartment of Mechanical Engineering, Vidyavardhaka College of Engineering, Mysuru.</p>
+                    <p>Supervised by Dr. Ashok B C at the Department of Mechanical Engineering, Vidyavardhaka College of Engineering, Mysuru.</p>
 
                     <!-- Contributors and Tools - Bottom two columns -->
                     <div class="row" style="margin-top: 30px;">
@@ -106,305 +106,100 @@
                 </div>
             </div>
 
-           <!-- Motivation + Methodology (merged into one info-block) -->
+           <!-- Overview Section -->
             <div class="row info-block" style="margin-top: 10px;">
                 <div class="col-md-8 col-md-offset-2">
-                    <!-- Motivation -->
+                    <!-- Overview -->
                     <div class="row">
                         <div class="col-md-12 animate-box">
-                            <h3>Motivation</h3>
-                            <p>Fluid-Structure Interaction (FSI) governs critical real-world phenomena where fluid forces deform structures and structural changes alter flow, from blood flow in arteries and heart valves to aerodynamic loads on aircraft wings and wind-induced bridge vibrations.</p>
-                            <p>Accurate prediction requires tightly coupled simulations that solve fluid and structural equations simultaneously with proper interface handling. Traditional uncoupled approaches often fail to capture these bidirectional effects, leading to inaccurate results.</p>
-                            <p>This project develops a methodology for system identification in FSI using Kratos Multiphysics. By combining numerical simulation with data-driven optimization (Differential Evolution), material parameters (Young's modulus) are refined from virtual sensor data, advancing digital twin concepts for structural monitoring in aerospace, biomedical, and energy applications.</p>
+                            <h3>Overview</h3>
+                            <p>In the present industrial revolution in aerospace sectors/industries drones are the most common technology which are used worldwide either in the military purpose or even for the common man usage. Unmanned Aerial Vehicle (UAV) commonly known as Drone is an aircraft without any human passengers or crew members on board the aircraft.</p>
+                            <p>Our project the “Quad-Plane” will work by using 5 propellers as it is a combination of working principle of Quadcopter and forward movement of Airplane hence the name “Quad- Plane”. The basic principle of quadcopter is it uses 4 motors with a pair of motors rotating in clockwise direction and the second pair rotating in counter clockwise direction. The uniqueness of our project is the usage of ducted propellers which is responsible for concentrating the air flow around the propellers to one single point resulting in efficiency of thrust generated by the body to generate lift.</p>
+                            <p>One propeller will be mounted in front of the Quad-Plane to enable it to propel forward upon reaching a certain altitude.</p>
                         </div>
                     </div>
 
-                    <!-- Methodology (directly below, no extra wrapper) -->
+                    <!-- Specifications Table -->
                     <div class="row" style="margin-top: 50px;">
                         <div class="col-md-12 animate-box">
-                            <h3>Methodology</h3>
-                            <p>This study employs a computational framework for solving FSI problems using Kratos Multiphysics, integrating numerical modeling with optimization techniques for system identification. The fluid and structural domains are governed by the incompressible Navier-Stokes equations and linear elasticity theory, respectively, discretized using FEM. The coupling is achieved through a partitioned approach with Dirichlet-Neumann scheme, where the fluid solver imposes velocity constraints, and the structural solver computes reaction forces. Relaxation techniques enhance convergence and stability.</p>
-                            <p>The solution process uses iterative solvers like GMRES and BiCGSTAB with preconditioners such as ILU and AMG. Parallel computing with OpenMP accelerates computations. An optimization framework adjusts Young's modulus to minimize errors between simulated and measured responses.</p>
-
-                            <h4>1. Governing Equations</h4>
-                            <ul>
-                                <li>Fluid: Incompressible Navier-Stokes with VMS/SUPG stabilization.</li>
-                                <li>Structure: Linear elasticity with Newmark-beta integration.</li>
-                            </ul>
-
-                            <h4>2. Computational Framework</h4>
-                            <ul>
-                                <li>Partitioned approach with Dirichlet-Neumann coupling.</li>
-                                <li>Gauss-Seidel strong coupling for stability.</li>
-                                <li>Data mapping using nearest neighbor.</li>
-                                <li>Solvers: GMRES/BiCGSTAB with ILU/AMG preconditioners.</li>
-                                <li>Parallel computing with OpenMP.</li>
-                            </ul>
-
-                            <h4>3. Optimization Framework</h4>
-                            <ul>
-                                <li>Objective: Minimize squared error between computed and measured responses.</li>
-                                <li>Method: Differential Evolution (DE) for nonlinear optimization.</li>
-                            </ul>
-
-                        <div style="margin-top: 30px; margin-bottom: 30px; text-align: center;">
-                            <p style="text-align: left;">The objective function \( J \) for optimization is defined as:</p>
-                            \[ J = \frac{1}{2} \sum_{t=1}^{N} \sum_{i=1}^{M} \left[ h_i^c(t) - h_i^m(t) \right]^2 \]
-                            <p style="font-size: 14px; color: #666; margin-top: 12px;">
-                                where \( h_i^c(t) \) is the computed value and \( h_i^m(t) \) is the measured value at sensor \( i \) and time \( t \).
-                            </p>
-                        </div>
-                            <p>This methodology combines advanced coupling strategies, solver optimizations, and robust optimization techniques to ensure accurate and efficient FSI simulations.</p>
-                        </div>
-                    </div>
-
-                    <!-- Full-bleed large flowchart -->
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-12 animate-box text-center">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/fsi/Optimization_1.png" 
-                                alt="Optimization Strategy Flowchart"
-                                style="max-width: 100%; max-height: 600px; height: auto; width: auto; display: block; margin: 0 auto; object-fit: contain;">
-                            <p style="font-size: 14px; color: #666; margin-top: 10px;">
-                                Figure: Optimization Strategy.</p>
+                            <h3>Specifications</h3>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>Airfoil Used</td>
+                                        <td>Wing: NACA 4415, Tail: NACA 0015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wing Span</td>
+                                        <td>1.1 m</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wing Loading</td>
+                                        <td>11 kg/m²</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MTOW</td>
+                                        <td>3 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Motor Specification</td>
+                                        <td>Brushless: 1000 KV (A2212) for quad, 1500 KV (Avionic C3536) for forward thrust</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Battery Specification</td>
+                                        <td>3-cell LiPo, 3300 mAh, 11.1 V, 25C discharge</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Propeller</td>
+                                        <td>10 x 4.5 inch</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
-                    <!-- Mesh/Split + Displacement Sensors -->
-                    <div class="row" style="margin-top: 60px;">
-                        <div class="col-md-10 col-md-offset-1 col-sm-12 text-center animate-box">
-                            <div style="margin-bottom: 40px; text-align: center;">
-                                <!-- Wrapper div to control the shift -->
-                                <div style="display: inline-block; margin-left: 15%;">
-                                    <img class="block-image img-responsive center-block" 
-                                        src="../images/fsi/Split_and_disp.png" 
-                                        alt="Mesh and Split Details"
-                                        style="max-width: 100%; max-height: 500px; height: auto; width: auto; display: block; object-fit: contain;">
+                    <!-- Image Gallery -->
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-md-12 animate-box">
+                            <h3>Manufacturing and Assembly Gallery</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="../images/Major_22/wing_top_bottom.jpg" alt="Wing – Top & Bottom Views" class="img-responsive" style="margin-bottom: 20px;">
+                                    <p style="font-size: 14px; color: #666; text-align: center;">Wing – Top & Bottom Views</p>
                                 </div>
-                                <p style="font-size: 14px; color: #666; margin-top: 10px;">
-                                    Figure: Mesh and Split Details (Left) and Location of Displacement Sensors (Right).
-                                </p>
+                                <div class="col-md-6">
+                                    <img src="../images/Major_22/fuselage_motor.jpg" alt="Fuselage with motor and electronics" class="img-responsive" style="margin-bottom: 20px;">
+                                    <p style="font-size: 14px; color: #666; text-align: center;">Fuselage with motor and electronics mounted</p>
+                                </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="../images/Major_22/3d_printing_bed.jpg" alt="3D Printing Bed Setup" class="img-responsive" style="margin-bottom: 20px;">
+                                    <p style="font-size: 14px; color: #666; text-align: center;">3D Printing Bed Setup</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="../images/Major_22/assembled_duct.jpg" alt="Assembled 3D printed Duct and Quad-Rod connector" class="img-responsive" style="margin-bottom: 20px;">
+                                    <p style="font-size: 14px; color: #666; text-align: center;">(a) Assembled 3D printed Duct (b) 3D printed Quad-Rod connector</p>
+                                </div>
+                            </div>
+                            <!-- Add more images as needed -->
                         </div>
                     </div>
 
-                    <!-- Full-width: Velocity Sensors -->
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/fsi/velocity_sensors.png" 
-                                alt="Location of Velocity Sensors"
-                                style="max-width: 100%; max-height: 700px; height: auto; width: auto; display: block; margin: 0 auto; object-fit: contain;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Location of Velocity Sensors.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Trade Studies starts directly below with controlled spacing -->
-                    <div class="row" style="margin-top: 70px;">  <!-- Controls the gap -->
+                    <!-- Conclusion -->
+                    <div class="row" style="margin-top: 50px;">
                         <div class="col-md-12 animate-box">
-                            <h3 style="margin-bottom: 10px;">Benchmarking & Testing</h3>
-                            <p>Benchmarking validated the mesh manipulation and split implementation. The displacement vs. time response for a continuous wall without a slit serves as the baseline, exhibiting smooth deformation under loading conditions. Introducing a split alters the structural response, as discontinuities affect stiffness and load distribution.</p>
-                            <p>Displacement responses for continuous and split walls overlapped perfectly, confirming no computational artifacts from the split.</p>
+                            <h3>Conclusion</h3>
+                            <p>The Quad-Plane was successfully designed, fabricated, and tested, demonstrating effective VTOL capabilities and efficient transition to forward flight. The use of ducted propellers enhanced thrust efficiency, extending flight time and range. Aerodynamic analysis via XFLR5 confirmed stable flight characteristics across various conditions.</p>
+                            <p>This project addresses key challenges in all-terrain UAV applications, such as emergency supply delivery, with a cost-effective and robust design.</p>
                         </div>
                     </div>
 
-                    <!-- Stacked Images -->
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/fsi/fig9.png" 
-                                alt="Comparing Continuous and Split Wall"
-                                style="max-width: 80%; height: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Comparing Continuous and Split Wall
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-md-10 col-md-offset-1 animate-box">
-                            <p>Stiffness variations in split halves showed expected deformation patterns, with the stiffer bottom half exhibiting less displacement, validating the implementation.</p>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/fsi/fig10.png" 
-                                alt="Bottom Stiffer Relative to Top"
-                                style="max-width: 80%; height: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Bottom Stiffer Relative to Top
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Comparison of Coupling Strategies -->
+                    <!-- Acknowledgments -->
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-md-12 animate-box">
-                            <h3>Comparison of Coupling Strategies</h3>
-                            <p>The behavior of different coupling strategies such as Gauss-Seidel strong, Gauss-Seidel weak, Jacobi weak, and the benchmark simulation offers critical insights into their suitability for strongly coupled FSI problems. Gauss-Seidel methods rely on sequential updates, where one domain's solution informs the other within the same iteration, allowing strong coupling to synchronize responses effectively.</p>
-                            <p>Gauss-Seidel strong matched the benchmark closely with minimal deviation and faster convergence due to efficient data exchange. Gauss-Seidel weak, while stable and cheaper, converges slower without iterative dependency for nonlinear interactions. Jacobi methods use parallel updates, making them less stable; Jacobi weak showed oscillations and divergence as exchanged data may not align, unsuitable for strongly coupled systems.</p>
-                            <p>These findings emphasize the importance of solver selection for capturing bidirectional interactions and achieving stable, accurate solutions.</p>
-                        </div>
-                    </div>
-
-                    <!-- Image below text -->
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/fsi/fig17.png" 
-                                alt="Coupling Strategy Comparison"
-                                style="max-width: 80%; height: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Coupling Strategy Comparison
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Optimization Results -->
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-12 animate-box">
-                            <h3 style="margin-bottom: 10px;">Optimization Results</h3>
-                        </div>
-                    </div>
-
-                    <!-- First paragraph + first image -->
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1 animate-box">
-                            <p>The optimization results for the four sensors show a rapid reduction in the objective function \( J \) from \( 5 \times 10^{-3} \) to \( 2.5 \times 10^{-3} \) within the first five iterations, followed by stabilization. This indicates the DE algorithm effectively minimized the error between computed and measured data, achieving efficient convergence.</p>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/fsi/fig15.jpg" 
-                                alt="Optimization of Function J"
-                                style="max-width: 100%; max-height: 600px; height: auto; width: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px; object-fit: contain;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Optimization of Function J
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Second paragraph + second image -->
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-md-10 col-md-offset-1 animate-box">
-                            <p>The remaining residual error suggests challenges such as unscaled velocity contributions and constrained Young's modulus bounds limiting full refinement. The process aimed to converge \( E_1 \) and \( E_2 \) toward 2.3 MPa, but persistent oscillations occurred due to the nonlinear search space. Despite these limitations, the framework successfully refined material properties iteratively, demonstrating its effectiveness for system identification in FSI simulations.</p>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-10 col-md-offset-1 text-center animate-box">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/fsi/fig16.jpg" 
-                                alt="Optimization of Young's Modulus"
-                                style="max-width: 100%; max-height: 600px; height: auto; width: auto; display: block; margin: 0 auto 40px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px; object-fit: contain;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Optimization of Young's Modulus
-                            </p>
-                        </div>
-                    </div>
-
-                   <!-- Velocity Visualizations -->
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-12 animate-box text-center">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/fsi/Velocity_1.png" 
-                                alt="Velocity During Ramp-up"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Velocity - During the Ramp-up
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- First Video - Responsive and Centered -->
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-12 text-center animate-box">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" 
-                                        src="https://www.youtube.com/embed/XBeAiM-qtCc?si=FmACc8fSwkF77H_u&rel=0" 
-                                        title="YouTube video player" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        referrerpolicy="strict-origin-when-cross-origin" 
-                                        allowfullscreen></iframe>
-                            </div>
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Video: Test - Control Surfaces
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-12 animate-box text-center">
-                            <img class="block-image img-responsive center-block" 
-                                src="../images/fsi/Velocity_2.png" 
-                                alt="Velocity After Settling"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Figure: Velocity - After Settling
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Second Video - Responsive and Centered -->
-                    <div class="row" style="margin-top: 40px;">
-                        <div class="col-md-12 text-center animate-box">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" 
-                                        src="https://www.youtube.com/embed/dEPDxtAp-EU?si=JHOq-VouZW8hTPP6&rel=0" 
-                                        title="YouTube video player" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        referrerpolicy="strict-origin-when-cross-origin" 
-                                        allowfullscreen></iframe>
-                            </div>
-                            <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center;">
-                                Video: Velocity Animation - After Settling
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Limitations, Future Work, Summary & Acknowledgments (merged into one info-block) -->
-                    <div class="row info-block" style="margin-top: 40px;">
-                        <div class="col-md-12">
-                            <!-- Limitations & Future Work -->
-                            <h3>Limitations & Future Work</h3>
-                            <ul>
-                                <li>Unscaled velocity data dominated error function in multi-sensor optimization</li>
-                                <li>Constrained Young's modulus bounds limited refinement</li>
-                                <li>Oscillations in convergence due to nonlinear, multi-modal search space</li>
-                                <li><strong>Future:</strong> Implement data scaling for equitable error contributions</li>
-                                <li>Extend to 3D structures and complex geometries</li>
-                                <li>Incorporate adaptive meshing and advanced preconditioners</li>
-                                <li>Enhance automation for segmentation and parameter handling</li>
-                            </ul>
-                            <p style="margin-top: 30px; font-style: italic;">
-                                The framework provides a solid foundation for advancing FSI simulations in engineering applications.
-                            </p>
-
-                            <!-- Summary -->
-                            <h3 style="text-align: left; margin-top: 40px;">Summary</h3>
-                            <p>This study presents a robust and adaptive framework for FSI simulations coupled with optimization strategies, demonstrating its potential for addressing complex structural optimization challenges. Through the development and analysis of an automated beam segmentation and optimization process, the study successfully highlighted the interplay between material property distribution and structural performance within a dynamic fluid environment.</p>
-
-                            <p>The methodology’s ability to handle both equal and unequal segmentation with optimal Young’s modulus values underscores its versatility and reliability in generating targeted design modifications. By leveraging optimization techniques, the framework minimized beam deflection efficiently while preserving the integrity of the structural simulation, providing a seamless balance between accuracy and computational feasibility.</p>
-
-                            <p>A detailed analysis of coupling strategies revealed the significance of choosing appropriate solvers in FSI problems. The Gauss-Seidel strong coupling method emerged as the most reliable approach for ensuring accurate synchronization between fluid and structural domains, closely replicating benchmark simulations with faster convergence.</p>
-
-                            <p>In contrast, weak coupling methods demonstrated slower convergence, with the Jacobi weak strategy exhibiting significant oscillations due to its parallel update mechanism, which is ill-suited for strongly coupled systems. These findings emphasize the importance of solver selection in capturing bidirectional interactions and achieving stable, accurate solutions.</p>
-
-                            <p>This study concludes with a reaffirmation of the importance of solver accuracy, optimization adaptability, and computational efficiency in achieving reliable solutions for strongly coupled systems. The developed framework serves as a stepping stone toward more sophisticated methodologies, fostering further innovation in the field of FSI modeling and optimization.</p>
-
-                            <!-- Acknowledgments -->
-                            <h3 style="text-align: left; margin-top: 40px;">Acknowledgments</h3>
-                            <p style="text-align: left;">
-                                Thanks to contributors Bhakti Sheth and Rohin Ramisetty, and supervisor Dr.-Ing. Ihar Antonau at the Chair of Structural Analysis, TU München.
-                            </p>
+                            <h3>Acknowledgments</h3>
+                            <p>Thanks to Dr. Ashok B C for guidance, and team members Prithvi G, Jayanth V, and Supriya A for their contributions.</p>
                         </div>
                     </div>
                 </div>
