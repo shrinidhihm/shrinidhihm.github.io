@@ -136,9 +136,9 @@
                     <div class="row">
                         <div class="col-md-12 animate-box">
                             <h3>Motivation</h3>
-                            <p>Fluid-Structure Interaction (FSI) governs critical real-world phenomena where fluid forces deform structures and structural changes alter flow — from blood flow in arteries and heart valves to aerodynamic loads on aircraft wings and wind-induced bridge vibrations.</p>
+                            <p>Fluid-Structure Interaction (FSI) governs critical real-world phenomena where fluid forces deform structures and structural changes alter flow, from blood flow in arteries and heart valves to aerodynamic loads on aircraft wings and wind-induced bridge vibrations.</p>
                             <p>Accurate prediction requires tightly coupled simulations that solve fluid and structural equations simultaneously with proper interface handling. Traditional uncoupled approaches often fail to capture these bidirectional effects, leading to inaccurate results.</p>
-                            <p>This project develops a methodology for system identification in FSI using Kratos Multiphysics. By combining numerical simulation with data-driven optimization (Differential Evolution), material parameters (Young's modulus) are refined from virtual sensor data — advancing digital twin concepts for structural monitoring in aerospace, biomedical, and energy applications.</p>
+                            <p>This project develops a methodology for system identification in FSI using Kratos Multiphysics. By combining numerical simulation with data-driven optimization (Differential Evolution), material parameters (Young's modulus) are refined from virtual sensor data, advancing digital twin concepts for structural monitoring in aerospace, biomedical, and energy applications.</p>
                         </div>
                     </div>
                 </div>
@@ -271,7 +271,7 @@
                     <div class="row" style="margin-top: 60px;">
                         <div class="col-md-12 animate-box">
                             <h3>Comparison of Coupling Strategies</h3>
-                            <p>The behavior of different coupling strategies—Gauss-Seidel strong, Gauss-Seidel weak, Jacobi weak, and the benchmark simulation—offers critical insights into their suitability for strongly coupled FSI problems. Gauss-Seidel methods rely on sequential updates, where one domain's solution informs the other within the same iteration, allowing strong coupling to synchronize responses effectively.</p>
+                            <p>The behavior of different coupling strategies such as Gauss-Seidel strong, Gauss-Seidel weak, Jacobi weak, and the benchmark simulation offers critical insights into their suitability for strongly coupled FSI problems. Gauss-Seidel methods rely on sequential updates, where one domain's solution informs the other within the same iteration, allowing strong coupling to synchronize responses effectively.</p>
                             <p>Gauss-Seidel strong matched the benchmark closely with minimal deviation and faster convergence due to efficient data exchange. Gauss-Seidel weak, while stable and cheaper, converges slower without iterative dependency for nonlinear interactions. Jacobi methods use parallel updates, making them less stable; Jacobi weak showed oscillations and divergence as exchanged data may not align, unsuitable for strongly coupled systems.</p>
                             <p>These findings emphasize the importance of solver selection for capturing bidirectional interactions and achieving stable, accurate solutions.</p>
                         </div>
