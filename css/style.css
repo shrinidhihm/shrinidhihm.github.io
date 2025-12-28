@@ -1427,3 +1427,12 @@ label,
     color: #2c3e50 !important;   /* Deep blue-grey for hover & active page */
     border-bottom: 2px solid #2c3e50 !important; /* Strong underline on active/hover */
 }
+
+/* Add this to style.css */
+.bulleted-list {
+    list-style-type: disc !important;
+    padding-left: 20px !important;
+}
+.bulleted-list li {
+    margin-bottom: 8px;
+}
