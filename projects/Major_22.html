@@ -31,35 +31,11 @@
         </script>
 </head>
    
-<script>
-    // Simple Lightbox
-    document.querySelectorAll('.zoomable').forEach(img => {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('click', function() {
-        const overlay = document.getElementById('lightbox-overlay');
-        const lightboxImg = document.getElementById('lightbox-img');
-        lightboxImg.src = this.src;
-        overlay.style.display = 'flex';
-    });
-    });
-
-    // Close lightbox
-    document.getElementById('lightbox-overlay').addEventListener('click', function(e) {
-    if (e.target === this || e.target.classList.contains('lightbox-close')) {
-        this.style.display = 'none';
-    }
-    });
-</script>
 
 <body>
 <div class="fh5co-loader"></div>
 <div id="page">
 
-    <!-- Lightbox Overlay -->
-    <div id="lightbox-overlay" class="lightbox-overlay">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" class="lightbox-content" alt="Enlarged view">
-    </div>
 
     <!-- Navigation -->
     <nav class="fh5co-nav" role="navigation">
@@ -84,6 +60,29 @@
             </div>
         </div>
     </nav>
+
+    <!-- Lightbox HTML (added just before </body>) -->
+    <div id="lightbox">
+      <span id="lightbox-close">×</span>
+      <img id="lightbox-img" src="" alt="Enlarged image">
+    </div>
+
+    <!-- Lightbox JavaScript (added just before </body>) -->
+    <script>
+    document.querySelectorAll('.zoomable').forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function() {
+        document.getElementById('lightbox-img').src = this.src;
+        document.getElementById('lightbox').style.display = 'flex';
+      });
+    });
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this || e.target.id === 'lightbox-close') {
+        this.style.display = 'none';
+      }
+    });
+    </script>
 
     <!-- Content -->
     <div id="fh5co-author">
