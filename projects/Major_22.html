@@ -29,11 +29,38 @@
         <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>
+
+        <script>
+            // Simple Lightbox
+            document.querySelectorAll('.zoomable').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function() {
+                const overlay = document.getElementById('lightbox-overlay');
+                const lightboxImg = document.getElementById('lightbox-img');
+                lightboxImg.src = this.src;
+                overlay.style.display = 'flex';
+            });
+            });
+
+            // Close lightbox
+            document.getElementById('lightbox-overlay').addEventListener('click', function(e) {
+            if (e.target === this || e.target.classList.contains('lightbox-close')) {
+                this.style.display = 'none';
+            }
+            });
+        </script>
+
 </head>
    
 <body>
 <div class="fh5co-loader"></div>
 <div id="page">
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox-overlay" class="lightbox-overlay">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" alt="Enlarged view">
+    </div>
 
     <!-- Navigation -->
     <nav class="fh5co-nav" role="navigation">
@@ -212,8 +239,8 @@
                             <h3>Manufacturing and Assembly Gallery</h3>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="../images/Major_22/wing_top_bottom.jpg" alt="Wing – Top & Bottom Views" class="img-responsive" style="margin-bottom: 20px;">
-                                    <p style="font-size: 14px; color: #666; text-align: center;">Wing – Top & Bottom Views</p>
+                                    <img src="../images/Major_22/Wing_U.jpg" alt="Wing – Top & Bottom Views" class="img-responsive zoomable" style="margin-bottom: 20px;">
+                                    <p style="font-size: 14px; color: #666; text-align: center;">Wing</p>
                                 </div>
                                 <div class="col-md-6">
                                     <img src="../images/Major_22/fuselage_motor.jpg" alt="Fuselage with motor and electronics" class="img-responsive" style="margin-bottom: 20px;">
@@ -242,7 +269,7 @@
                                 <div class="col-md-6 text-center">
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" 
-                                                src="https://www.youtube.com/embed/FNuVuNiK-L4?rel=0" 
+                                                src="https://www.youtube.com/embed/GLJxsXneTSs?si=7-NCo1naPcG8OqD0&rel=0" 
                                                 title="QHOVER Mode Demonstration" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -253,7 +280,7 @@
                                 <div class="col-md-6 text-center">
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" 
-                                                src="https://www.youtube.com/embed/FNuVuNiK-L4?rel=0" 
+                                                src="https://www.youtube.com/embed/1e39YnMKrCM?si=Ktnc91YRaUdTOLcH&rel=0" 
                                                 title="QLOITER Mode Demonstration" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -266,7 +293,7 @@
                                 <div class="col-md-6 text-center">
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" 
-                                                src="https://www.youtube.com/embed/FNuVuNiK-L4?rel=0" 
+                                                src="https://www.youtube.com/embed/-nI2YgX2vaI?si=xz-2Fa664dqwITXg&rel=0" 
                                                 title="QSTABILIZE Mode Demonstration" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -277,7 +304,7 @@
                                 <div class="col-md-6 text-center">
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" 
-                                                src="https://www.youtube.com/embed/j2dzih4Lseo?rel=0" 
+                                                src="https://www.youtube.com/embed/uvVHv9IwXvA?si=1VI8-mOgTxY5a1b1rel=0" 
                                                 title="Control Surface Movement Test" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -303,9 +330,9 @@
                         <div class="col-md-12 animate-box">
                             <h3>Acknowledgments</h3>
                             <ul>
-                                <li>Dr. Ashok B C, Professor and Dean of Corporate & International Affairs, for his supervision</li>
+                                <li>Dr. Ashok B C, Professor and Dean of Corporate & International Affairs, Department of Mechanical Engineering, Vidyavardhaka College of Engineering, Mysuru for his supervision</li>
                                 <li>Team members Prithvi G, Jayanth V, and Supriya A for their contributions</li>
-                                <li>Chandrakanth Sharma from Rangsons Aerospace for his constant support and guidance in the overall design to fabrication process</li>
+                                <li>Mr. Chandrakanth Sharma, Rangsons Aerospace for his constant support and guidance in the overall design to fabrication process</li>
                             </ul>
                         </div>    
                     </div>
