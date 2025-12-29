@@ -77,7 +77,7 @@
                     <!-- Title and Intro Text -->
                     <h2>Design and Fabrication of Quad-Plane for All Terrain Applications</h2>
                     
-                    <p>Led a team of four to design and fabricate a fixed-wing electric vertical take-off and landing (eVTOL) UAV with 1.2 m wingspan and 3 kg maximum take-off weight, optimized for medical supply delivery in all-terrain environments.</p>
+                    <p>Led a team of four to design and fabricate a fixed-wing electric vertical take-off and landing (eVTOL) UAV with 1.1 m wingspan and 3 kg maximum take-off weight, optimized for medical supply delivery in all-terrain environments.</p>
                     
                     <p>Conducted aerodynamic design in XFLR5, CAD modeling in SolidWorks, and CFD-based optimization with structural validation in Ansys Workbench. Designed and 3D-printed propeller ducts to improve propulsion efficiency and safety.</p>
 
@@ -96,9 +96,11 @@
                         <div class="role col-md-6 text-left">
                             <h3>Tools & Methods</h3>
                             <ul>
-                                <li>XFLR5: Aerodynamic analysis</li>
+                                <li>OpenVSP: Initial aircraft sizing</li>
+                                <li>XFLR5: Sizing of control and lifting surfaces, aerodynamic analysis</li>
                                 <li>SolidWorks: CAD modeling</li>
-                                <li>Ansys Workbench: CFD optimization, structural validation</li>
+                                <li>Ansys Workbench (Fluent): Aerodynamics analysis</li>
+                                <li>Ansys Workbench (Static Structural): FEM structural validation</li>
                                 <li>3D Printing: Component fabrication</li>
                             </ul>
                         </div>
@@ -113,9 +115,49 @@
                     <div class="row">
                         <div class="col-md-12 animate-box">
                             <h3>Overview</h3>
-                            <p>UAVs are deployed in military and civilian applications without onboard personnel.</p>
-                            <p>The Quad-Plane integrated quadcopter and fixed-wing principles using five propellers: four for vertical operations and one for forward propulsion. Motors rotated in opposing pairs for stability. Ducted propellers focused airflow to enhance thrust and lift efficiency.</p>
-                            <p>The forward propeller enabled horizontal flight post-altitude achievement.</p>
+                            <p>The Quad-Plane is a hybrid fixed-wing VTOL UAV that combines the vertical take-off and landing capability of a quadcopter with the efficiency and range of conventional fixed-wing flight.</p>
+                            <p>It uses four ducted propellers for vertical operations and a fifth forward-mounted propeller for cruise. Counter-rotating motor pairs provide stability in hover, while ducted shrouds improve thrust efficiency and propeller safety.</p>
+                            <p>After gaining altitude in quad mode, the vehicle transitions to forward flight by tilting forward and engaging the pusher propeller, allowing longer endurance and greater range than pure multirotors.</p>
+                            <p>The design targeted all-terrain applications, particularly emergency medical supply delivery, with emphasis on payload capacity, slow-flight controllability, and runway-independent operation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Design Process -->
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-md-12 animate-box">
+                            <h3>Design Process</h3>
+                            <p>Initial sizing was performed in OpenVSP, followed by detailed aerodynamic evaluation in XFLR5. NACA 4415 was selected for the main wing due to its favorable lift-to-drag characteristics at the operating Reynolds numbers, while NACA 0015 was used for the tail surfaces.</p>
+                            <p>A rectangular wing planform was chosen for optimal aerodynamic performance and ease of manufacturing. A conventional tail configuration provided longitudinal and directional stability while avoiding risks associated with alternative layouts.</p>
+                            <p>Structural integrity of key components was verified through finite element analysis in Ansys Static Structural. Propeller ducts were designed and 3D-printed to enhance propulsion efficiency and safety.</p>
+                        </div>
+                    </div>
+
+                    <!-- Aerodynamic Analysis -->
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-md-12 animate-box">
+                            <h3>Aerodynamic Analysis</h3>
+                            <p>XFLR5 was used to model the complete aircraft and analyze pressure distribution, flow streams, induced drag, and viscous drag at cruise speed across a range of angles of attack and control surface deflections.</p>
+                            <p>Simulations confirmed stable flight characteristics and acceptable drag penalties during low-speed maneuvers with deployed ailerons and flaps.</p>
+                            <!-- Add relevant images from PDF if available -->
+                        </div>
+                    </div>
+
+                    <!-- Flight System -->
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-md-12 animate-box">
+                            <h3>Flight System</h3>
+                            <img src="../images/Major_22/flight_block_diagram.jpg" alt="Flight System block diagram" class="img-responsive center-block" style="max-width: 80%; height: auto; display: block; margin: 0 auto 20px auto;">
+                            <p style="font-size: 14px; color: #666; margin-top: 10px; text-align: center;">Figure: Flight System Block Diagram</p>
+                            <p>The system comprised a 3300 mAh LiPo battery, brushless DC motors, electronic speed controllers, metal-gear servos for control surfaces, and a Pixhawk flight controller running ArduPilot firmware.</p>
+                        </div>
+                    </div>
+
+                    <!-- Proposed Design -->
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-md-12 animate-box">
+                            <h3>Proposed Design</h3>
+                            <img src="../images/Major_22/proposed_sketch.jpg" alt="Proposed Sketch of Quad-Plane" class="img-responsive center-block" style="max-width: 80%; height: auto; display: block; margin: 0 auto 20px auto;">
+                            <p style="font-size: 14px; color: #666; margin-top: 10px; text-align: center;">Figure: Proposed Sketch of Quad-Plane</p>
                         </div>
                     </div>
 
@@ -164,7 +206,7 @@
                         </div>
                     </div>
 
-                    <!-- Image Gallery -->
+                    <!-- Manufacturing and Assembly Gallery -->
                     <div class="row" style="margin-top: 50px;">
                         <div class="col-md-12 animate-box">
                             <h3>Manufacturing and Assembly Gallery</h3>
@@ -192,6 +234,61 @@
                         </div>
                     </div>
 
+                    <!-- Demonstrations -->
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-md-12 animate-box">
+                            <h3>Flight Mode Demonstrations</h3>
+                            <div class="row">
+                                <div class="col-md-6 text-center">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" 
+                                                src="https://www.youtube.com/embed/FNuVuNiK-L4?rel=0" 
+                                                title="QHOVER Mode Demonstration" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen></iframe>
+                                    </div>
+                                    <p style="font-size: 14px; color: #666; margin-top: 12px;">Video: QHOVER Mode</p>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" 
+                                                src="https://www.youtube.com/embed/FNuVuNiK-L4?rel=0" 
+                                                title="QLOITER Mode Demonstration" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen></iframe>
+                                    </div>
+                                    <p style="font-size: 14px; color: #666; margin-top: 12px;">Video: QLOITER Mode</p>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 40px;">
+                                <div class="col-md-6 text-center">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" 
+                                                src="https://www.youtube.com/embed/FNuVuNiK-L4?rel=0" 
+                                                title="QSTABILIZE Mode Demonstration" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen></iframe>
+                                    </div>
+                                    <p style="font-size: 14px; color: #666; margin-top: 12px;">Video: QSTABILIZE Mode</p>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" 
+                                                src="https://www.youtube.com/embed/j2dzih4Lseo?rel=0" 
+                                                title="Control Surface Movement Test" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen></iframe>
+                                    </div>
+                                    <p style="font-size: 14px; color: #666; margin-top: 12px;">Video: Control Surface Movement</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Conclusion -->
                     <div class="row" style="margin-top: 50px;">
                         <div class="col-md-12 animate-box">
@@ -205,8 +302,12 @@
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-md-12 animate-box">
                             <h3>Acknowledgments</h3>
-                            <p>Thanks to Dr. Ashok B C for guidance, and team members Prithvi G, Jayanth V, and Supriya A for contributions.</p>
-                        </div>
+                            <ul>
+                                <li>Dr. Ashok B C, Professor and Dean of Corporate & International Affairs, for his supervision</li>
+                                <li>Team members Prithvi G, Jayanth V, and Supriya A for their contributions</li>
+                                <li>Chandrakanth Sharma from Rangsons Aerospace for his constant support and guidance in the overall design to fabrication process</li>
+                            </ul>
+                        </div>    
                     </div>
                 </div>
             </div>
