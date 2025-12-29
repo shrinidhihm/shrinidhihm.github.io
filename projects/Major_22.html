@@ -61,29 +61,6 @@
         </div>
     </nav>
 
-    <!-- Lightbox HTML (added just before </body>) -->
-    <div id="lightbox">
-      <span id="lightbox-close">×</span>
-      <img id="lightbox-img" src="" alt="Enlarged image">
-    </div>
-
-    <!-- Lightbox JavaScript (added just before </body>) -->
-    <script>
-    document.querySelectorAll('.zoomable').forEach(img => {
-      img.style.cursor = 'zoom-in';
-      img.addEventListener('click', function() {
-        document.getElementById('lightbox-img').src = this.src;
-        document.getElementById('lightbox').style.display = 'flex';
-      });
-    });
-
-    document.getElementById('lightbox').addEventListener('click', function(e) {
-      if (e.target === this || e.target.id === 'lightbox-close') {
-        this.style.display = 'none';
-      }
-    });
-    </script>
-
     <!-- Content -->
     <div id="fh5co-author">
         <div class="container">
