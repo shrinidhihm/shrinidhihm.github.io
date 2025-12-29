@@ -29,29 +29,28 @@
         <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>
-
-        <script>
-            // Simple Lightbox
-            document.querySelectorAll('.zoomable').forEach(img => {
-            img.style.cursor = 'zoom-in';
-            img.addEventListener('click', function() {
-                const overlay = document.getElementById('lightbox-overlay');
-                const lightboxImg = document.getElementById('lightbox-img');
-                lightboxImg.src = this.src;
-                overlay.style.display = 'flex';
-            });
-            });
-
-            // Close lightbox
-            document.getElementById('lightbox-overlay').addEventListener('click', function(e) {
-            if (e.target === this || e.target.classList.contains('lightbox-close')) {
-                this.style.display = 'none';
-            }
-            });
-        </script>
-
 </head>
    
+<script>
+    // Simple Lightbox
+    document.querySelectorAll('.zoomable').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function() {
+        const overlay = document.getElementById('lightbox-overlay');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = this.src;
+        overlay.style.display = 'flex';
+    });
+    });
+
+    // Close lightbox
+    document.getElementById('lightbox-overlay').addEventListener('click', function(e) {
+    if (e.target === this || e.target.classList.contains('lightbox-close')) {
+        this.style.display = 'none';
+    }
+    });
+</script>
+
 <body>
 <div class="fh5co-loader"></div>
 <div id="page">
@@ -304,7 +303,7 @@
                                 <div class="col-md-6 text-center">
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" 
-                                                src="https://www.youtube.com/embed/uvVHv9IwXvA?si=1VI8-mOgTxY5a1b1rel=0" 
+                                                src="https://www.youtube.com/embed/uvVHv9IwXvA?si=1VI8-mOgTxY5a1b1&rel=0" 
                                                 title="Control Surface Movement Test" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -330,7 +329,7 @@
                         <div class="col-md-12 animate-box">
                             <h3>Acknowledgments</h3>
                             <ul>
-                                <li>Dr. Ashok B C, Professor and Dean of Corporate & International Affairs, Department of Mechanical Engineering, Vidyavardhaka College of Engineering, Mysuru for his supervision</li>
+                                <li>Dr. Ashok B C, Professor and Dean of Corporate & International Affairs, Department of Mechanical Engineering, Vidyavardhaka College of Engineering, Mysuru, for his supervision</li>
                                 <li>Team members Prithvi G, Jayanth V, and Supriya A for their contributions</li>
                                 <li>Mr. Chandrakanth Sharma, Rangsons Aerospace for his constant support and guidance in the overall design to fabrication process</li>
                             </ul>
