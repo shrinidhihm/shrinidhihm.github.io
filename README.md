@@ -10,7 +10,7 @@ This repository contains the source code for my personal website and portfolio, 
 - [Work](/work.html)
 - [CV](/cv.html)
 - [Certifications](/certifications.html)
-- [Beyond](/beyond.html
+- [Beyond](/beyond.html)
 - [Contact](/contact.html)
 
 ### Technologies Used
