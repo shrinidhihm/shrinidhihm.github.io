@@ -7,10 +7,10 @@ This repository contains the source code for my personal website and portfolio, 
 
 ### Quick Links
 - [Home](/index.html)
-- [Work](/work.html
+- [Work](/work.html)
 - [CV](/cv.html)
 - [Certifications](/certifications.html)
-- [Beyong](/beyond.html
+- [Beyond](/beyond.html
 - [Contact](/contact.html)
 
 ### Technologies Used
